@@ -1,21 +1,16 @@
 <?php
 
-class Router {
-
-
-
-    
-
+class Router
+{
     /**
      * Holds the registered routes.
      *
-     * @var array $routes
+     * @var array
      */
-     public  $routes = [];
+    public $routes = [];
 
-     public $action ;
-     
-    
+    public $action;
+
     /**
      * Register a new route.
      *
@@ -26,10 +21,10 @@ class Router {
     {
         global $routes;
         $action = trim($action, '/');
-        $action = preg_replace('/{[^}]+}/','(.+)',$action);
+        $action = preg_replace('/{[^}]+}/', '(.+)', $action);
         $routes[$action] = $callback;
     }
-    
+
     /**
      * Dispatch the router.
      *
@@ -41,42 +36,35 @@ class Router {
         $action = trim($action, '/');
         // $callback = $routes[$action];
         $callback = null;
-        $params =[];
-        foreach ($routes as $route => $handler){
-            if(preg_match("%^{$route}$%",$action,$matches) === 1){
+        $params = [];
+        foreach ($routes as $route => $handler) {
+            if (preg_match("%^{$route}$%", $action, $matches) === 1) {
                 // exit(var_dump($route) . " -- " . $action);
 
                 $callback = $handler;
                 unset($matches[0]);
                 $params = $matches;
                 break;
-    
             }
         }
-        if(!$callback || !is_callable($callback)){
+        if (!$callback || !is_callable($callback)) {
             http_response_code(404);
-            require 'pages_error404.html';
+            require '404.html';
             exit;
         }
-    
+
         echo call_user_func($callback, ...$params);
     }
-    
-    public function view($path,array $dollar){
+
+    public function view($path, array $dollar)
+    {
         func_get_args();
-        
+
         require __DIR__.'/../'.$path;
-    
     }
 
-    public function action (){
-
-    return  $this->action = $_SERVER['REQUEST_URI'];
-        
+    public function action()
+    {
+        return  $this->action = $_SERVER['REQUEST_URI'];
     }
-    
-    
-    
-
-
 }

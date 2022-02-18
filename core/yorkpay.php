@@ -1,5 +1,5 @@
 <?php
-Class Yorkpay  extends Config{
+Class Yorkpay{
     public $key ;
    
     public function __construct(){
@@ -35,13 +35,13 @@ function payWithPaystack() {
 
   var handler = PaystackPop.setup({
 
-    key:"'.$this->public_key.'", 
+    key:"'.Config::get("PUBLIC_KEY").'", 
 
     email: "'.$email.'",
 
     amount: '.$amount.' * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
 
-    currency: "'.$this->currency_code.'", // Use GHS for Ghana Cedis or USD for US Dollars
+    currency: "'.Config::get("CURRENCY_CODE").'", // Use GHS for Ghana Cedis or USD for US Dollars
 
     firstname: "'.$fname.'",
 
@@ -73,7 +73,7 @@ function payWithPaystack() {
        
 
       //alert("Payment complete! Reference: " + reference);
-    window.location="'.$this->callback_url.'/'.$fname.' '.$lname.'/'.$email.'/'.$phone.'/'.$amount.'/'.$ref.'" ;
+    window.location="'.Config::get("CALLBACK_URL").'/'.$fname.' '.$lname.'/'.$email.'/'.$phone.'/'.$amount.'/'.$ref.'" ;
       
       // Make an AJAX call to your server with the reference to verify the transaction
       

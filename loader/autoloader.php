@@ -1,8 +1,11 @@
 <?php
+require __DIR__.'/../core/config.php';
 
- require 'PHPMailer/src/Exception.php';
- require 'PHPMailer/src/PHPMailer.php';
- require 'PHPMailer/src/SMTP.php';
+Config::init();
+
+ require  __DIR__.'/../PHPMailer/src/Exception.php';
+ require  __DIR__.'/../PHPMailer/src/PHPMailer.php';
+ require  __DIR__.'/../PHPMailer/src/SMTP.php';
 spl_autoload_register(function ($class) {
     $path = __DIR__.'/../core/'.lcfirst(str_replace('\\', '/', $class)).'.php';
     // include 'classes/'.$class.'.php';

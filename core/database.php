@@ -1,6 +1,6 @@
 <?php
 
-class database extends Config
+class database
 {
     public $conn;
 
@@ -12,7 +12,7 @@ class database extends Config
         // }
 
         try {
-            $this->conn = new PDO('mysql:host='.$this->db_host.';dbname='.$this->db_name.'', ''.$this->db_user.'', ''.$this->db_pass.'');
+            $this->conn = new PDO('mysql:host='.Config::get("DB_HOST").';dbname='.Config::get("DB_NAME").'', ''.Config::get("DB_USER").'', ''.Config::get("DB_PASS").'');
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             echo '<h1 style="color:red;">ERROR: Failed to connect  Database</h1>';

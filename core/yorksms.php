@@ -1,5 +1,5 @@
 <?php
-class Yorksms extends Config{
+class Yorksms{
     public $senderid;
     public $recipient;
     // public $apikey;
@@ -14,7 +14,7 @@ class Yorksms extends Config{
 
 
     public function sms($senderid,$recipient,$message){
-        $url = $this->client . "?key=" . $this->apikey . "&to=" . $recipient . "&msg=" . $message . "&sender_id=" . $senderid;
+        $url = $this->client . "?key=" .Config::get("APIKEY"). "&to=" . $recipient . "&msg=" . $message . "&sender_id=" . $senderid;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

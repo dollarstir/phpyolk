@@ -1,3 +1,19 @@
+# DirectoryIndex engine.php
+
+# # enable apache rewrite engine
+# RewriteEngine on
+
+# # set your rewrite base
+# # Edit this in your init method too if you script lives in a subfolder
+# RewriteBase /
+
+# # Deliver the folder or file directly if it exists on the server
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+ 
+# # Push every request to index.php
+# RewriteRule ^(.*)$ bmm/engine.php [QSA]
+
 DirectoryIndex engine.php
 
 # enable apache rewrite engine
@@ -11,5 +27,11 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
  
-# Push every request to index.php
-RewriteRule ^(.*)$ tms/engine.php [QSA]
+# Redirect all php and html files to engine.php
+# RewriteRule \/?(.+)\.(php|html)$ engine.php [L]
+
+# Redirect all asseets files to respective subfolder or location
+# RewriteRule \/?(.+)\.(.+)$ $1.$2 [L]
+
+#  Push every request to index.php
+RewriteRule ^(.*)$ bmm/engine.php [QSA]
