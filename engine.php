@@ -1,24 +1,33 @@
 <?php
+
 // require_once 'core/router.php';
 require_once 'loader/autoloader.php';
 
 $router = new Router([
     new Route(
-        "/",
+        '/',
         function ($context) {
-            return View::view('/main.php', $context);
+            return Viewer::view('/main.php', $context);
         }
     ),
     new Route(
-        "/test",
+        '/test',
         function ($context) {
-            return View::view('/test.php', $context);
+            return Viewer::view('/test.php', $context);
         }
     ),
+
     new Route(
-        "/test/{user}",
+        '/test/{id}',
         function ($context) {
-            return View::response("PHP York " . json_encode($context));
+            return Viewer::view('/test.php', $context);
+        }
+    ),
+
+    new Route(
+        '/test/{user}',
+        function ($context) {
+            return Viewer::response('PHP York '.json_encode($context));
         }
     ),
 ]);
@@ -29,8 +38,7 @@ $router = new Router([
 *
 */
 $router->route('/home', function ($context) {
-    return View::view('/main.php', $context);
+    return Viewer::view('/main.php', $context);
 });
-
 
 $router->launch();

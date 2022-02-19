@@ -19,7 +19,7 @@ if (isset($context['color'])) {
 </head>
 
 <body>
-    <h3 class="text-center m-4 <?= ($color == 1 ? 'text-success' : 'text-danger') ?>">
+    <h3 class="text-center m-4 <?= ($color == 1 ? 'text-success' : 'text-danger'); ?>">
         <i class="fa-solid fa-fire"></i>
         Thanks for choosing the York microframework!!!
     </h3>
@@ -28,7 +28,7 @@ if (isset($context['color'])) {
             <?php
             foreach ($context as $key => $value) {
                 echo '
-                    <li style="width: fit-content"><span>' . $key . '</span> : <span>' . $value . '</span></li>
+                    <li style="width: fit-content"><span>'.$key.'</span> : <span>'.$value.'</span></li>
                 ';
             }
             ?>
@@ -36,8 +36,8 @@ if (isset($context['color'])) {
     </h4>
     <h4 class="text-center text-muted mt-5">
         Try out this link :
-        <a href="?framework=york&color=<?= ++$color % 2 ?>">
-            <i class="fa fa-face-laugh-wink <?= ($color == 1 ? 'text-danger' : 'text-success') ?>"></i>
+        <a href="/framework=york&color=<?= ++$color % 2; ?>">
+            <i class="fa fa-face-laugh-wink <?= ($color == 1 ? 'text-danger' : 'text-success'); ?>"></i>
         </a>
     </h4>
 

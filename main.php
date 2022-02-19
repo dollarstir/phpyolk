@@ -20,7 +20,7 @@
         <a href="test">
             <i class="fa fa-face-laugh-wink text-success"></i>
         </a>
-    </h4>
+    </h4>   
 
     <form method="POST" action="">
         <?php
@@ -58,22 +58,19 @@
         Yolk::input('radio', 'Check', '', '', 'Agree', '');
         Yolk::input('checkbox', 'Check', '', '', 'Male', '');
         component::accordion(
-
             [
                 'kofi' => 'Ama',
-                'How to use php Yolk Framework' => "<strong>Easy going with you</strong> ok so with today we gonna be talking about how i built php york",
-                'Have you used php Yolk before?' => "<strong>Yes</strong> i have used php york before but i was not able to get it to work",
+                'How to use php Yolk Framework' => '<strong>Easy going with you</strong> ok so with today we gonna be talking about how i built php york',
+                'Have you used php Yolk before?' => '<strong>Yes</strong> i have used php york before but i was not able to get it to work',
             ]
         );
         component::basicalert('This is a basic alert', 'success', '', 'style="margin-top:10px;"');
-
 
         Yolk::input('password', 'password', '', '', 'Password');
         Yolk::input('submit', 'bbn', 'primary', '', 'Login', '');
         div::colm(4, 'e');
 
         div::row('e');
-
 
         div::fcont('e');
 
@@ -87,14 +84,10 @@
                 [
                     ['username', '=', $username],
                     ['password', '=', md5($password)],
-
-
                 ],
                 'AND'
-
             );
         }
-
 
         ?>
 
