@@ -6,13 +6,19 @@ $router = new Router([
     new Route(
         "/",
         function ($context) {
-            return View::response("PHP York " . json_encode($context));
+            return View::view('/main.php', $context);
         }
     ),
     new Route(
-        "/index/{tab}",
+        "/test",
         function ($context) {
-            return View::view('/index.php', $context);
+            return View::view('/test.php', $context);
+        }
+    ),
+    new Route(
+        "/test/{user}",
+        function ($context) {
+            return View::response("PHP York " . json_encode($context));
         }
     ),
 ]);
@@ -23,7 +29,7 @@ $router = new Router([
 *
 */
 $router->route('/home', function ($context) {
-    return View::view('/index.php', $context);
+    return View::view('/main.php', $context);
 });
 
 
