@@ -1,12 +1,12 @@
 <?php
 
-// require_once 'core/router.php';
-// require_once 'loader/viewer.php';
-// $router = new Router();
+require_once 'core/router.php';
+require_once 'loader/viewer.php';
+$router = new Router();
 
-// $router->route('bmm/', function () {
-//     return view('/main.php');
-// });
+$router->route('phpyork/', function () {
+    return view('main.php');
+});
 
 // $router->route('/', function () {
 //     return view('/main.php');
