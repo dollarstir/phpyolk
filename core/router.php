@@ -5,11 +5,27 @@ class Router
     /**
      * Holds the registered routes.
      *
-     * @var array
+     * @var Route[]
      */
-    public $routes = [];
+    private $routes = [];
 
-    public $action;
+    /**
+     * Requested route (URL).
+     *
+     * @var string
+     */
+    private $action;
+
+    /**
+     * Register a new route.
+     *
+     * @param $routes List of Routes
+     */
+    public function __construct($routes = [])
+    {
+        $this->routes = $routes;
+        $this->action = $_SERVER['REQUEST_URI'];
+    }
 
     /**
      * Register a new route.
@@ -19,52 +35,38 @@ class Router
      */
     public function route($action, Closure $callback)
     {
-        global $routes;
-        $action = trim($action, '/');
-        $action = preg_replace('/{[^}]+}/', '(.+)', $action);
-        $routes[$action] = $callback;
+        $this->routes[] = new Route($action, $callback);
     }
 
     /**
      * Dispatch the router.
      *
-     * @param $action string
      */
-    public function launch($action)
+    public function launch()
     {
-        global $routes;
-        $action = trim($action, '/');
-        // $callback = $routes[$action];
-        $callback = null;
-        $params = [];
-        foreach ($routes as $route => $handler) {
-            if (preg_match("%^{$route}$%", $action, $matches) === 1) {
-                // exit(var_dump($route) . " -- " . $action);
+        // Removing subfolder from url and correct root route
+        $action = trim($this->action, '/');
+        
+        $root = explode("/core", Path::root())[0];
+        $root = array_reverse(explode("/", $root))[0];
 
-                $callback = $handler;
-                unset($matches[0]);
-                $params = $matches;
+        $action = preg_replace("/^$root/", "", $action);
+        $action = trim(explode("?", $action)[0], "/");
+
+        $selected_route = null;
+        $params = [];
+        foreach ($this->routes as $route) {
+            if (preg_match("%^{$route->endpoint}$%", $action, $matches) === 1) {
+                $selected_route = $route;
+                $params = array_filter($matches, "is_string", ARRAY_FILTER_USE_KEY);
                 break;
             }
         }
-        if (!$callback || !is_callable($callback)) {
-            http_response_code(404);
-            require '404.html';
-            exit;
+
+        if (is_null($selected_route) || !is_callable($selected_route->view)) {
+            exit(View::error(404));
         }
 
-        echo call_user_func($callback, ...$params);
-    }
-
-    public function view($path, array $dollar)
-    {
-        func_get_args();
-
-        require __DIR__.'/../'.$path;
-    }
-
-    public function action()
-    {
-        return  $this->action = $_SERVER['REQUEST_URI'];
+        exit(call_user_func($selected_route->view, array_merge($params, $_GET)));
     }
 }
