@@ -16,11 +16,14 @@ class Yolk
     {
         switch ($type) {
             case 'cssb':
-                echo '<link rel="stylesheet" href="'.__DIR__.'../ui/css/bootstrap.min.css">';
+                echo '<link rel="stylesheet" href="ui/css/bootstrap.min.css">';
                 break;
 
             case 'cssa':
-                echo '<link rel="stylesheet" href="'.require __DIR__.'/../ui/css/sweetalert2.min.css">';
+                echo '<link rel="stylesheet" href="ui/css/sweetalert2.min.css">';
+                break;
+            case 'cssfa':
+                echo '<link rel="stylesheet" href="ui/css/all.min.css">';
                 break;
             case 'jsa':
                 echo '<script src="ui/js/sweetalert2.all.min.js"></script>';
@@ -31,13 +34,20 @@ class Yolk
             case 'jsb':
                 echo '<script src="ui/js/bootstrap.min.js"></script>';
                 break;
+            case 'jsfa':
+                echo '<script src="ui/js/all.min.js"></script>';
+                break;
             case 'allc':
                 echo '<link rel="stylesheet" href="ui/css/bootstrap.min.css">';
+                echo '<link rel="stylesheet" href="ui/css/all.min.css">';
                 echo '<link rel="stylesheet" href="ui/css/sweetalert2.min.css">';
+               
+                
                 break;
             case 'allj':
                 echo '<script src="ui/js/jquery.min.js"></script>';
                 echo '<script src="ui/js/bootstrap.min.js"></script>';
+                echo '<script src="ui/js/all.min.js"></script>';
                 echo '<script src="ui/js/sweetalert2.all.min.js"></script>';
                 break; }
     }
@@ -173,5 +183,7 @@ class Yolk
             ';
             }
                
+
+        
     }
 }

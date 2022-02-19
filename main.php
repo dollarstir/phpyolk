@@ -18,7 +18,9 @@ require 'loader/autoloader.php';
     <?php 
     div::fcont('s');
         
-    
+            Image::brandsvg('btc','20px','20');
+            Image::regularsvg('user','20px','20');
+            Image::solidsvg('bars','20px','20');
         div::row('s');
             div::colm(4,'s');
                 h::h3('s','style="text-align:center;"');
@@ -45,7 +47,17 @@ require 'loader/autoloader.php';
                 Yolk::floatingInput('email','Email Address');
                 Yolk::floatingInput('textarea','Enter your message here');
                 Yolk::input('range','range','','','Range','');
+                Yolk::input('radio','Check','','','Agree','');
                 Yolk::input('checkbox','Check','','','Male','');
+                component::accordion(
+                   
+                    [
+                        'kofi'=>'Ama',
+                        'How to use php Yolk Framework'=>"<strong>Easy going with you</strong> ok so with today we gonna be talking about how i built php york",
+                        'Have you used php Yolk before?'=>"<strong>Yes</strong> i have used php york before but i was not able to get it to work",
+                        ]
+                );
+                component::basicalert('This is a basic alert','success','','style="margin-top:10px;"');
 
 
                 Yolk::input('password','password','','','Password');
