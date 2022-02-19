@@ -1,19 +1,30 @@
 <?php
+// require_once 'core/router.php';
+require_once 'loader/autoloader.php';
 
-require_once 'core/router.php';
-require_once 'loader/viewer.php';
-$router = new Router();
+$router = new Router([
+    new Route(
+        "/",
+        function ($context) {
+            return View::response("PHP York " . json_encode($context));
+        }
+    ),
+    new Route(
+        "/index/{tab}",
+        function ($context) {
+            return View::view('/index.php', $context);
+        }
+    ),
+]);
 
-$router->route('phpyork/', function () {
-    return view('main.php');
+/*
+* @Test
+* Test with /home?id=2
+*
+*/
+$router->route('/home', function ($context) {
+    return View::view('/index.php', $context);
 });
 
-// $router->route('/', function () {
-//     return view('/main.php');
-// });
 
-// $router->route('tms/eventexecuted/{id}', function ($id) {
-//     return  view('/eventx_edit.php', [$id]);
-// });
-
-$router->launch($router->action());
+$router->launch();
