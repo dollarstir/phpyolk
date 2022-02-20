@@ -19,7 +19,7 @@ if (isset($context['color'])) {
 </head>
 
 <body>
-    <img width=100 height=100 src="<?= Path::rebase("test/after.png")?>">
+    <img width=100 height=100 src="<?= Path::rebase("j/after.png")?>">
 
     <h3 class="text-center m-4 <?= ($color == 1 ? 'text-success' : 'text-danger'); ?>">
         <i class="fa-solid fa-fire"></i>
