@@ -18,18 +18,18 @@ $router = new Router([
     ),
 
     new Route(
-        '/test/{id}',
+        '/test/{id}/customers/{cid}',
         function ($context) {
             return Viewer::view('/test.php', $context);
         }
     ),
 
-    new Route(
-        '/test/{user}',
-        function ($context) {
-            return Viewer::response('PHP York '.json_encode($context));
-        }
-    ),
+    // new Route(
+    //     '/test/{user}',
+    //     function ($context) {
+    //         return Viewer::response('PHP York '.json_encode($context));
+    //     }
+    // ),
 ]);
 
 /*

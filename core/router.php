@@ -40,31 +40,30 @@ class Router
 
     /**
      * Dispatch the router.
-     *
      */
     public function launch()
     {
         // Removing subfolder from url and correct root route
         $action = trim($this->action, '/');
-        
-        $root = explode("/core", Path::root())[0];
-        $root = array_reverse(explode("/", $root))[0];
 
-        $action = preg_replace("/^$root/", "", $action);
-        $action = trim(explode("?", $action)[0], "/");
+        $root = explode('/core', Path::root())[0];
+        $root = array_reverse(explode('/', $root))[0];
+
+        $action = preg_replace("/^$root/", '', $action);
+        $action = trim(explode('?', $action)[0], '/');
 
         $selected_route = null;
         $params = [];
         foreach ($this->routes as $route) {
             if (preg_match("%^{$route->endpoint}$%", $action, $matches) === 1) {
                 $selected_route = $route;
-                $params = array_filter($matches, "is_string", ARRAY_FILTER_USE_KEY);
+                $params = array_filter($matches, 'is_string', ARRAY_FILTER_USE_KEY);
                 break;
             }
         }
 
         if (is_null($selected_route) || !is_callable($selected_route->view)) {
-            exit(View::error(404));
+            exit(Viewer::error(404));
         }
 
         exit(call_user_func($selected_route->view, array_merge($params, $_GET)));

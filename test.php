@@ -21,7 +21,7 @@ if (isset($context['color'])) {
 <body>
     <h3 class="text-center m-4 <?= ($color == 1 ? 'text-success' : 'text-danger'); ?>">
         <i class="fa-solid fa-fire"></i>
-        Thanks for choosing the York microframework!!!
+        Thanks for choosing the Yolk framework!!!
     </h3>
     <h4 class="text-muted m-4">
         <ul>
@@ -36,7 +36,7 @@ if (isset($context['color'])) {
     </h4>
     <h4 class="text-center text-muted mt-5">
         Try out this link :
-        <a href="/framework=york&color=<?= ++$color % 2; ?>">
+        <a href="test/2">
             <i class="fa fa-face-laugh-wink <?= ($color == 1 ? 'text-danger' : 'text-success'); ?>"></i>
         </a>
     </h4>
