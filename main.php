@@ -11,13 +11,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <?php Yolk::uicore('allc'); ?>
+    <?php Yolk::uicore('allcss'); ?>
 </head>
 
 <body>
     <h4 class="text-center text-muted my-5">
         Try out this link :
-        <a href="<?= Path::rebase("test/1") ?>">
+        <a href="<?= Path::rebase('test/1'); ?>">
             <i class="fa fa-face-laugh-wink text-success"></i>
         </a>
     </h4>   
@@ -91,7 +91,7 @@
 
         ?>
 
-        <?php Yolk::uicore('allj'); ?>
+        <?php Yolk::uicore('alljs'); ?>
     </form>
     <script>
         function hello() {

@@ -4,7 +4,7 @@ class Yolk
 {
     public static function goto($loaction)
     {
-        echo  '<script>window.location="' . $loaction . '"</script>';
+        echo  '<script>window.location="'.$loaction.'"</script>';
     }
 
     public static function say($something)
@@ -16,42 +16,42 @@ class Yolk
     {
         switch ($type) {
             case 'cssb':
-                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/bootstrap.min.css") . '">';
+                echo '<link rel="stylesheet" href="'.Path::rebase('ui/css/bootstrap.min.css').'">';
                 break;
 
             case 'cssa':
-                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/sweetalert2.min.css") . '">';
+                echo '<link rel="stylesheet" href="'.Path::rebase('ui/css/sweetalert2.min.css').'">';
                 break;
             case 'cssfa':
-                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/all.min.css") . '">';
+                echo '<link rel="stylesheet" href="'.Path::rebase('ui/css/all.min.css').'">';
                 break;
             case 'jsa':
-                echo '<script src="' . Path::rebase("ui/js/sweetalert2.all.min.js") . '"></script>';
+                echo '<script src="'.Path::rebase('ui/js/sweetalert2.all.min.js').'"></script>';
                 break;
             case 'jsj':
-                echo '<script src="' . Path::rebase("ui/js/jquery.min.js") . '"></script>';
+                echo '<script src="'.Path::rebase('ui/js/jquery.min.js').'"></script>';
                 break;
             case 'jsb':
-                echo '<script src="' . Path::rebase("ui/js/bootstrap.min.js") . '"></script>';
+                echo '<script src="'.Path::rebase('ui/js/bootstrap.min.js').'"></script>';
                 break;
             case 'jsfa':
-                echo '<script src="' . Path::rebase("ui/js/all.min.js") . '"></script>';
+                echo '<script src="'.Path::rebase('ui/js/all.min.js').'"></script>';
                 break;
-            case 'allc':
-                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/bootstrap.min.css") . '">';
-                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/all.min.css") . '">';
-                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/sweetalert2.min.css") . '">';
-               
+            case 'allcss':
+                echo '<link rel="stylesheet" href="'.Path::rebase('ui/css/bootstrap.min.css').'">';
+                echo '<link rel="stylesheet" href="'.Path::rebase('ui/css/all.min.css').'">';
+                echo '<link rel="stylesheet" href="'.Path::rebase('ui/css/sweetalert2.min.css').'">';
+
                 break;
-            case 'allj':
-                echo '<script src="' . Path::rebase("ui/js/jquery.min.js") . '"></script>';
-                echo '<script src="' . Path::rebase("ui/js/bootstrap.min.js") . '"></script>';
-                echo '<script src="' . Path::rebase("ui/js/all.min.js") . '"></script>';
-                echo '<script src="' . Path::rebase("ui/js/sweetalert2.all.min.js") . '"></script>';
+            case 'alljs':
+                echo '<script src="'.Path::rebase('ui/js/jquery.min.js').'"></script>';
+                echo '<script src="'.Path::rebase('ui/js/bootstrap.min.js').'"></script>';
+                echo '<script src="'.Path::rebase('ui/js/all.min.js').'"></script>';
+                echo '<script src="'.Path::rebase('ui/js/sweetalert2.all.min.js').'"></script>';
                 break; }
     }
 
-    public static function button($type, $text = 'Button', $class = 'primary add', $id = '' , $onclick = '', $other = '')
+    public static function button($type, $text = 'Button', $class = 'primary add', $id = '', $onclick = '', $other = '')
     {
         switch ($type) {
             case 'btn':
@@ -88,7 +88,7 @@ class Yolk
         }
     }
 
-    public static function input($type, $name='',$class = '', $id = '',$label='', $value = '', $other = '',$onclick = '')
+    public static function input($type, $name = '', $class = '', $id = '', $label = '', $value = '', $other = '', $onclick = '')
     {
         switch ($type) {
             case 'text':
@@ -122,7 +122,7 @@ class Yolk
                     <button type="reset" class=" btn btn-'.$class.'" id="'.$id.'" onclick="'.$onclick.'" '.$other.'>'.$label.'</button>
                     
                     </div>';
-                    
+
                 break;
             case 'submit':
                     echo '
@@ -165,24 +165,20 @@ class Yolk
         }
     }
 
-    public static function floatingInput($type,$label,$name='',$class='',$placeholder='',$id='',$other=''){
-
-            if(strtolower($type) == 'textarea'){
-                echo'<div class="form-floating">
+    public static function floatingInput($type, $label, $name = '', $class = '', $placeholder = '', $id = '', $other = '')
+    {
+        if (strtolower($type) == 'textarea') {
+            echo'<div class="form-floating">
                 <textarea class="form-control '.$class.'" id="'.$id.'" name="'.$name.'" placeholder="'.$placeholder.'"></textarea>
                 <label for="'.$id.'">'.$label.'</label>
               </div> ';
-
-            }else{
-                echo '
+        } else {
+            echo '
             <div class="form-floating mb-3">
                 <input type="'.$type.'" class="form-control '.$class.'" id="'.$id.'" placeholder="'.$placeholder.'" '.$other.'>
                 <label for="floatingInput">'.$label.'</label>
             </div>
             ';
-            }
-               
-
-        
+        }
     }
 }

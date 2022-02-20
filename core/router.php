@@ -45,7 +45,7 @@ class Router
     {
         // Removing subfolder from url and correct root route
         $action = trim($this->action, '/');
-        $root = trim(Path::rebase(), "/");
+        $root = trim(Path::rebase(), '/');
 
         $root = explode('/core', Path::root())[0];
         $root = array_reverse(explode('/', $root))[0];
