@@ -4,7 +4,7 @@ class Yolk
 {
     public static function goto($loaction)
     {
-        echo  '<script>window.location="' . $loaction . '"</script>';
+        echo  '<script>window.location="'.$loaction.'"</script>';
     }
 
     public static function say($something)
@@ -51,7 +51,7 @@ class Yolk
                 break; }
     }
 
-    public static function button($type, $text = 'Button', $class = 'primary add', $id = '' , $onclick = '', $other = '')
+    public static function button($type, $text = 'Button', $class = 'primary add', $id = '', $onclick = '', $other = '')
     {
         switch ($type) {
             case 'btn':
@@ -88,7 +88,7 @@ class Yolk
         }
     }
 
-    public static function input($type, $name='',$class = '', $id = '',$label='', $value = '', $other = '',$onclick = '')
+    public static function input($type, $name = '', $class = '', $id = '', $label = '', $value = '', $other = '', $onclick = '')
     {
         switch ($type) {
             case 'text':
@@ -122,7 +122,7 @@ class Yolk
                     <button type="reset" class=" btn btn-'.$class.'" id="'.$id.'" onclick="'.$onclick.'" '.$other.'>'.$label.'</button>
                     
                     </div>';
-                    
+
                 break;
             case 'submit':
                     echo '
@@ -165,24 +165,20 @@ class Yolk
         }
     }
 
-    public static function floatingInput($type,$label,$name='',$class='',$placeholder='',$id='',$other=''){
-
-            if(strtolower($type) == 'textarea'){
-                echo'<div class="form-floating">
+    public static function floatingInput($type, $label, $name = '', $class = '', $placeholder = '', $id = '', $other = '')
+    {
+        if (strtolower($type) == 'textarea') {
+            echo'<div class="form-floating">
                 <textarea class="form-control '.$class.'" id="'.$id.'" name="'.$name.'" placeholder="'.$placeholder.'"></textarea>
                 <label for="'.$id.'">'.$label.'</label>
               </div> ';
-
-            }else{
-                echo '
+        } else {
+            echo '
             <div class="form-floating mb-3">
                 <input type="'.$type.'" class="form-control '.$class.'" id="'.$id.'" placeholder="'.$placeholder.'" '.$other.'>
                 <label for="floatingInput">'.$label.'</label>
             </div>
             ';
-            }
-               
-
-        
+        }
     }
 }

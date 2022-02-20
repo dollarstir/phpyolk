@@ -15,7 +15,7 @@ if (isset($context['color'])) {
 
     <title>Document</title>
 
-    <?php Yolk::uicore('allc'); ?>
+    <?php Yolk::uicore('allcss'); ?>
 </head>
 
 <body>
@@ -41,7 +41,11 @@ if (isset($context['color'])) {
 
     <h4 class="text-center text-muted mt-5">
         Try out this link :
+<<<<<<< HEAD
         <a href="<?= Path::rebase("test/Yolk/".(++$color % 2)); ?>">
+=======
+        <a href="<?= Path::rebase('test/york/'.(++$color % 2)); ?>">
+>>>>>>> 5e93469e300ebd09566cd6cb1a3e73dde5914688
             <i class="fa fa-face-laugh-wink <?= ($color == 1 ? 'text-danger' : 'text-success'); ?>"></i>
         </a>
     </h4>

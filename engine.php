@@ -1,4 +1,5 @@
 <?php
+
 require_once 'loader/autoloader.php';
 
 $router = new Router([
