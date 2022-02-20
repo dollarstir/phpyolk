@@ -12,10 +12,10 @@ class Path {
 
         $uri = $_SERVER['REQUEST_URI'];
         
-        if(!preg_match("/^\/$root/", $uri)) {
+        if(!preg_match("/^\/?$root/", $uri)) {
             return "/$path";
         }
-
+        
         return "/$root/$path";
     }
 }

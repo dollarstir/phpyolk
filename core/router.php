@@ -47,14 +47,22 @@ class Router
         $action = trim($this->action, '/');
         $root = trim(Path::rebase(), "/");
 
-        $root = explode('/core', Path::root())[0];
-        $root = array_reverse(explode('/', $root))[0];
-
-        $action = preg_replace("/^$root/", '', $action);
+        $action = preg_replace("/\/?^$root/", '', $action);
         $action = trim(explode('?', $action)[0], '/');
 
         $selected_route = null;
         $params = [];
+        
+        if (preg_match("/.+\.[a-zA-Z0-9]+$/", $action)) {
+            exit(Viewer::assets(
+                $action,
+                [
+                    "Accept-Ranges" => "bytes",
+                    "Content-Type" => getallheaders()["Accept"] . "*/*",
+                ]
+            ));
+        }
+
         foreach ($this->routes as $route) {
             if (preg_match("%^{$route->endpoint}$%", $action, $matches) === 1) {
                 $selected_route = $route;
