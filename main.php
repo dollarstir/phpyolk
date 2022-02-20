@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <?php Yolk::uicore('allcss'); ?>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
