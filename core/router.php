@@ -46,9 +46,7 @@ class Router
     {
         // Removing subfolder from url and correct root route
         $action = trim($this->action, '/');
-        
-        $root = explode("/core", Path::root())[0];
-        $root = array_reverse(explode("/", $root))[0];
+        $root = trim(Path::rebase(), "/");
 
         $action = preg_replace("/^$root/", "", $action);
         $action = trim(explode("?", $action)[0], "/");
@@ -64,7 +62,7 @@ class Router
         }
 
         if (is_null($selected_route) || !is_callable($selected_route->view)) {
-            exit(View::error(404));
+            exit(Viewer::error(404));
         }
 
         exit(call_user_func($selected_route->view, array_merge($params, $_GET)));
