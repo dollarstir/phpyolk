@@ -15,7 +15,7 @@ $router = new Router([
         }
     ),
     new Route(
-        '/test/{id}',
+        '/test/{id}/customers/{cid}',
         function ($context) {
             return Viewer::view('/test.php', $context);
         }

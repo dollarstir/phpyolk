@@ -23,7 +23,7 @@ if (isset($context['color'])) {
 
     <h3 class="text-center m-4 <?= ($color == 1 ? 'text-success' : 'text-danger'); ?>">
         <i class="fa-solid fa-fire"></i>
-        Thanks for choosing the York microframework!!!
+        Thanks for choosing the Yolk framework!!!
     </h3>
 
     <h4 class="text-muted m-4">

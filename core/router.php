@@ -40,7 +40,6 @@ class Router
 
     /**
      * Dispatch the router.
-     *
      */
     public function launch()
     {
@@ -48,15 +47,18 @@ class Router
         $action = trim($this->action, '/');
         $root = trim(Path::rebase(), "/");
 
-        $action = preg_replace("/^$root/", "", $action);
-        $action = trim(explode("?", $action)[0], "/");
+        $root = explode('/core', Path::root())[0];
+        $root = array_reverse(explode('/', $root))[0];
+
+        $action = preg_replace("/^$root/", '', $action);
+        $action = trim(explode('?', $action)[0], '/');
 
         $selected_route = null;
         $params = [];
         foreach ($this->routes as $route) {
             if (preg_match("%^{$route->endpoint}$%", $action, $matches) === 1) {
                 $selected_route = $route;
-                $params = array_filter($matches, "is_string", ARRAY_FILTER_USE_KEY);
+                $params = array_filter($matches, 'is_string', ARRAY_FILTER_USE_KEY);
                 break;
             }
         }
