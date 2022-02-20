@@ -17,7 +17,7 @@
 <body>
     <h4 class="text-center text-muted my-5">
         Try out this link :
-        <a href="test">
+        <a href="<?= Path::rebase("test/1") ?>">
             <i class="fa fa-face-laugh-wink text-success"></i>
         </a>
     </h4>   

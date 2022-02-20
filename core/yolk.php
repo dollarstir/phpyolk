@@ -4,7 +4,7 @@ class Yolk
 {
     public static function goto($loaction)
     {
-        echo  '<script>window.location="'.$loaction.'"</script>';
+        echo  '<script>window.location="' . $loaction . '"</script>';
     }
 
     public static function say($something)
@@ -16,39 +16,38 @@ class Yolk
     {
         switch ($type) {
             case 'cssb':
-                echo '<link rel="stylesheet" href="ui/css/bootstrap.min.css">';
+                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/bootstrap.min.css") . '">';
                 break;
 
             case 'cssa':
-                echo '<link rel="stylesheet" href="ui/css/sweetalert2.min.css">';
+                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/sweetalert2.min.css") . '">';
                 break;
             case 'cssfa':
-                echo '<link rel="stylesheet" href="ui/css/all.min.css">';
+                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/all.min.css") . '">';
                 break;
             case 'jsa':
-                echo '<script src="ui/js/sweetalert2.all.min.js"></script>';
+                echo '<script src="' . Path::rebase("ui/js/sweetalert2.all.min.js") . '"></script>';
                 break;
             case 'jsj':
-                echo '<script src="ui/js/jquery.min.js"></script>';
+                echo '<script src="' . Path::rebase("ui/js/jquery.min.js") . '"></script>';
                 break;
             case 'jsb':
-                echo '<script src="ui/js/bootstrap.min.js"></script>';
+                echo '<script src="' . Path::rebase("ui/js/bootstrap.min.js") . '"></script>';
                 break;
             case 'jsfa':
-                echo '<script src="ui/js/all.min.js"></script>';
+                echo '<script src="' . Path::rebase("ui/js/all.min.js") . '"></script>';
                 break;
             case 'allc':
-                echo '<link rel="stylesheet" href="ui/css/bootstrap.min.css">';
-                echo '<link rel="stylesheet" href="ui/css/all.min.css">';
-                echo '<link rel="stylesheet" href="ui/css/sweetalert2.min.css">';
+                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/bootstrap.min.css") . '">';
+                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/all.min.css") . '">';
+                echo '<link rel="stylesheet" href="' . Path::rebase("ui/css/sweetalert2.min.css") . '">';
                
-                
                 break;
             case 'allj':
-                echo '<script src="ui/js/jquery.min.js"></script>';
-                echo '<script src="ui/js/bootstrap.min.js"></script>';
-                echo '<script src="ui/js/all.min.js"></script>';
-                echo '<script src="ui/js/sweetalert2.all.min.js"></script>';
+                echo '<script src="' . Path::rebase("ui/js/jquery.min.js") . '"></script>';
+                echo '<script src="' . Path::rebase("ui/js/bootstrap.min.js") . '"></script>';
+                echo '<script src="' . Path::rebase("ui/js/all.min.js") . '"></script>';
+                echo '<script src="' . Path::rebase("ui/js/sweetalert2.all.min.js") . '"></script>';
                 break; }
     }
 
