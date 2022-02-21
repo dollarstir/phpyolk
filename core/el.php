@@ -4,11 +4,9 @@ class el
 {
     public static function p($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <p '.$attributes.'>';
 
@@ -19,20 +17,16 @@ class el
         ';
     }
 
-    public static function a($href='',$attributes = '', $content = ['link here'])
+    public static function a($href = '', $attributes = '', $content = ['link here'])
     {
-        if(strpos($href,'http') !== false){
+        if (strpos($href, 'http') !== false) {
             echo ' <a href="'.($href).'" '.$attributes.'>';
-        }
-        else{
-            
+        } else {
             echo ' <a href="'.Path::rebase($href).'" '.$attributes.'>';
         }
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
 
         foreach ($content as $result) {
@@ -44,11 +38,9 @@ class el
 
     public static function nav($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo 'nav '.$attributes.'>';
 
@@ -61,11 +53,9 @@ class el
 
     public static function html($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <html '.$attributes.'>';
 
@@ -78,11 +68,9 @@ class el
 
     public static function head($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <head '.$attributes.'>';
 
@@ -95,11 +83,9 @@ class el
 
     public static function title($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <title '.$attributes.'>';
 
@@ -112,11 +98,9 @@ class el
 
     public static function body($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <body '.$attributes.'>';
 
@@ -129,11 +113,9 @@ class el
 
     public static function abbr($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <abbr '.$attributes.'>';
 
@@ -146,11 +128,9 @@ class el
 
     public static function acronym($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <acronym '.$attributes.'>';
 
@@ -163,11 +143,9 @@ class el
 
     public static function address($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <address '.$attributes.'>';
 
@@ -180,11 +158,9 @@ class el
 
     public static function applet($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <applet '.$attributes.'>';
 
@@ -197,11 +173,9 @@ class el
 
     public static function area($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <area '.$attributes.'>';
 
@@ -214,11 +188,9 @@ class el
 
     public static function article($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <article '.$attributes.'>';
 
@@ -231,11 +203,9 @@ class el
 
     public static function aside($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <aside '.$attributes.'>';
 
@@ -256,11 +226,9 @@ class el
 
     public static function b($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <b '.$attributes.'>';
 
@@ -278,11 +246,9 @@ class el
 
     public static function bdi($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <bdi '.$attributes.'>';
 
@@ -295,11 +261,9 @@ class el
 
     public static function bdo($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <bdo '.$attributes.'>';
 
@@ -312,11 +276,9 @@ class el
 
     public static function big($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <big '.$attributes.'>';
 
@@ -329,11 +291,9 @@ class el
 
     public static function blockquote($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <blockquote '.$attributes.'>';
 
@@ -348,15 +308,12 @@ class el
     {
         echo ' <br '.$attributes.'>';
     }
-    
 
     public static function button($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <button '.$attributes.'>';
 
@@ -369,11 +326,9 @@ class el
 
     public static function canvas($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <canvas '.$attributes.'>';
 
@@ -386,11 +341,9 @@ class el
 
     public static function caption($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <caption '.$attributes.'>';
 
@@ -403,11 +356,9 @@ class el
 
     public static function center($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <center '.$attributes.'>';
 
@@ -420,11 +371,9 @@ class el
 
     public static function cite($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <cite '.$attributes.'>';
 
@@ -437,11 +386,9 @@ class el
 
     public static function code($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <code '.$attributes.'>';
 
@@ -454,11 +401,9 @@ class el
 
     public static function col($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <col '.$attributes.'>';
 
@@ -471,11 +416,9 @@ class el
 
     public static function colgroup($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <colgroup '.$attributes.'>';
 
@@ -488,11 +431,9 @@ class el
 
     public static function data($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <data '.$attributes.'>';
 
@@ -505,11 +446,9 @@ class el
 
     public static function datalist($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <datalist '.$attributes.'>';
 
@@ -522,11 +461,9 @@ class el
 
     public static function dd($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <dd '.$attributes.'>';
 
@@ -539,11 +476,9 @@ class el
 
     public static function del($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <del '.$attributes.'>';
 
@@ -556,11 +491,9 @@ class el
 
     public static function details($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <details '.$attributes.'>';
 
@@ -573,11 +506,9 @@ class el
 
     public static function dfn($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <dfn '.$attributes.'>';
 
@@ -590,11 +521,9 @@ class el
 
     public static function dialog($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <dialog '.$attributes.'>';
 
@@ -607,11 +536,9 @@ class el
 
     public static function dir($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <dir '.$attributes.'>';
 
@@ -622,13 +549,11 @@ class el
         ';
     }
 
-    public static function div($attributes = '', $content = [])
+    public static function divi($attributes = '', $content = [''])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <div '.$attributes.'>';
 
@@ -636,16 +561,14 @@ class el
             echo $result;
         }
         echo'</div>
-        ';
+';
     }
 
     public static function dl($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <dl '.$attributes.'>';
 
@@ -658,11 +581,9 @@ class el
 
     public static function dt($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <dt '.$attributes.'>';
 
@@ -675,11 +596,9 @@ class el
 
     public static function em($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <em '.$attributes.'>';
 
@@ -690,19 +609,16 @@ class el
         ';
     }
 
-    public static function embed($source,$attributes = '')
+    public static function embed($source, $attributes = '')
     {
         echo ' <embed src="'.$source.'" '.$attributes.'>';
     }
-   
 
     public static function fieldset($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <fieldset '.$attributes.'>';
 
@@ -715,11 +631,9 @@ class el
 
     public static function figure($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <figure '.$attributes.'>';
 
@@ -732,11 +646,9 @@ class el
 
     public static function figcaption($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <figcaption '.$attributes.'>';
 
@@ -749,11 +661,9 @@ class el
 
     public static function font($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <font '.$attributes.'>';
 
@@ -766,11 +676,9 @@ class el
 
     public static function footer($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <footer '.$attributes.'>';
 
@@ -781,13 +689,11 @@ class el
         ';
     }
 
-    public static function form($action='',$method='',$attributes = '', $content = [])
+    public static function form($action = '', $method = '', $attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <form '.$action.' '.$method.' '.$attributes.'>';
 
@@ -800,11 +706,9 @@ class el
 
     public static function frame($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <frame '.$attributes.'>';
 
@@ -817,11 +721,9 @@ class el
 
     public static function frameset($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <frameset '.$attributes.'>';
 
@@ -834,11 +736,9 @@ class el
 
     public static function h1($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <h1 '.$attributes.'>';
 
@@ -851,11 +751,9 @@ class el
 
     public static function h2($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <h2 '.$attributes.'>';
 
@@ -868,11 +766,9 @@ class el
 
     public static function h3($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <h3 '.$attributes.'>';
 
@@ -885,11 +781,9 @@ class el
 
     public static function h4($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <h4 '.$attributes.'>';
 
@@ -902,11 +796,9 @@ class el
 
     public static function h5($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <h5 '.$attributes.'>';
 
@@ -919,11 +811,9 @@ class el
 
     public static function h6($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <h6 '.$attributes.'>';
 
@@ -936,11 +826,9 @@ class el
 
     public static function header($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <header '.$attributes.'>';
 
@@ -955,15 +843,12 @@ class el
     {
         echo ' <hr '.$attributes.'>';
     }
-    
 
     public static function i($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <i '.$attributes.'>';
 
@@ -974,13 +859,11 @@ class el
         ';
     }
 
-    public static function iframe($source='',$attributes = '', $content = [])
+    public static function iframe($source = '', $attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <iframe src="'.$source.'" '.$attributes.'>';
 
@@ -991,41 +874,36 @@ class el
         ';
     }
 
-    public static function img($source='',$attributes = '')
+    public static function img($source = '', $attributes = '')
     {
         echo ' <img src="'.$source.'" '.$attributes.'>';
     }
 
-    public static function image($source='',$attributes = '')
+    public static function image($source = '', $attributes = '')
     {
         echo ' <img src="'.$source.'" '.$attributes.'>';
     }
 
-    public static function pic($source='',$attributes = '')
+    public static function pic($source = '', $attributes = '')
     {
         echo ' <img src="'.$source.'" '.$attributes.'>';
     }
 
-    public static function photo($source='',$attributes = '')
+    public static function photo($source = '', $attributes = '')
     {
         echo ' <img src="'.$source.'" '.$attributes.'>';
     }
 
-    
-   
-
-    public static function input($type='text',$name='',$class='',$id='',$attributes = '')
+    public static function input($type = 'text', $name = '', $class = '', $id = '', $attributes = '')
     {
         echo ' <input type="'.$type.'" name="'.$name.'" class="'.$class.'" id="'.$id.'" '.$attributes.'>';
     }
 
     public static function ins($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <ins '.$attributes.'>';
 
@@ -1038,11 +916,9 @@ class el
 
     public static function kbd($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <kbd '.$attributes.'>';
 
@@ -1055,11 +931,9 @@ class el
 
     public static function keyboard($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <kbd '.$attributes.'>';
 
@@ -1072,11 +946,9 @@ class el
 
     public static function label($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <label '.$attributes.'>';
 
@@ -1089,11 +961,9 @@ class el
 
     public static function legend($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo '<legend '.$attributes.'>';
 
@@ -1106,11 +976,9 @@ class el
 
     public static function li($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <li '.$attributes.'>';
 
@@ -1121,53 +989,46 @@ class el
         ';
     }
 
-    public static function linkatom($href='',$attributes = '')
+    public static function linkatom($href = '', $attributes = '')
     {
-        
         echo '<link rel="alternate" href="'.$href.'" type="application/atom+xml" title="Atom" '.$attributes.'>';
     }
 
-
-    public static function linkcss($href='',$attributes = '')
+    public static function linkcss($href = '', $attributes = '')
     {
         echo '<link rel="stylesheet" href="'.$href.'" type="text/css" '.$attributes.'>';
     }
 
-
-    public static function favicon($href='',$attributes = '',$type='')
+    public static function favicon($href = '', $attributes = '', $type = '')
     {
         echo '<link rel="shortcut icon" href="'.$href.'" type="'.$type.'">';
     }
 
-
-    public static function linkimport($href='',$attributes = '')
+    public static function linkimport($href = '', $attributes = '')
     {
         echo '<link rel="import" href="'.$href.'">';
     }
 
-    public static function linkmanifest($href='',$attributes = '')
+    public static function linkmanifest($href = '', $attributes = '')
     {
         echo '<link rel="manifest" href="'.$href.'">';
     }
 
-    public static function linkrss($href='',$attributes = '')
+    public static function linkrss($href = '', $attributes = '')
     {
         echo '<link rel="alternate" href="'.$href.'" type="application/rss+xml" title="RSS">';
     }
 
-    public static function linktouchicon($href='',$attributes = '')
+    public static function linktouchicon($href = '', $attributes = '')
     {
         echo '<link rel="apple-touch-icon" href="'.$href.'">';
     }
-    
 
     public static function main($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <main '.$attributes.'>';
 
@@ -1178,13 +1039,11 @@ class el
         ';
     }
 
-    public static function map($name='',$attributes = '', $content = [])
+    public static function map($name = '', $attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <map '.$name.' '.$attributes.'>';
 
@@ -1195,18 +1054,16 @@ class el
         ';
     }
 
-    public static function maparea($href='',$shape='',$cordinate='',$attributes = '')
+    public static function maparea($href = '', $shape = '', $cordinate = '', $attributes = '')
     {
         echo '<area shape="'.$shape.'" coords="'.$cordinate.'" '.$href.' '.$attributes.'>';
     }
 
     public static function mark($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <mark '.$attributes.'>';
 
@@ -1219,11 +1076,9 @@ class el
 
     public static function meter($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <meter '.$attributes.'>';
 
@@ -1236,11 +1091,9 @@ class el
 
     public static function noframes($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <noframes '.$attributes.'>';
 
@@ -1253,11 +1106,9 @@ class el
 
     public static function noscript($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo '<noscript '.$attributes.'>';
 
@@ -1270,11 +1121,9 @@ class el
 
     public static function object($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <object '.$attributes.'>';
 
@@ -1287,11 +1136,9 @@ class el
 
     public static function ol($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <ol '.$attributes.'>';
 
@@ -1304,11 +1151,9 @@ class el
 
     public static function optgroup($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <optgroup '.$attributes.'>';
 
@@ -1319,14 +1164,11 @@ class el
         ';
     }
 
-
     public static function option($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <option '.$attributes.'>';
 
@@ -1339,11 +1181,9 @@ class el
 
     public static function output($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <output '.$attributes.'>';
 
@@ -1356,11 +1196,9 @@ class el
 
     public static function param($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <param '.$attributes.'>';
 
@@ -1371,15 +1209,11 @@ class el
         ';
     }
 
-   
-
     public static function picture($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <picture '.$attributes.'>';
 
@@ -1392,11 +1226,9 @@ class el
 
     public static function pre($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <pre '.$attributes.'>';
 
@@ -1409,11 +1241,9 @@ class el
 
     public static function prev($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <pre '.$attributes.'>';
 
@@ -1423,13 +1253,12 @@ class el
         echo'</pre>
         ';
     }
+
     public static function preview($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <pre '.$attributes.'>';
 
@@ -1440,13 +1269,11 @@ class el
         ';
     }
 
-    public static function progress($value='',$max='100',$attributes = '', $content = [])
+    public static function progress($value = '', $max = '100', $attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <progress value="'.$value.'" max="'.$max.'" '.$attributes.'>';
 
@@ -1457,13 +1284,11 @@ class el
         ';
     }
 
-    public static function progressbar($value='',$max='100',$attributes = '', $content = [])
+    public static function progressbar($value = '', $max = '100', $attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <progress value="'.$value.'" max="'.$max.'" '.$attributes.'>';
 
@@ -1476,11 +1301,9 @@ class el
 
     public static function q($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <q '.$attributes.'>';
 
@@ -1493,11 +1316,9 @@ class el
 
     public static function rp($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <rp '.$attributes.'>';
 
@@ -1510,11 +1331,9 @@ class el
 
     public static function rt($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <rt '.$attributes.'>';
 
@@ -1527,11 +1346,9 @@ class el
 
     public static function ruby($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <ruby '.$attributes.'>';
 
@@ -1544,11 +1361,9 @@ class el
 
     public static function s($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <s '.$attributes.'>';
 
@@ -1561,11 +1376,9 @@ class el
 
     public static function samp($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <samp '.$attributes.'>';
 
@@ -1578,11 +1391,9 @@ class el
 
     public static function script($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <script '.$attributes.'>';
 
@@ -1595,11 +1406,9 @@ class el
 
     public static function section($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <section '.$attributes.'>';
 
@@ -1610,13 +1419,11 @@ class el
         ';
     }
 
-    public static function select($name='' ,$attributes = '', $content = [])
+    public static function select($name = '', $attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <select '.$name.'  '.$attributes.'>';
 
@@ -1629,11 +1436,9 @@ class el
 
     public static function small($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <small '.$attributes.'>';
 
@@ -1644,21 +1449,16 @@ class el
         ';
     }
 
-    public static function source($source='',$type='',$attributes = '')
+    public static function source($source = '', $type = '', $attributes = '')
     {
         echo ' <source src="'.$source.'" type="'.$type.'" '.$attributes.'>';
-
-       
     }
-    
 
     public static function span($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <span '.$attributes.'>';
 
@@ -1669,15 +1469,11 @@ class el
         ';
     }
 
-    
-
     public static function strike($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <strike '.$attributes.'>';
 
@@ -1690,11 +1486,9 @@ class el
 
     public static function strong($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <strong '.$attributes.'>';
 
@@ -1707,11 +1501,9 @@ class el
 
     public static function style($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <style '.$attributes.'>';
 
@@ -1724,11 +1516,9 @@ class el
 
     public static function sub($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <sub '.$attributes.'>';
 
@@ -1741,11 +1531,9 @@ class el
 
     public static function summary($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <summary '.$attributes.'>';
 
@@ -1758,11 +1546,9 @@ class el
 
     public static function sup($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <sup '.$attributes.'>';
 
@@ -1775,11 +1561,9 @@ class el
 
     public static function superscript($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <sup '.$attributes.'>';
 
@@ -1790,13 +1574,11 @@ class el
         ';
     }
 
-    public static function svg($width='',$height='',$attributes = '', $content = [])
+    public static function svg($width = '', $height = '', $attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <svg '.$width.' '.$height.' '.$attributes.'>';
 
@@ -1809,11 +1591,9 @@ class el
 
     public static function table($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <table '.$attributes.'>';
 
@@ -1826,11 +1606,9 @@ class el
 
     public static function tbody($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <tbody '.$attributes.'>';
 
@@ -1843,11 +1621,9 @@ class el
 
     public static function td($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <td '.$attributes.'>';
 
@@ -1860,11 +1636,9 @@ class el
 
     public static function template($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <template '.$attributes.'>';
 
@@ -1875,13 +1649,11 @@ class el
         ';
     }
 
-    public static function textarea ($name='',$rows='',$cols='',$attributes = '', $content = [])
+    public static function textarea($name = '', $rows = '', $cols = '', $attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <textarea '.$attributes.'>';
 
@@ -1894,11 +1666,9 @@ class el
 
     public static function tfoot($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <tfoot '.$attributes.'>';
 
@@ -1911,11 +1681,9 @@ class el
 
     public static function th($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <th '.$attributes.'>';
 
@@ -1928,11 +1696,9 @@ class el
 
     public static function thead($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <thead '.$attributes.'>';
 
@@ -1945,11 +1711,9 @@ class el
 
     public static function time($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <time '.$attributes.'>';
 
@@ -1962,11 +1726,9 @@ class el
 
     public static function tr($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <tr '.$attributes.'>';
 
@@ -1980,19 +1742,13 @@ class el
     public static function track($attributes = '')
     {
         echo ' <track '.$attributes.'>';
-
-        
     }
-
-   
 
     public static function tt($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <tt '.$attributes.'>';
 
@@ -2003,16 +1759,11 @@ class el
         ';
     }
 
-
-   
-
     public static function u($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <u '.$attributes.'>';
 
@@ -2025,11 +1776,9 @@ class el
 
     public static function ul($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <ul '.$attributes.'>';
 
@@ -2042,11 +1791,9 @@ class el
 
     public static function var($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <var '.$attributes.'>';
 
@@ -2057,12 +1804,11 @@ class el
         ';
     }
 
-    public static function video($source='',$width='',$height='',$type='',$attributes = '')
+    public static function video($source = '', $width = '', $height = '', $type = '', $attributes = '')
     {
         echo ' <video width="'.$width.'" height="$'.$height.'" '.$attributes.' controls>';
 
-        
-            echo '<source src="'.$source.'" type="'.$type.'">
+        echo '<source src="'.$source.'" type="'.$type.'">
               Your browser does not support the video tag.
             ';
 
@@ -2072,11 +1818,9 @@ class el
 
     public static function wbr($attributes = '', $content = [])
     {
-        if(is_array($content)){
-            
-        }
-        else{
-             $content = [$content];
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
         }
         echo ' <wbr '.$attributes.'>';
 
@@ -2087,8 +1831,8 @@ class el
         ';
     }
 
-
-    public static function doctype(){
+    public static function doctype()
+    {
         echo '<!DOCTYPE html>';
     }
 }
