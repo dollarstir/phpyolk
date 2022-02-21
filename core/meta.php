@@ -16,6 +16,9 @@ class meta{
     public static function viewport($viewport='width=device-width, initial-scale=1.0'){
         echo '<meta name="viewport" content="'.$viewport.'">';
     }
+    public static function browser($eq ='X-UA-Compatible',$browser='IE=edge'){
+        echo '<meta http-equiv="'.$eq.'" content="'.$browser.'">';
+    }
   
 }
 

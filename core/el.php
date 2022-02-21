@@ -1396,4 +1396,9 @@ class el
         echo'</wbr>
         ';
     }
+
+
+    public static function doctype(){
+        echo '<!DOCTYPE html>';
+    }
 }
