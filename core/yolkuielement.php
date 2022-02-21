@@ -17,7 +17,7 @@ class YolkUIElement
     public function __construct(
         $contents = [],
         $attributes = [],
-        $tag = null,
+        $tag = null
     ) {
         $this->contents = is_string($contents) ? [new Tag($contents)] : $contents;
         $this->attributes = $attributes;

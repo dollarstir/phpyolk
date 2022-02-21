@@ -6,22 +6,28 @@ YolkUI::run(new Html([
         MetaData::keyword(["PHP", "Framework", "Quick", "UI"]),
         MetaData::author("yolkteam@github.com"),
 
-        new Title("YolkUI Page"),
+            new Title("YolkUI Page"),
 
-        // Yolk::uicore("allcss")
-    ]),
-    new Body([
-        new Paragraph("Welcome to Yolk UI!"),
-        new Row([
-            new Column(Column::SM, 2, [
-                new Paragraph("Lorem ipsum dolor sit amet consectetur adipisicing elit."),
-                new Paragraph("Lorem ipsum dolor sit amet consectetur adipisicing elit."),
-                new Paragraph("Lorem ipsum dolor sit amet consectetur adipisicing elit."),
-            ]),
-            new Column(1, 3, [
-                new Paragraph("Lorem ipsum dolor sit amet consectetur adipisicing elit."),
-                new Paragraph("Lorem ipsum dolor sit amet consectetur adipisicing elit."),
-            ])
+            new Tag (Yolk::uicore("allcss")),
         ]),
-    ])
+        new Body([
+            new Paragraph("Welcome to Yolk UI!"),
+            new Row([
+                new Column(2,6,[
+                    new Paragraph("Lorem ipsum dolor sit amet consectetur adipisicing elit."),
+                    new Paragraph("Lorem ipsum dolor sit amet consectetur adipisicing elit."),
+                    new Paragraph("Lorem ipsum dolor sit amet consectetur adipisicing elit."),
+                ]),
+                new Column(2, 6, [
+                    new Paragraph("Lorem ipsum dolor sit amet consectetur adipisicing elit."),
+                    new Paragraph("Lorem ipsum dolor sit amet consectetur adipisicing elit."),
+                ])
+            ]
+        ),
+
+    ],
+    [
+        'style' => 'background-color:#116699;'
+    ]
+    )
 ]));
