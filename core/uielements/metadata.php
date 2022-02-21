@@ -1,6 +1,6 @@
 <?php
 
-class Meta extends YolkUIElement
+class MetaData extends YolkUIElement
 {
     protected $tag = "meta";
     protected $closed = false;
@@ -11,7 +11,7 @@ class Meta extends YolkUIElement
     }
 
     public static function description($description = "") {
-        return new Meta([
+        return new MetaData([
             "name" => "description",
             "content" => $description
         ]);
@@ -21,21 +21,21 @@ class Meta extends YolkUIElement
         if(!is_array($keywords)) {
             $keywords = [$keywords];
         }
-        return new Meta([
+        return new MetaData([
             "name" => "keywords",
             "content" => implode(", ", $keywords)
         ]);
     }
 
     public static function author($author = "") {
-        return new Meta([
+        return new MetaData([
             "name" => "author",
             "content" => $author
         ]);
     }
 
     public static function browser($eq ='X-UA-Compatible', $browser='IE=edge') {
-        return new Meta([
+        return new MetaData([
             "http-equiv" => $eq,
             "content" => $browser
         ]);

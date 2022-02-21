@@ -1,12 +1,10 @@
 <?php
 
-YolkUI::run(
-    
-    new Html([
-        new Head([
-            Meta::description("Yolk UI, the quickest way to build your UI in PHP"),
-            Meta::keyword(["PHP", "Framework", "Quick", "UI"]),
-            Meta::author("yolkteam@github.com"),
+YolkUI::run(new Html([
+    new Head([
+        MetaData::description("Yolk UI, the quickest way to build your UI in PHP"),
+        MetaData::keyword(["PHP", "Framework", "Quick", "UI"]),
+        MetaData::author("yolkteam@github.com"),
 
             new Title("YolkUI Page"),
 
