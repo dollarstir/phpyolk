@@ -8,7 +8,7 @@ YolkUI::run(new Html([
 
             new Title("YolkUI Page"),
 
-            new Tag (Yolk::uicore("allcss")),
+            new Wrapper(Yolk::uicore("allcss")),
         ]),
         new Body([
             new Paragraph("Welcome to Yolk UI!"),
