@@ -11,14 +11,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <?php Yolk::uicore('allcss'); ?>
-    <link rel="stylesheet" href="style.css">
+    <?php Yolk::uicore('allc'); ?>
 </head>
 
 <body>
+<img width=100 height=100 src="<?= Path::rebase("j/after.png") ?>">
+
     <h4 class="text-center text-muted my-5">
         Try out this link :
-        <a href="<?= Path::rebase('test/1'); ?>">
+        <a href="<?= Path::rebase("test/Yolk/1") ?>">
             <i class="fa fa-face-laugh-wink text-success"></i>
         </a>
     </h4>   
