@@ -1,6 +1,6 @@
 <?php
 
-class Tag extends YolkUIElement {
+class Wrapper extends YolkUIElement {
     private $element = "";
 
     public function __construct($element = "")
