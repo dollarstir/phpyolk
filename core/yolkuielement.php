@@ -4,7 +4,7 @@ class YolkUIElement
     protected $tag = "div";
     protected $contents = [];
     protected $attributes = [];
-    protected $closed = true;
+    protected $closed = false;
     protected $override = false;
 
     protected static function show(...$args)
