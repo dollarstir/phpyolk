@@ -1,32 +1,70 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yolk Framework</title>
-    <link rel="apple-touch-icon" href="favicon.png">
-    <?php
-        Yolk::uicore('allcss');
-    ?>
-</head>
-<body>
-    <?php
-div::container('s');
-el::p('class="text-center text-muted mt-5"',
+<?php
+el::doctype();
+el::html('lang="en"', 
 [
-   '500 - Internal Server Error',
-   el::a('href="home/"',
-   [
-   'Home',
-    ]),
+    el::head('',
+    [
+        meta::charset('charset="utf-8"'),
+        meta::browser('http-equiv="X-UA-Compatible" content="IE=edge"'),
+        meta::viewport('name="viewport" content="width=device-width, initial-scale=1.0"'),
+        el::title('Yolk Framework'),
+        Yolk::uicore('allcss')
+    ]
+    ),
+    el::body('',
+    [
+        el::img('width=100 height=100 src="'.Path::rebase('j/after.png').'"'),
+        el::h3('class="text-center m-4 text-success"', ['Thanks for choosing the Yolk framework!!!']),
+        el::h4('class="text-muted m-4"',[
+
+        
+            el::ul('',
+            [
+                el::li('style="width: fit-content"',
+                [
+                    el::span('', ['framework']),
+                    el::span('',[ $context['framework']])
+                ]
+                ),
+                el::li('style="width: fit-content"',
+                [
+                    el::span('', ['color']),
+                    el::span('', [$context['color']])
+                ]
+                ),
+                el::li('style="width: fit-content"',
+                [
+                    el::span('', ['id']),
+                    el::span('', [$context['id']])
+                ]
+                ),
+                el::li('style="width: fit-content"',
+                [
+                    el::span('', ['cid']),
+                    el::span('', [$context['cid']])
+                ]
+                )
+            ]
+            )
+        ]
+        ),
+        el::h4('class="text-center text-muted mt-5"',
+        [
+            el::a('href="'.Path::rebase('test/york/'.(++$color % 2)).'"',
+            [
+                el::i('class="fa fa-face-laugh-wink text-success"')
+            ]
+          )
+        ]
+        )
+    ]
+    )
 ]);
 
-div::container('e');
-        Yolk::uicore('alljs');
-    ?>
-   
-   
-</body>
-</html>
+
+
+
+
+
+
+?>

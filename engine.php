@@ -15,12 +15,12 @@ $router = new Router([
             return Viewer::view('/test.php', $context);
         }
     ),
-    new Route(
-        '/test/{id}/customers/{cid}',
-        function ($context) {
-            return Viewer::view('j/testing.php', $context);
-        }
-    ),
+    // new Route(
+    //     '/test/{id}/customers/{cid}',
+    //     function ($context) {
+    //         return Viewer::view('j/testing.php', $context);
+    //     }
+    // ),
 ]);
 
 $router->route('/home', function ($context) {
