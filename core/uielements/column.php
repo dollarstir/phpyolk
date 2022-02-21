@@ -14,7 +14,7 @@ class Column extends YolkUIElement {
     public function __construct($size = Column::SM, $number = 12, $content = [], $attributes = []) 
     {
         $classes = $attributes['class'] ?? "";
-        if($number < 1 || $number > 12 || is_int($number)) {
+        if($number < 1 || $number > 12 || !is_int($number)) {
             $number = 12;
         }
         $attributes['class'] = trim("col" . $this->getSize($size) . "-$number " . $classes); 

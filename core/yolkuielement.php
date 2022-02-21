@@ -4,7 +4,7 @@ class YolkUIElement
     protected $tag = "div";
     protected $contents = [];
     protected $attributes = [];
-    protected $closed = true;
+    protected $closed = false;
     protected $override = false;
 
     protected static function show(...$args)
@@ -17,7 +17,7 @@ class YolkUIElement
     public function __construct(
         $contents = [],
         $attributes = [],
-        $tag = null,
+        $tag = null
     ) {
         $this->contents = is_string($contents) ? [new Tag($contents)] : $contents;
         $this->attributes = $attributes;
