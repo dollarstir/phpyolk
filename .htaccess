@@ -15,3 +15,4 @@ RewriteRule \/?(.+)\.(.+)$ $1.$2 [L]
 
 #  Push every request to index.php
 RewriteRule ^(.*)$ engine.php [QSA]
+

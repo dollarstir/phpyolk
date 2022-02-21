@@ -10,6 +10,12 @@ $router = new Router([
         }
     ),
     new Route(
+        '/test2',
+        function ($context) {
+            return Viewer::view('/test2.php', $context);
+        }
+    ),
+    new Route(
         '/test/{framework}/{color}',
         function ($context) {
             return Viewer::view('/test.php', $context);
@@ -23,8 +29,8 @@ $router = new Router([
     // ),
 ]);
 
-$router->route('/home', function ($context) {
-    return Viewer::view('/main.php', $context);
-});
+// $router->route('/home', function ($context) {
+//     return Viewer::view('/main.php', $context);
+// });
 
 $router->launch();
