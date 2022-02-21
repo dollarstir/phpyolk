@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<img width=100 height=100 src="j/after.png">
+<img width=100 height=100 src="<?= Path::rebase("j/after.png") ?>">
 
     <h4 class="text-center text-muted my-5">
         Try out this link :

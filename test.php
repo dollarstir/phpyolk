@@ -20,7 +20,7 @@ if (isset($context['color'])) {
 
 <body>
     <img src="<?= Path::rebase("ui/svgs/solid/bars.svg")?>" width="20px" height="20" class="" id="">
-    <img width=100 height=100 src="j/after.png">
+    <img width=100 height=100 src="<?= Path::rebase("j/after.png") ?>">
 
     <h3 class="text-center m-4 <?= ($color == 1 ? 'text-success' : 'text-danger'); ?>">
         <i class="fa-solid fa-fire"></i>
