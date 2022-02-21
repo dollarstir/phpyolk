@@ -1,7 +1,7 @@
 <?php
 
-class Base extends YolkUIElement {
-    protected $tag = "base";
+class Embed extends YolkUIElement {
+    protected $tag = "embed";
     protected $closed = true;
 
     public function __construct($link = "", $attributes = [])
@@ -11,9 +11,9 @@ class Base extends YolkUIElement {
             if (strpos($link, 'http') !== false) {
                 $attributes['src'] = $link;
             }
-
         }
+
         parent::__construct([], $attributes);
-        
     }
+
 }

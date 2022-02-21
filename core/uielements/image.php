@@ -1,8 +1,7 @@
 <?php
 
-class Base extends YolkUIElement {
-    protected $tag = "base";
-    protected $closed = true;
+class Image extends YolkUIElement {
+    protected $tag = "img";
 
     public function __construct($link = "", $attributes = [])
     {
@@ -13,7 +12,7 @@ class Base extends YolkUIElement {
             }
 
         }
-        parent::__construct([], $attributes);
-        
+
+        parent::__construct([], $attributes);        
     }
 }

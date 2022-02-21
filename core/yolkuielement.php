@@ -45,7 +45,7 @@ class YolkUIElement
         $overrides = [];
         self::show("<{$this->tag}{$this->attr()}>");
 
-        if($this->closed) {
+        if(!$this->closed) {
             self::show($this->before());
     
             foreach ($this->contents as $key => $content) {
