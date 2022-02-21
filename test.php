@@ -1,6 +1,6 @@
 <?php
-el::doctype();
-el::html('lang="en"', 
+// el::doctype();
+YolkUI::run( new Tag(el::html('lang="en"', 
 [
     el::head('',
     [
@@ -61,5 +61,5 @@ el::html('lang="en"',
 
     ]
     )
-]);
+])));
 
