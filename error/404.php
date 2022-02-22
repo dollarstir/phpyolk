@@ -1,6 +1,6 @@
 <?php
 // el::doctype();
-YolkUI::run(new Tag(el::html('lang="en"', 
+YolkUI::run(new Wrapper(el::html('lang="en"', 
 [
     el::head('',
     [
@@ -13,7 +13,7 @@ YolkUI::run(new Tag(el::html('lang="en"',
     ),
     el::body('',
     [
-        el::img('width=100 height=100 src="'.Path::rebase('j/after.png').'"'),
+        el::img(Path::rebase('j/after.png'),'width=100 height=100'),
         el::h3('class="text-center m-4 text-success"', ['Thanks for choosing the Yolk framework!!!']),
         el::h4('class="text-muted m-4"',[
 
@@ -50,7 +50,7 @@ YolkUI::run(new Tag(el::html('lang="en"',
         ),
         el::h4('class="text-center text-muted mt-5"',
         [
-            el::a('href="'.Path::rebase('test/york/'.(++$color % 2)).'"',
+            el::a('href="home"',
             [
                 el::i('class="fa fa-face-laugh-wink text-success"')
             ]
