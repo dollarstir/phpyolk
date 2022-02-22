@@ -11,12 +11,17 @@ class Column extends YolkUIElement {
     protected $tag = "div";
     private $sizes = ["sm", "md", "lg", "xl", "xxl"];
 
-    public function __construct($size = Column::SM, $number = 12, $content = [], $attributes = []) 
+    public function __construct($size = Column::SM, $number = 0, $content = [], $attributes = []) 
     {
         $classes = $attributes['class'] ?? "";
-        if($number < 1 || $number > 12 || !is_int($number)) {
+        if($number < 0 || $number > 12 || !is_int($number)) {
             $number = 12;
         }
+
+        if($number == 0) {
+            $number = "auto";
+        }
+
         $attributes['class'] = trim("col" . $this->getSize($size) . "-$number " . $classes); 
         
         parent::__construct($content, $attributes);
