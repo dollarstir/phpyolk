@@ -8,32 +8,37 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <p '.$attributes.'>';
+        $tag=' <p '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</p>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</p>
         ';
+        return trim($tag);
     }
 
     public static function a($href = '', $attributes = '', $content = ['link here'])
     {
-        if (strpos($href, 'http') !== false) {
-            echo ' <a href="'.($href).'" '.$attributes.'>';
+        // var_dump(strpos($href, 'http') !== false);
+        if (strpos($href, 'http') !== false || strpos($href, 'www') !== false) {
+            $tag = ' <a href="'.($href).'" '.$attributes.'>';
         } else {
-            echo ' <a href="'.Path::rebase($href).'" '.$attributes.'>';
+            $tag = ' <a href="'.Path::rebase($href).'" '.$attributes.'>';
         }
         if (is_array($content)) {
         } else {
             $content = [$content];
         }
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</a>
+        // foreach ($content as $result) {
+            $tag .= implode('', $content);
+        // }
+        $tag .='</a>
         ';
+
+        return trim($tag);
     }
 
     public static function nav($attributes = '', $content = [])
@@ -42,13 +47,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo 'nav '.$attributes.'>';
+        $tag=' <nav '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</nav>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</nav>
         ';
+        return trim($tag);
     }
 
     public static function html($attributes = '', $content = [])
@@ -240,10 +247,20 @@ class el
 
     public static function audio($source = '', $attributes = '', $type = '')
     {
-        return' <audio '.$attributes.' controls>
-        <source src="'.$source.'" type="'.$type.'">
-        </audio>
+        $tag =' <audio '.$attributes.' controls>';
+        
+        if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false ) {
+           
+            $tag .= '<source src="'.$source.'" type="'.$type.'">';
+        } else {
+            
+            $tag .='<source src="'.Path::rebase($source).'" type="'.$type.'">';
+            
+        }
+       $tag .=' </audio>
         ';
+
+        return $tag;
     }
 
     public static function b($attributes = '', $content = [])
@@ -263,9 +280,14 @@ class el
         return trim($tag);
     }
 
-    public static function base($hre = '', $attributes = '')
+    public static function base($href = '', $attributes = '')
     {
-        return ' <base '.$attributes.' href="'.$hre.'">';
+        if (strpos($href, 'http') !== false || strpos($href, 'www') !== false) {
+            return ' <base '.$attributes.' href="'.$href.'">';
+        } else {
+            return ' <base '.$attributes.' href="'.Path::rebase($href).'">';
+
+        }
     }
 
     public static function bdi($attributes = '', $content = [])
@@ -653,13 +675,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <dt '.$attributes.'>';
+        $tag=' <dt '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</dt>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</dt>
         ';
+        return trim($tag);
     }
 
     public static function em($attributes = '', $content = [])
@@ -668,18 +692,27 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <em '.$attributes.'>';
+        $tag=' <em '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</em>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</em>
         ';
+        return trim($tag);
     }
 
     public static function embed($source, $attributes = '')
     {
-        echo ' <embed src="'.$source.'" '.$attributes.'>';
+        
+
+        if (strpos($source, 'http') !== false || strpos($source, 'www') !== false) {
+            return ' <embed src="'.$source.'" '.$attributes.'>';
+        } else {
+            return ' <embed src="'.Path::rebase($source).'" '.$attributes.'>';
+
+        }
     }
 
     public static function fieldset($attributes = '', $content = [])
@@ -688,13 +721,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <fieldset '.$attributes.'>';
+        $tag=' <fieldset '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</fieldset>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</fieldset>
         ';
+        return trim($tag);
     }
 
     public static function figure($attributes = '', $content = [])
@@ -703,13 +738,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <figure '.$attributes.'>';
+        $tag=' <figure '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</figure>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</figure>
         ';
+        return trim($tag);
     }
 
     public static function figcaption($attributes = '', $content = [])
@@ -718,13 +755,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <figcaption '.$attributes.'>';
+        $tag=' <figcation '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</figcaption>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</figcaption>
         ';
+        return trim($tag);
     }
 
     public static function font($attributes = '', $content = [])
@@ -733,13 +772,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <font '.$attributes.'>';
+        $tag=' <font '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</font>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</font>
         ';
+        return trim($tag);
     }
 
     public static function footer($attributes = '', $content = [])
@@ -748,13 +789,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <footer '.$attributes.'>';
+        $tag=' <footer '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</footer>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</footer>
         ';
+        return trim($tag);
     }
 
     public static function form($action = '', $method = '', $attributes = '', $content = [])
@@ -763,13 +806,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <form '.$action.' '.$method.' '.$attributes.'>';
+        $tag=' <form '.$action.' '.$method.' '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</form>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</form>
         ';
+        return trim($tag);
     }
 
     public static function frame($attributes = '', $content = [])
@@ -778,13 +823,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <frame '.$attributes.'>';
+        $tag=' <frame '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</frame>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</frame>
         ';
+        return trim($tag);
     }
 
     public static function frameset($attributes = '', $content = [])
@@ -793,13 +840,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <frameset '.$attributes.'>';
+        $tag=' <frameset '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</frameset>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</frameset>
         ';
+        return trim($tag);
     }
 
     public static function h1($attributes = '', $content = [])
@@ -808,13 +857,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <h1 '.$attributes.'>';
+        $tag=' <h1 '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</h1>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</h1>
         ';
+        return trim($tag);
     }
 
     public static function h2($attributes = '', $content = [])
@@ -823,13 +874,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <h2 '.$attributes.'>';
+        $tag=' <h2 '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</h2>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</h3>
         ';
+        return trim($tag);
     }
 
     public static function h3($attributes = '', $content = [])
@@ -838,13 +891,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <h3 '.$attributes.'>';
+        $tag=' <h3 '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</h3>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</h3>
         ';
+        return trim($tag);
     }
 
     public static function h4($attributes = '', $content = [])
@@ -853,12 +908,15 @@ class el
         } else {
             $content = [$content];
         }
+        $tag=' <h4 '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        $tag = ' <h4 '.$attributes.'>';
-        $tag .= implode(' ', $content);
-        
-        $tag .= '</h4>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</h4>
         ';
+        return trim($tag);
     }
 
     public static function h5($attributes = '', $content = [])
@@ -867,13 +925,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <h5 '.$attributes.'>';
+        $tag=' <h5 '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</h5>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</h5>
         ';
+        return trim($tag);
     }
 
     public static function h6($attributes = '', $content = [])
@@ -882,13 +942,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <h6 '.$attributes.'>';
+        $tag=' <h6 '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</h6>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</h6>
         ';
+        return trim($tag);
     }
 
     public static function header($attributes = '', $content = [])
@@ -897,18 +959,20 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <header '.$attributes.'>';
+        $tag=' <header '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</header>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</header>
         ';
+        return trim($tag);
     }
 
     public static function hr($attributes = '')
     {
-        echo ' <hr '.$attributes.'>';
+        return ' <hr '.$attributes.'>';
     }
 
     public static function i($attributes = '', $content = [])
@@ -917,13 +981,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <i '.$attributes.'>';
+        $tag=' <i '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</i>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</i>
         ';
+        return trim($tag);
     }
 
     public static function iframe($source = '', $attributes = '', $content = [])
@@ -932,33 +998,69 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <iframe src="'.$source.'" '.$attributes.'>';
+        $tag=' <iframe scr='.$source.' '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</iframe>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</iframe>
         ';
+        return trim($tag);
     }
 
     public static function img($source = '', $attributes = '')
     {
-        return ' <img src="'.$source.'" '.$attributes.'>';
+        // $source =trim($source);
+        if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false ) {
+           
+            $tag ='<img src="'.$source.'" '.$attributes.' />';
+        } else {
+            
+            $tag=' <img  src="'.Path::rebase($source).'" '.$attributes.'/>';
+            
+        }
+        return $tag;
+        
     }
 
     public static function image($source = '', $attributes = '')
     {
-        return ' <img src="'.$source.'" '.$attributes.'>';
+        if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false ) {
+           
+            $tag ='<img src="'.$source.'" '.$attributes.' />';
+        } else {
+            
+            $tag=' <img  src="'.Path::rebase($source).'" '.$attributes.'/>';
+            
+        }
+        return $tag;
     }
 
     public static function pic($source = '', $attributes = '')
     {
-        return ' <img src="'.$source.'" '.$attributes.'>';
+        if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false ) {
+           
+            $tag ='<img src="'.$source.'" '.$attributes.' />';
+        } else {
+            
+            $tag=' <img  src="'.Path::rebase($source).'" '.$attributes.'/>';
+            
+        }
+        return $tag;
     }
 
     public static function photo($source = '', $attributes = '')
     {
-        return ' <img src="'.$source.'" '.$attributes.'>';
+        if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false ) {
+           
+            $tag ='<img src="'.$source.'" '.$attributes.' />';
+        } else {
+            
+            $tag=' <img  src="'.Path::rebase($source).'" '.$attributes.'/>';
+            
+        }
+        return $tag;
     }
 
     public static function input($type = 'text', $name = '', $class = '', $id = '', $attributes = '')
@@ -972,13 +1074,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <ins '.$attributes.'>';
+        $tag=' <ins '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</ins>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</ins>
         ';
+        return trim($tag);
     }
 
     public static function kbd($attributes = '', $content = [])
@@ -987,13 +1091,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <kbd '.$attributes.'>';
+        $tag=' <kbd '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</kbd>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</kbd>
         ';
+        return trim($tag);
     }
 
     public static function keyboard($attributes = '', $content = [])
@@ -1002,13 +1108,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <kbd '.$attributes.'>';
+        $tag=' <kbd '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</kbd>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</kbd>
         ';
+        return trim($tag);
     }
 
     public static function label($attributes = '', $content = [])
@@ -1017,13 +1125,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <label '.$attributes.'>';
+        $tag=' <label '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</label>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</label>
         ';
+        return trim($tag);
     }
 
     public static function legend($attributes = '', $content = [])
@@ -1032,13 +1142,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo '<legend '.$attributes.'>';
+        $tag=' <legend '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</legend>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</legend>
         ';
+        return trim($tag);
     }
 
     public static function li($attributes = '', $content = [])
@@ -1047,28 +1159,47 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <li '.$attributes.'>';
+        $tag=' <li '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</li>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</li>
         ';
+        return trim($tag);
     }
 
     public static function linkatom($href = '', $attributes = '')
     {
-        echo '<link rel="alternate" href="'.$href.'" type="application/atom+xml" title="Atom" '.$attributes.'>';
+        // return '<link rel="alternate" href="'.$href.'" type="application/atom+xml" title="Atom" '.$attributes.'>';
+        if (strpos($href, 'http') !== false || strpos($href, 'www') !== false) {
+            return '<link rel="alternate" href="'.$href.'" type="application/atom+xml" title="Atom" '.$attributes.'>';
+        } else {
+            return '<link rel="alternate" href="'.Path::rebase($href).'" type="application/atom+xml" title="Atom" '.$attributes.'>';
+        }
     }
 
     public static function linkcss($href = '', $attributes = '')
     {
-        echo '<link rel="stylesheet" href="'.$href.'" type="text/css" '.$attributes.'>';
+        // return '<link rel="stylesheet" href="'.$href.'" type="text/css" '.$attributes.'>';
+        // return '<link rel="alternate" href="'.$href.'" type="application/atom+xml" title="Atom" '.$attributes.'>';
+        if (strpos($href, 'http') !== false || strpos($href, 'www') !== false) {
+            return '<link rel="stylesheet" href="'.$href.'" type="text/css" '.$attributes.'>';
+        } else {
+            return '<link rel="stylesheet" href="'.Path::rebase($href).'" type="text/css" '.$attributes.'>';
+        }
     }
 
     public static function favicon($href = '', $attributes = '', $type = '')
     {
-        echo '<link rel="shortcut icon" href="'.$href.'" type="'.$type.'">';
+        
+
+        if (strpos($href, 'http') !== false || strpos($href, 'www') !== false) {
+            return '<link rel="shortcut icon" href="'.$href.'" type="'.$type.'">';
+        } else {
+            return '<link rel="stylesheet" href="'.Path::rebase($href).'" type="text/css" '.$attributes.'>';
+        }
     }
 
     public static function linkimport($href = '', $attributes = '')
@@ -1097,13 +1228,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <main '.$attributes.'>';
+        $tag=' <main '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</main>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</main>
         ';
+        return trim($tag);
     }
 
     public static function map($name = '', $attributes = '', $content = [])
@@ -1112,18 +1245,20 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <map '.$name.' '.$attributes.'>';
+        $tag=' <map name="'.$name.'" '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</map>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</map>
         ';
+        return trim($tag);
     }
 
     public static function maparea($href = '', $shape = '', $cordinate = '', $attributes = '')
     {
-        echo '<area shape="'.$shape.'" coords="'.$cordinate.'" '.$href.' '.$attributes.'>';
+        return '<area shape="'.$shape.'" coords="'.$cordinate.'" '.$href.' '.$attributes.'>';
     }
 
     public static function mark($attributes = '', $content = [])
@@ -1132,13 +1267,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <mark '.$attributes.'>';
+        $tag=' <mark '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</mark>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</mark>
         ';
+        return trim($tag);
     }
 
     public static function meter($attributes = '', $content = [])
@@ -1147,13 +1284,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <meter '.$attributes.'>';
+        $tag=' <meter '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</meter>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</meter>
         ';
+        return trim($tag);
     }
 
     public static function noframes($attributes = '', $content = [])
@@ -1162,13 +1301,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <noframes '.$attributes.'>';
+        $tag=' <noframes '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</noframes>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</noframes>
         ';
+        return trim($tag);
     }
 
     public static function noscript($attributes = '', $content = [])
@@ -1177,13 +1318,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo '<noscript '.$attributes.'>';
+        $tag=' <noscript '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</noscript>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</noscript>
         ';
+        return trim($tag);
     }
 
     public static function object($attributes = '', $content = [])
@@ -1192,13 +1335,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <object '.$attributes.'>';
+        $tag=' <object '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</object>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</object>
         ';
+        return trim($tag);
     }
 
     public static function ol($attributes = '', $content = [])
@@ -1207,13 +1352,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <ol '.$attributes.'>';
+        $tag=' <ol '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</ol>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</ol>
         ';
+        return trim($tag);
     }
 
     public static function optgroup($attributes = '', $content = [])
@@ -1222,28 +1369,32 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <optgroup '.$attributes.'>';
+        $tag=' <optgroup '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</optgroup>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</optgroup>
         ';
+        return trim($tag);
     }
 
-    public static function option($attributes = '', $content = [])
+    public static function option($value='',$attributes = '', $content = [])
     {
         if (is_array($content)) {
         } else {
             $content = [$content];
         }
-        echo ' <option '.$attributes.'>';
+        $tag=' <option value="'.$value.'" '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</option>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</option>
         ';
+        return trim($tag);
     }
 
     public static function output($attributes = '', $content = [])
@@ -1252,13 +1403,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <output '.$attributes.'>';
+        $tag=' <output '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</output>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</output>
         ';
+        return trim($tag);
     }
 
     public static function param($attributes = '', $content = [])
@@ -1267,13 +1420,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <param '.$attributes.'>';
+        $tag=' <param '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</param>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</param>
         ';
+        return trim($tag);
     }
 
     public static function picture($attributes = '', $content = [])
@@ -1282,13 +1437,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <picture '.$attributes.'>';
+        $tag=' <picture '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</picture>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</picture>
         ';
+        return trim($tag);
     }
 
     public static function pre($attributes = '', $content = [])
@@ -1297,13 +1454,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <pre '.$attributes.'>';
+        $tag=' <pre '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</pre>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</pre>
         ';
+        return trim($tag);
     }
 
     public static function prev($attributes = '', $content = [])
@@ -1312,13 +1471,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <pre '.$attributes.'>';
+        $tag=' <pre '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</pre>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</pre>
         ';
+        return trim($tag);
     }
 
     public static function preview($attributes = '', $content = [])
@@ -1327,13 +1488,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <pre '.$attributes.'>';
+        $tag=' <pre '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</pre>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</pre>
         ';
+        return trim($tag);
     }
 
     public static function progress($value = '', $max = '100', $attributes = '', $content = [])
@@ -1342,13 +1505,14 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <progress value="'.$value.'" max="'.$max.'" '.$attributes.'>';
+         $tag =' <progress value="'.$value.'" max="'.$max.'" '.$attributes.'>';
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</progress>
+        // foreach ($content as $result) {
+            $tag .=implode('', $content);
+        // }
+        $tag .= '</progress>
         ';
+        return trim($tag);
     }
 
     public static function progressbar($value = '', $max = '100', $attributes = '', $content = [])
@@ -1357,13 +1521,14 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <progress value="'.$value.'" max="'.$max.'" '.$attributes.'>';
+        $tag = ' <progress value="'.$value.'" max="'.$max.'" '.$attributes.'>';
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</progress>
+        // foreach ($content as $result) {
+        $tag .=implode('', $content);
+        // }
+        $tag .='</progress>
         ';
+        $return = trim($tag);
     }
 
     public static function q($attributes = '', $content = [])
@@ -1372,13 +1537,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <q '.$attributes.'>';
+        $tag=' <q '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</q>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</q>
         ';
+        return trim($tag);
     }
 
     public static function rp($attributes = '', $content = [])
@@ -1387,13 +1554,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <rp '.$attributes.'>';
+        $tag=' <rp '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</rp>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</rp>
         ';
+        return trim($tag);
     }
 
     public static function rt($attributes = '', $content = [])
@@ -1402,13 +1571,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <rt '.$attributes.'>';
+        $tag=' <rt '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</rt>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</rt>
         ';
+        return trim($tag);
     }
 
     public static function ruby($attributes = '', $content = [])
@@ -1417,13 +1588,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <ruby '.$attributes.'>';
+        $tag=' <ruby '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</ruby>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</ruby>
         ';
+        return trim($tag);
     }
 
     public static function s($attributes = '', $content = [])
@@ -1432,13 +1605,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <s '.$attributes.'>';
+        $tag=' <s '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</s>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</s>
         ';
+        return trim($tag);
     }
 
     public static function samp($attributes = '', $content = [])
@@ -1447,13 +1622,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <samp '.$attributes.'>';
+        $tag=' <samp '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</samp>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</samp>
         ';
+        return trim($tag);
     }
 
     public static function script($attributes = '', $content = [])
@@ -1462,13 +1639,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <script '.$attributes.'>';
+        $tag=' <script '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</script>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</script>
         ';
+        return trim($tag);
     }
 
     public static function section($attributes = '', $content = [])
@@ -1477,13 +1656,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <section '.$attributes.'>';
+        $tag=' <section '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</section>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</section>
         ';
+        return trim($tag);
     }
 
     public static function select($name = '', $attributes = '', $content = [])
@@ -1492,13 +1673,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <select '.$name.'  '.$attributes.'>';
+        $tag=' <select name="'.$name.'" '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</select>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</select>
         ';
+        return trim($tag);
     }
 
     public static function small($attributes = '', $content = [])
@@ -1507,18 +1690,29 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <small '.$attributes.'>';
+        $tag=' <small '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</small>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</small>
         ';
+        return trim($tag);
     }
 
     public static function source($source = '', $type = '', $attributes = '')
     {
-        echo ' <source src="'.$source.'" type="'.$type.'" '.$attributes.'>';
+        // return ' <source src="'.$source.'" type="'.$type.'" '.$attributes.'>';
+        if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false ) {
+           
+            $tag =' <source src="'.$source.'" type="'.$type.'" '.$attributes.'>';
+        } else {
+            
+            $tag=' <source  src="'.Path::rebase($source).'" type="'.$type.'" '.$attributes.'/>';
+            
+        }
+        return $tag;
     }
 
     public static function span($attributes = '', $content = [])
@@ -1527,13 +1721,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <span '.$attributes.'>';
+        $tag=' <span '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</span>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</span>
         ';
+        return trim($tag);
     }
 
     public static function strike($attributes = '', $content = [])
@@ -1542,13 +1738,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <strike '.$attributes.'>';
+        $tag=' <strike '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</strike>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</strike>
         ';
+        return trim($tag);
     }
 
     public static function strong($attributes = '', $content = [])
@@ -1557,13 +1755,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <strong '.$attributes.'>';
+        $tag=' <strong '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</strong>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</strong>
         ';
+        return trim($tag);
     }
 
     public static function style($attributes = '', $content = [])
@@ -1572,13 +1772,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <style '.$attributes.'>';
+        $tag=' <style '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</style>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</style>
         ';
+        return trim($tag);
     }
 
     public static function sub($attributes = '', $content = [])
@@ -1587,13 +1789,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <sub '.$attributes.'>';
+        $tag=' <sub '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</sub>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</sub>
         ';
+        return trim($tag);
     }
 
     public static function summary($attributes = '', $content = [])
@@ -1602,13 +1806,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <summary '.$attributes.'>';
+        $tag=' <summary '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</summary>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</summary>
         ';
+        return trim($tag);
     }
 
     public static function sup($attributes = '', $content = [])
@@ -1617,13 +1823,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <sup '.$attributes.'>';
+        $tag=' <sup '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</sup>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</sup>
         ';
+        return trim($tag);
     }
 
     public static function superscript($attributes = '', $content = [])
@@ -1632,13 +1840,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <sup '.$attributes.'>';
+        $tag=' <sup '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</sup>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</sup>
         ';
+        return trim($tag);
     }
 
     public static function svg($width = '', $height = '', $attributes = '', $content = [])
@@ -1647,13 +1857,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <svg '.$width.' '.$height.' '.$attributes.'>';
+        $tag =' <svg '.$width.' '.$height.' '.$attributes.'>';
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</svg>
+        // foreach ($content as $result) {
+            $tag .=implode('', $content);
+        // }
+        $tag .='</svg>
         ';
+
+        return trim($tag);
     }
 
     public static function table($attributes = '', $content = [])
@@ -1662,13 +1874,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <table '.$attributes.'>';
+        $tag=' <table '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</table>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</table>
         ';
+        return trim($tag);
     }
 
     public static function tbody($attributes = '', $content = [])
@@ -1677,13 +1891,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <tbody '.$attributes.'>';
+        $tag=' <tbody '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</tbody>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</tbody>
         ';
+        return trim($tag);
     }
 
     public static function td($attributes = '', $content = [])
@@ -1692,13 +1908,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <td '.$attributes.'>';
+        $tag=' <td '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</td>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</td>
         ';
+        return trim($tag);
     }
 
     public static function template($attributes = '', $content = [])
@@ -1707,13 +1925,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <template '.$attributes.'>';
+        $tag=' <template '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</template>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</template>
         ';
+        return trim($tag);
     }
 
     public static function textarea($name = '', $rows = '', $cols = '', $attributes = '', $content = [])
@@ -1722,13 +1942,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <textarea '.$attributes.'>';
+        $tag = ' <textarea '.$attributes.'>';
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</textarea>
+        // foreach ($content as $result) {
+            $tag .= implode('', $content);
+        // }
+        $tag .='</textarea>
         ';
+
+        return trim($tag);
     }
 
     public static function tfoot($attributes = '', $content = [])
@@ -1737,13 +1959,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <tfoot '.$attributes.'>';
+        $tag=' <tfoot '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</tfoot>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</tfoot>
         ';
+        return trim($tag);
     }
 
     public static function th($attributes = '', $content = [])
@@ -1752,13 +1976,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <th '.$attributes.'>';
+        $tag=' <th '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</th>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</th>
         ';
+        return trim($tag);
     }
 
     public static function thead($attributes = '', $content = [])
@@ -1767,13 +1993,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <thead '.$attributes.'>';
+        $tag=' <th '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</thead>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</th>
         ';
+        return trim($tag);
     }
 
     public static function time($attributes = '', $content = [])
@@ -1782,13 +2010,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <time '.$attributes.'>';
+        $tag=' <time '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</time>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</time>
         ';
+        return trim($tag);
     }
 
     public static function tr($attributes = '', $content = [])
@@ -1797,18 +2027,20 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <tr '.$attributes.'>';
+        $tag=' <tr '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</tr>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</tr>
         ';
+        return trim($tag);
     }
 
     public static function track($attributes = '')
     {
-        echo ' <track '.$attributes.'>';
+        return' <track '.$attributes.'>';
     }
 
     public static function tt($attributes = '', $content = [])
@@ -1817,13 +2049,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <tt '.$attributes.'>';
+        $tag=' <tt '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</tt>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</tt>
         ';
+        return trim($tag);
     }
 
     public static function u($attributes = '', $content = [])
@@ -1832,13 +2066,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <u '.$attributes.'>';
+        $tag=' <u '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</u>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</u>
         ';
+        return trim($tag);
     }
 
     public static function ul($attributes = '', $content = [])
@@ -1847,13 +2083,15 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <ul '.$attributes.'>';
+        $tag=' <ul '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</ul>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</ul>
         ';
+        return trim($tag);
     }
 
     public static function var($attributes = '', $content = [])
@@ -1862,25 +2100,36 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <var '.$attributes.'>';
+        $tag=' <var '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</var>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</var>
         ';
+        return trim($tag);
     }
 
     public static function video($source = '', $width = '', $height = '', $type = '', $attributes = '')
     {
-        echo ' <video width="'.$width.'" height="$'.$height.'" '.$attributes.' controls>';
+        $tag =' <video width="'.$width.'" height="$'.$height.'" '.$attributes.' controls>';
 
-        echo '<source src="'.$source.'" type="'.$type.'">
-              Your browser does not support the video tag.
-            ';
+        
+        if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false ) {
+           
+            $tag .= '<source src="'.$source.'" type="'.$type.'">Your browser does not support the video tag.';
+        } else {
+            
+            $tag .='<source src="'.Path::rebase($source).'" type="'.$type.'">Your browser does not support the video tag.';
+            
+        }
+        return $tag;
 
-        echo'</video>
+        $tag .='</video>
         ';
+
+        return trim($tag);
     }
 
     public static function wbr($attributes = '', $content = [])
@@ -1889,17 +2138,19 @@ class el
         } else {
             $content = [$content];
         }
-        echo ' <wbr '.$attributes.'>';
+        $tag=' <wbr '.$attributes.'>';
+        $tag .=implode('', $content);
 
-        foreach ($content as $result) {
-            echo $result;
-        }
-        echo'</wbr>
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</wbr>
         ';
+        return trim($tag);
     }
 
     public static function doctype()
     {
-        echo '<!DOCTYPE html>';
+        return'<!DOCTYPE html>';
     }
 }

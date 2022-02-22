@@ -19,7 +19,7 @@ class YolkUIElement
         $attributes = [],
         $tag = null
     ) {
-        $this->contents = is_string($contents) ? [new Tag($contents)] : $contents;
+        $this->contents = is_string($contents) ? [new Wrapper($contents)] : $contents;
         $this->attributes = $attributes;
         if (!is_null($tag)) {
             $this->tag = $tag;

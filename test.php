@@ -1,12 +1,13 @@
 <?php
-// el::doctype();
-YolkUI::run( new Wrapper(el::html('lang="en"', 
+
+YolkUI::run( new Wrapper(
+    el::html('lang="en"', 
 [
     el::head('',
     [
-        meta::charset('charset="utf-8"'),
-        meta::browser('http-equiv="X-UA-Compatible" content="IE=edge"'),
-        meta::viewport('name="viewport" content="width=device-width, initial-scale=1.0"'),
+        meta::charset(),
+        meta::browser(),
+        meta::viewport(),
         el::title('Yolk Framework'),
         Yolk::uicore('allcss'),
         el::style('',
@@ -33,6 +34,12 @@ YolkUI::run( new Wrapper(el::html('lang="en"',
     [
         el::divi('class="container"',
         [
+            component::accordion(
+                ['kofi'=>"name is a good thing to use",
+                 'Ama'=>"Good vibes ",
+                 "dollar"=>'good bsdfsdf',
+                 ]
+            ),
         
             el::h3('class="text m-4 text-success"', ['Thanks for choosing the Yolk framework!!!']),
             el::h4('class="text-muted m-4"',[
@@ -54,12 +61,34 @@ YolkUI::run( new Wrapper(el::html('lang="en"',
             ]
             ),
             
-            el::img(Path::rebase('j/s.png'),'width=70% class=""'),
+            el::img('j/s.png','width=70% class=""'),
+            el::a('http://www.google.com/search?q=check+if+a+variable+is+an+array+php&client=firefox-b-d&sxsrf=APq-WBtdoNkkeSt_htL665U51ewTPH6GKw:1645429940483&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjpueuYqJD2AhUFy4UKHU4NDOIQ_AUoAnoECAEQBA&biw=1280&bih=593&dpr=1','',[
+                'Somethng goo',
+            ])
         ]
         ),
+        el::q('',
+        [
+            el::strong('','Said by Claver'),
+            image::brandsvg('btc'),
+        ]),
+        alert::closable('success','warning','Hello World'),
+        inputfile::basic('pic','Select Image to upload'),
+        el::button('class="btn btn-success" style="position:relative"',[
+            'inbox',
+              
+        ]),
+        Card::image('j/after.png','',
+              [
+                  el::h3('',
+                  [
+                      'Hello World'
+                  ])
+              ]),
+        
         Yolk::uicore('alljs')
 
     ]
-    )
+    ),
 ])));
 
