@@ -1,5 +1,5 @@
 <?php
 
-class Main {
+class Main extends YolkUIElement {
     protected $tag = "main";
 }
