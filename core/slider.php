@@ -4,22 +4,26 @@ class Slider
 {
     public static function basic($attributes = "", $slides = [])
     {
-        return self::_all($attributes, false, false, $slides);
+        return self::_init($attributes, false, false, $slides);
     }
 
     public static function controls($attributes = '', $slides = [])
     {
-        return self::_all($attributes, true, false, $slides);
+        return self::_init($attributes, true, false, $slides);
     }
-
 
     public static function indicators($attributes = '', $slides = [])
     {
-        return self::_all($attributes, false, true, $slides);
+        return self::_init($attributes, false, true, $slides);
+    }
+
+    public static function all($attributes = '', $slides = [])
+    {
+        return self::_init($attributes, true, true, $slides);
     }
 
 
-    private static function _all(
+    private static function _init(
         $attributes = "",
         $controls = true,
         $indicators = true,
@@ -32,6 +36,7 @@ class Slider
         $_controls = '';
         $_indicators = '';
         $_items = '';
+        $slide_num = count($slides);
 
         if ($controls) {
             $_controls = '
@@ -52,7 +57,7 @@ class Slider
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="' . $index . '" class="' . ($index ? 'active" aria-current="true"' : '"') . '" aria-label="Slide ' . $index . '"></button>
                 ';
     
-                if (count($slides) == $index + 1) {
+                if ($slide_num == $index + 1) {
                     $_indicators = '
                         <div class="carousel-indicators">
                         ' . $_indicators . '
@@ -61,11 +66,11 @@ class Slider
                 }
             }
 
-            $_items .= $slide;
+            $_items .= preg_replace("/\{is_active\}/", ($index ? "" : "active"), $slide);
         }
 
         return '
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" '.$attributes.'>
                 ' . $_indicators . '
                 <div class="carousel-inner">
                     ' . $_items . '
@@ -90,7 +95,7 @@ class Slider
         }
 
         return '
-            <div class="carousel-item active" ' . $attributes . '>
+            <div class="carousel-item {is_active}" ' . $attributes . '>
                 <img src="' . $image . '" class="d-block w-100" alt="Image Link: ' . $image . '">
                 ' . $caption . '
             </div>
