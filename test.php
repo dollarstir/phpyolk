@@ -1,5 +1,9 @@
 <?php
   $aa ='';
+  $d = '';
+  $ab = new Counter();
+  $cc = $ab->countall('users');
+  $d = Badge::basic('primary',$cc);
 if (isset($_POST['bb'])){
     $add = new Inser();
     extract($_POST);
@@ -41,7 +45,7 @@ YolkUI::run( new Wrapper(
                     Navbar::basiclight('',navbar::Navbrand('home',[el::h2('class="kofi"',['Php Yolk'])]),
                     [
                         Navbar::Navactive('',['Home' =>'home']),
-                        Navbar::Navbasic('',['Services'=>'services']),
+                        Navbar::Navbasic('',['Services'=>'services/sjdsdjs']),
                         Navbar::Navbasic('',['Documentation'=>'documentation']),
                         Navbar::Navdropdown('','Pages',
                         [
@@ -74,6 +78,7 @@ YolkUI::run( new Wrapper(
                 [
                     Container::fluid('',
                     [
+                       
                         
                     ]),
                 ]),
@@ -83,14 +88,20 @@ YolkUI::run( new Wrapper(
                     [
                         
                         $aa,
-                        el::h2('',['User Registeration']),
+                        el::h3('style=""',['User Registeration']),
+                        //el::
+                        Button::basic('success','',
+                        [
+                            'Users ',
+                            $d,
+                        ]),
                         el::form('','post','class="" enctype="multipart/form-data"',
                         [
                         inputfile::basic('image','Select file to upload'),
                         Yolk::input('text','name','','','Full Name'),
                         Yolk::input('email','email','','','Email Adress'),
                         Yolk::input('number','contact','','','Phone Number'),
-                        Yolk::input('submit','bb','primary','','Submit',''),
+                        Yolk::input('submit','bb','success','','Submit',''),
 
                         ]),
                     ]),
