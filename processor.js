@@ -1,5 +1,6 @@
 
 $(function(){
+    // alert("Hello Yolk");
 
     function resp(response){
 
@@ -105,12 +106,12 @@ $(function(){
         },
     });
 }
-$('.addvisitor').submit(function(e){
+$('.adduser').submit(function(e){
 
         e.preventDefault();
         // before();
         var visitors = {
-            url: 'processor.php?action=addvisitor',
+            url: 'processor.php?action=adduser',
             type: 'post',
             data: new FormData(this),
             cache: false,

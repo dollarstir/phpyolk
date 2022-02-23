@@ -806,7 +806,7 @@ class el
         } else {
             $content = [$content];
         }
-        $tag=' <form '.$action.' '.$method.' '.$attributes.'>';
+        $tag=' <form action="'.$action.'" method="'.$method.'" '.$attributes.'>';
         $tag .=implode('', $content);
 
         // foreach ($content as $result) {
@@ -880,7 +880,7 @@ class el
         // foreach ($content as $result) {
             
         // }
-        $tag.='</h3>
+        $tag.='</h2>
         ';
         return trim($tag);
     }

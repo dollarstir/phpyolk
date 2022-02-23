@@ -5,7 +5,7 @@ class Inputfile{
     public static function basic($name="file",$label='Basic file upload',$class=''){
         return '<div class="mb-3">
         <label for="formFile" class="form-label">'.$label.'</label>
-        <input class="form-control '.$class.'" type="file" id="formFile">
+        <input class="form-control '.$class.'" type="file" id="formFile" name="'.$name.'">
       </div>';
     }
 

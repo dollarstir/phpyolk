@@ -16,7 +16,7 @@ $router = new Router([
         }
     ),
     new Route(
-        '/test/{framework}/{color}',
+        '/test',
         function ($context) {
             return Viewer::view('/test.php', $context);
         }

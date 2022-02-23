@@ -1,5 +1,5 @@
 <?php
-class Session extends York {
+class Session extends Yolk {
 
     public function authpagechecker($isloggedinlocation=""){
         session_start();
