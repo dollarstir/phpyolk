@@ -74,6 +74,10 @@ YolkUI::run( new Wrapper(
                 [
                     Container::fluid('',
                     [
+                        Slider::basic("", [
+                            Slider::item("","j/s.png"),
+                            Slider::item("","j/s.png"),
+                        ])
                         
                     ]),
                 ]),
