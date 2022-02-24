@@ -68,7 +68,8 @@ YolkUI::run(new Wrapper(
                                                 el::divi('id="getStarted"',[
                                                     'Get Started',
                                                 ])
-                                            ])
+                                            ]),
+                                            bar::labelprogress('0','100','50','50%',),
                                         ]
                                     ),
 
