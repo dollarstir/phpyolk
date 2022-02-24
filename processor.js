@@ -2,6 +2,8 @@
 $(function(){
     // alert("Hello Yolk");
 
+    
+
     function resp(response){
 
         if(response == "success"){
@@ -97,7 +99,7 @@ $(function(){
     function before()
 {
     
-    Swal.fire({
+    swal({
         title: 'Please Wait !',
         html: 'request in progress...',// add html attribute if you want or remove
         allowOutsideClick: false,
