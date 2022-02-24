@@ -23,7 +23,7 @@ class el
     {
         // var_dump(strpos($href, 'http') !== false);
         if (strpos($href, 'http') !== false || strpos($href, 'www') !== false) {
-            $tag = ' <a href="'.($href).'" '.$attributes.'>';
+            $tag = ' <a href="'.($href).'"  '.$attributes.'>';
         } else {
             $tag = ' <a href="'.Path::rebase($href).'" '.$attributes.'>';
         }
@@ -40,6 +40,8 @@ class el
 
         return trim($tag);
     }
+
+    
 
     public static function nav($attributes = '', $content = [])
     {
@@ -1188,6 +1190,17 @@ class el
             return '<link rel="stylesheet" href="'.$href.'" type="text/css" '.$attributes.'>';
         } else {
             return '<link rel="stylesheet" href="'.Path::rebase($href).'" type="text/css" '.$attributes.'>';
+        }
+    }
+
+    public static function linkcustomcss($href = '',$rel='',$attributes = '')
+    {
+        // return '<link rel="stylesheet" href="'.$href.'" type="text/css" '.$attributes.'>';
+        // return '<link rel="alternate" href="'.$href.'" type="application/atom+xml" title="Atom" '.$attributes.'>';
+        if (strpos($href, 'http') !== false || strpos($href, 'www') !== false) {
+            return '<link rel="'.$rel.'" href="'.$href.'" type="text/css" '.$attributes.'>';
+        } else {
+            return '<link rel="'.$rel.'"  href="'.Path::rebase($href).'" type="text/css" '.$attributes.'>';
         }
     }
 

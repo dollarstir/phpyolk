@@ -21,6 +21,12 @@ $router = new Router([
             return Viewer::view('/test.php', $context);
         }
     ),
+    new Route(
+        '/documentation',
+        function ($context){
+            return Viewer::view('/docs.php',$context);
+        }
+    ),
     // new Route(
     //     '/test/{id}/customers/{cid}',
     //     function ($context) {
