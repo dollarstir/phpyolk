@@ -26,7 +26,7 @@ YolkUI::run( new Wrapper(
                 
                 Layout::colm('12','',
                 [
-                    Navbar::basiclight('style="height:50px;"',navbar::Navbrand('home',[el::h2('class="kofi"',['Php Yolk'])]),
+                    Navbar::basiclight('',navbar::Navbrand('home',[el::h2('class="kofi"',['Php Yolk'])]),
                     [
                         Navbar::Navactive('',['Home' =>'home']),
                         Navbar::Navbasic('',['Services'=>'services/sjdsdjs']),
