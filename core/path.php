@@ -7,6 +7,10 @@ class Path {
     }
 
     static function rebase($path = "") {
+        if(strpos($path, 'http') || strpos($path, 'www.')) {
+            return $path;
+        }
+        
         $root = explode("/core", __DIR__)[0];
         $root = array_reverse(explode("/", $root))[0];
 

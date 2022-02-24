@@ -57,7 +57,7 @@ YolkUI::run( new Wrapper(
             ]),
             Layout::row('',
             [
-                Layout::colm('4','',
+                Layout::colm('3','',
                 [
                     Navbar::sidebar('',
                     [
@@ -74,11 +74,16 @@ YolkUI::run( new Wrapper(
                         'Sales'
                     ]),
                 ]),
-                Layout::colm('4','',
+                Layout::colm('5','',
                 [
                     Container::fluid('',
                     [
-                       
+                        Slider::indicator('style="height:400px;"', [
+                           
+                            'j/after.png',
+                            'j/s.png',
+                            'j/3.jpeg'
+                        ])
                         
                     ]),
                 ]),
@@ -86,18 +91,12 @@ YolkUI::run( new Wrapper(
                 [
                     Container::fluid('style="margin-top: 10px;"',
                     [
+                         $aa,
+                        el::h3('style="text-align:center;"',['User Registeration']),
                         
-                        $aa,
-                        el::h3('style=""',['User Registeration']),
-                        //el::
-                        Button::basic('success','',
-                        [
-                            'Users ',
-                            $d,
-                        ]),
                         el::form('','post','class="" enctype="multipart/form-data"',
                         [
-                        inputfile::basic('image','Select file to upload'),
+                        inputfile::basic('image','Select image to upload'),
                         Yolk::input('text','name','','','Full Name'),
                         Yolk::input('email','email','','','Email Adress'),
                         Yolk::input('number','contact','','','Phone Number'),
