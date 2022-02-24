@@ -56,7 +56,6 @@ YolkUI::run(new Wrapper(
                                                 el::divi('id="getStarted"', [
                                                     'Get Started',
 
-
                                                 ]),
                                                 el::divi('id="introbox"', [
                                                     el::p('', 'Welcome to the Yolk PHP documentation!'),
@@ -81,11 +80,6 @@ YolkUI::run(new Wrapper(
                                                 ]),
 
                                             ])
-
-                                                ])
-                                            ]),
-                                            bar::labelprogress('0','100','50','50%',),
-
                                         ]
                                     ),
 
