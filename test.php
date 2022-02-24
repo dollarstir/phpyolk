@@ -26,7 +26,7 @@ YolkUI::run( new Wrapper(
                 
                 Layout::colm('12','',
                 [
-                    Navbar::basiclight('',navbar::Navbrand('home',[el::h2('class="kofi"',['Php Yolk'])]),
+                    Navbar::basiclight('style="height:50px;"',navbar::Navbrand('home',[el::h2('class="kofi"',['Php Yolk'])]),
                     [
                         Navbar::Navactive('',['Home' =>'home']),
                         Navbar::Navbasic('',['Services'=>'services/sjdsdjs']),
@@ -37,26 +37,15 @@ YolkUI::run( new Wrapper(
             ]),
             Layout::row('',
             [
-                Layout::colm('8','',
-                [Container::fluid('',[Slider::crossfade('style="height:470px;"', ['j/after.png','j/s.png','j/3.jpeg']) ]),]),
-                Layout::colm('4','',
+                container::basic('id="maindiv"',
                 [
-                    Container::fluid('style="margin-top: 10px;"',
+                    el::divi('id="navlist"',
                     [
-                        //  $aa,
-                        el::h3('style="text-align:center;"',['User Registeration']),
-                        
-                        el::form('','post','class="adduser" enctype="multipart/form-data"',
-                        [
-                        inputfile::basic('image','Select image to upload'),
-                        Yolk::input('text','name','','','Full Name'),
-                        Yolk::input('email','email','','','Email Adress'),
-                        Yolk::input('number','contact','','','Phone Number'),
-                        Yolk::input('submit','bb','success','','Submit',''),
-
-                        ]),
+                        el::input('search','search','inps','','placeholder="Search..."')
                     ]),
+                    el::divi('id="contents"')
                 ]),
+             
             ]),
        ]),
         Yolk::uicore('alljs'),

@@ -1,80 +1,68 @@
 <?php
+  
+// Developed by Frederick Ennin (Dollarstir)
 
-YolkUI::run(new Html([
-    new Head([
-        MetaData::description("Yolk UI, the quickest way to build your UI in PHP"),
-        MetaData::keyword(["PHP", "Framework", "Quick", "UI"]),
-        MetaData::author("yolkteam@github.com"),
-        MetaData::browser(),
+YolkUI::run( new Wrapper(
+    el::html('lang="en"', 
+[
+    el::head('',
+    [
+        meta::charset(),
+        meta::browser(),
+        meta::viewport(),
+        el::title('Yolk Framework'),
+        Yolk::uicore('allcss'),
 
-        new Title("YolkUI Page"),
-
-        new Style([
-            "body" => [
-                "width" => "100vw",
-                "height" => "100vh"
-            ]
-        ])
-
-    ]),
-    new Body([
-        
-        new Header([
-            new Row([
-                new Column(
-                    Column::SM,
-                    0,
+       el::linkcss('style.css'),
+    ]
+    ),
+    el::body('',
+    [
+        Container::fluid('',
+        [
+            el::divi('style="margin-top: 0px"'),
+            Layout::row('',
+            [
+                
+                Layout::colm('12','',
+                [
+                    Navbar::basiclight('style="height:50px;"',navbar::Navbrand('home',[el::h2('class="kofi"',['Php Yolk'])]),
                     [
-                        new Span("Home")
-                    ],
-                    [
-                        "class" => "px-4 py-2 m-2",
-                        "style" => "background: #0072B5"
-                    ]
-                ),
-
-                new Column(
-                    Column::SM,
-                    0,
-                    [
-                        new Span("Home")
-                    ],
-                    [
-                        "class" => "px-4 py-2 m-2",
-                        "style" => "background: #0072B5"
-                    ]
-                ),
-
-                new Column(
-                    Column::SM,
-                    0,
-                    [
-                        new Span("Home")
-                    ],
-                    [
-                        "class" => "px-4 py-2 m-2",
-                        "style" => "background: #0072B5"
-                    ]
-                ),
-
-            ], [
-                "class" => "justify-content-sm-center m-0 p-3 text-white",
-                "style" => "background: #E7E9EB"
+                        Navbar::Navactive('',['Home' =>'home']),
+                        Navbar::Navbasic('',['Services'=>'services/sjdsdjs']),
+                        Navbar::Navbasic('',['Documentation'=>'documentation']),
+                        Navbar::Navdropdown('','Pages',['Contact Us'=>"contact",'About Us' =>'about',]),
+                    ]),
+                ]),
             ]),
-        ], [
-            "class" => "text-center"
-        ]),
+            Layout::row('',
+            [
+                // Layout::colm('4','',
+                // [Container::basic('',[Slider::crossfade('style="height:470px;"', ['j/after.png','j/s.png','j/3.jpeg']) ]),]),
+                // Layout::colm('8','',
+                // [
+                //     Container::basic('style="margin-top: 10px;"',
+                //     [
+                //         //  $aa,
+                //         el::h3('style="text-align:center;"',['User Registeration']),
+                        
+                //         el::form('','post','class="adduser" enctype="multipart/form-data"',
+                //         [
+                //         inputfile::basic('image','Select image to upload'),
+                //         Yolk::input('text','name','','','Full Name'),
+                //         Yolk::input('email','email','','','Email Adress'),
+                //         Yolk::input('number','contact','','','Phone Number'),
+                //         Yolk::input('submit','bb','success','','Submit',''),
 
-        new Div([
-            new Main([
-                new Paragraph("Hello World"),
-            ], [
-                "class" => "p-5",
-                "style" => "background: #E7E9EB; width: 100%; height: 100%"
+                //         ]),
+                //     ]),
+                // ]),
             ]),
-        ], [
-            "class" => "p-5"
-        ])
+       ]),
+        Yolk::uicore('alljs'),
+    ]
+    ),
+])));
 
-    ])
-]));
+
+
