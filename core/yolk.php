@@ -40,7 +40,8 @@ class Yolk
             case 'allcss':
                 return '<link rel="stylesheet" href="'.Path::rebase('ui/css/bootstrap.min.css').'">
                 <link rel="stylesheet" href="'.Path::rebase('ui/css/all.min.css').'">
-                <link rel="stylesheet" href="'.Path::rebase('ui/css/sweetalert2.min.css').'">';
+                <link rel="stylesheet" href="'.Path::rebase('ui/css/sweetalert2.min.css').'">
+                <link rel="stylesheet" href="'.Path::rebase('yolkassets/prism.css').'">';
                
 
                 // break;
@@ -49,7 +50,10 @@ class Yolk
                 <script src="'.Path::rebase('ui/js/bootstrap.min.js').'"></script>
                 <script src="'.Path::rebase('ui/js/all.min.js').'"></script>
                 <script src="'.Path::rebase('ui/js/sweetalert2.all.min.js').'"></script>
-                <script src="'.Path::rebase('processor.js').'"></script>';
+                <script src="'.Path::rebase('processor.js').'"></script>
+                <script src="' . Path::rebase('ui/js/igniter.js') . '"></script>
+                <script src="' . Path::rebase('yolkassets/prism.js').'"></script>';
+
                 // break;
         }
     }
