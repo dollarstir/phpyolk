@@ -2,6 +2,9 @@
 
 require_once 'loader/autoloader.php';
 
+
+echo el::html('id="cococo"');
+
 $router = new Router([
     new Route(
         '/',

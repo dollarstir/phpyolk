@@ -2,6 +2,17 @@
 $(function(){
     // alert("Hello Yolk");
 
+    // var tt = $('#sisi ul li a');
+    // // alert(tt);
+    // var cont  = $('#cococo');
+    //     tt.on('click',function(e){
+    //         e.preventDefault();
+    //         var w = $(this);
+    //         var tag = w.data('target')
+    //         cont.load('docs.php');
+    //         alert(tag);
+    //     })
+
     
 
     function resp(response){
@@ -655,5 +666,8 @@ $('.editstaff').submit(function(e){
     };
     $.ajax(visitor);
 });
+
+
+
     
 })
