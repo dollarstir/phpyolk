@@ -2,17 +2,16 @@
 $(function(){
     // alert("Hello Yolk");
 
-    // var tt = $('#sisi ul li a');
-    // // alert(tt);
-    // var cont  = $('#cococo');
-    //     tt.on('click',function(e){
-    //         e.preventDefault();
-    //         var w = $(this);
-    //         var tag = w.data('target')
-    //         cont.load('docs.php');
-    //         alert(tag);
-    //     })
-
+    $(document).on('click', "#ddo",function(){
+        swal({
+            title: "Done!",
+            text: "Record Deleted Successfully",
+            timer: 1000,
+            type: 'success',
+            padding: "2em",
+            target: document.querySelector("html")
+          });
+    })
     
 
     function resp(response){

@@ -24,16 +24,23 @@ YolkUI::run(new Wrapper(
                 ]
             ),
 
-            el::body('',
-            [
-                el::ul('',[
-                    el::li('',[
-                        el::a('documentation','data-target="docs.php" id="sisi"')
-                    ])
-                ]),
+            el::body(
+                'id="yolk-body"',
+                [
+                    el::a("documentation", ""),
+                    CodeBox('css','
+                    #searchbox{ 
+                        display: grid;grid-template-columns: fr 1fr;
+                        border: 1px solid rgb(194, 194, 194);
+                        border-radius: 5px ;}'),
 
-                    Yolk::uicore('alljs')
-            ]),
+            
+
+                   
+                    Yolk::uicore('alljs'),
+                    // el::script('src="yolkassets/prism.js"'),
+                ]
+            ),
         ]
     )
 ));
