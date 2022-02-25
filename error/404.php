@@ -1,5 +1,8 @@
 <?php
 // el::doctype();
+// if(file_exist('loader/autoloader'))
+@include '../loader/autoloader.php';
+
 YolkUI::run(new Wrapper(el::html('lang="en"', 
 [
     el::head('',

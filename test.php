@@ -13,7 +13,7 @@ YolkUI::run(new Wrapper(
                     meta::charset(),
                     meta::browser(),
                     meta::viewport(),
-                    el::title('Yolk Framework'),
+                    el::title('','Yolk Framework'),
                     Yolk::uicore('allcss'),
                     el::linkcss('yolkassets/style.css'),
                     el::linkcustomcss('https://fonts.googleapis.com', 'preconnect'),

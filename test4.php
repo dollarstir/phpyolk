@@ -1,7 +1,6 @@
 <?php
 
 // Developed by Frederick Ennin (Dollarstir)
-require 'components/codes.php';
 
 YolkUI::run(new Wrapper(
     el::html(
@@ -13,7 +12,7 @@ YolkUI::run(new Wrapper(
                     meta::charset(),
                     meta::browser(),
                     meta::viewport(),
-                    el::title('','Yolk Framework'),
+                    el::title('','Yolk Framework - SSR'),
                     Yolk::uicore('allcss'),
                     el::linkcss('yolkassets/style.css'),
                     el::linkcustomcss('https://fonts.googleapis.com', 'preconnect'),
@@ -23,22 +22,10 @@ YolkUI::run(new Wrapper(
                     
                 ]
             ),
-
             el::body(
                 'id="yolk-body"',
                 [
-                    el::a("documentation", ""),
-                    CodeBox('css','
-                    #searchbox{ 
-                        display: grid;grid-template-columns: fr 1fr;
-                        border: 1px solid rgb(194, 194, 194);
-                        border-radius: 5px ;}'),
-
-            
-
-                   
-                    Yolk::uicore('alljs'),
-                    // el::script('src="yolkassets/prism.js"'),
+                    el::a('t5','', 'Testing SSR functionality!')
                 ]
             ),
         ]

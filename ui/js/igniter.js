@@ -1,28 +1,49 @@
+window.history.forward(1);
+
+window.addEventListener("popstate", function (event) {
+    $.ajax({
+        url: event.target.location,
+        method: "get",
+        error: (xhr) => {
+            if (xhr.status == 404) {
+                $('body').load('error/404.php')
+            }
+        },
+        beforeSend: () => { },
+        success: (response) => {
+            $("body").html(response);
+        }
+    });
+
+    return true;
+})
+
 $(document).ready(function () {
+    console.log("Load History: ", history.length);
+
     $(document).on("click", "a", function (e) {
         e.preventDefault();
-
         var link = $(this).attr("href");
+
+        if (link.match(new RegExp("^(http|www)"))) {
+            window.open(link, '_blank');
+            return;
+        }
+
         $.ajax({
             url: link,
             method: "get",
-            error: () => {},
-            beforeSend: () => {},
+            error: (xhr) => {
+                if (xhr.status == 404) {
+                    $('body').load('error/404.php')
+                }
+            },
+            beforeSend: () => { },
             success: (response) => {
-                console.log(response);
-
-                $("html").html(response);
-
-                // const title_pattern = new RegExp("<[(title)\s]+>(.*)<\\\/title>");
-                // const body_pattern = new RegExp("<[(body)\s]+>(.*)<\/body>");
-
-                // var title = `${response}`.match(title_pattern);
-                // var body = response.replaceAll("/", "\/").match(body_pattern);
-
-                // console.log();
-                // console.log("Results: ",title);
-                // console.log();
-                // console.log(body);
+                if (window.location.pathname != link) {
+                    history.pushState(null, null, link);
+                    $("body").html(response);
+                }
             }
         });
     })

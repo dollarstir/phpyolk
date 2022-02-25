@@ -28,6 +28,8 @@ YolkUI::run(new Wrapper(
                 'id="yolk-body"',
                 [
 
+                    el::image('j/after.png','style="width:100px;height:100px;"'),
+
                     
                     el::divi(
                         'id="mainCont"',
@@ -64,7 +66,7 @@ YolkUI::run(new Wrapper(
                                                     el::p('', 'Welcome to the Yolk PHP documentation!'),
                                                     el::p('', 'This documentation is intended to help you get started with the Yolk PHP framework.'),
                                                     el::p('', 'If you have any questions, please feel free to contact us at'),
-                                                    el::a('t4', '', 'yolk@gmail.com'),
+                                                    el::a('https://www.google.com/search?client=firefox-b-d&q=how+to+get+a+request+status+in+javascript', '', 'yolk@gmail.com'),
                                                 ]),
                                                 el::divi('id="pcont"', [
                                                     el::h4('', ['System Requirements']),
