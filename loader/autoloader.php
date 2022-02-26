@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/../core/config.php';
+require __DIR__ . '/../core/yc.php';
 
 Config::init();
 

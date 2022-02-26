@@ -1,6 +1,15 @@
 
 $(function(){
-    // alert("Hello Yolk");
+   $('#socl').click(function(){
+    swal({
+        title: "Done!",
+        text: "Record Deleted Successfully",
+        timer: 1000,
+        type: 'success',
+        padding: "2em",
+        // target: document.querySelector("html")
+      });
+   })
 
     $(document).on('click', "#ddo",function(){
         swal({

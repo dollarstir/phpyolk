@@ -39,7 +39,8 @@ YolkUI::run(new Wrapper(
                             el::divi(
                                 '',
                                 [
-                                    el::button('id="ddo"','Submit'),
+                                    // el::button('id="ddo"','Submit'),
+                                    el::button('id="socl"',"Send"),
                                     Container::basic(
                                         'id="maindiv"',
                                         [
@@ -81,6 +82,7 @@ YolkUI::run(new Wrapper(
                                                             border-radius: 5px ;}'),
 
                                                 ]),
+                                               
 
                                             ])
                                         ]
