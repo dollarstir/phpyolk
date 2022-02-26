@@ -93,7 +93,8 @@ YolkUI::run(new Wrapper(
                         ]
                     ),
                     Yolk::uicore('alljs'),
-                    el::script('src="yolkassets/prism.js"'),
+                    // el::script("src='ui/js/sweetalert2.all.min.js'"),
+                    // el::script('src="yolkassets/prism.js"'),
                 ]
 
             ),

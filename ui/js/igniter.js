@@ -1,8 +1,8 @@
-const head_pattern = /<head .*>([\w\W]+)<\/head>/gim;
-const body_pattern = /<body .*>([\w\W]+)<\/body>/gim;
-const title_pattern = /<title>(.*)<\/title>/;
-const script_pattern = /<script src="[\S]+"><\/script>/g;
-const source_pattern = /src="(.*)"/;
+var head_pattern = /<head .*>([\w\W]+)<\/head>/gim;
+var body_pattern = /<body .*>([\w\W]+)<\/body>/gim;
+var title_pattern = /<title>(.*)<\/title>/;
+var script_pattern = /<script src="[\S]+"><\/script>/g;
+var source_pattern = /src="(.*)"/;
 
 window.addEventListener("popstate", function (event) {
     $.ajax({
@@ -21,19 +21,19 @@ window.addEventListener("popstate", function (event) {
 
 })
 
-var main_scripts = [];
+// var main_scripts = [];
 
-window.addEventListener("load", function (event, ...args) {
-    var content = document.getElementsByTagName("html")[0].innerHTML;
+// window.addEventListener("load", function (event, ...args) {
+//     var content = document.getElementsByTagName("html")[0].innerHTML;
 
-    content.match(script_pattern).forEach(script => {
-        var src = script.match(source_pattern)[1];
+//     (content.match(script_pattern) ?? []).forEach(script => {
+//         var src = script.match(source_pattern)[1];
 
-        if (!main_scripts.includes(src)) {
-            main_scripts.push(src);
-        }
-    });
-})
+//         if (!main_scripts.includes(src)) {
+//             main_scripts.push(src);
+//         }
+//     });
+// })
 
 $(document).ready(function () {
     $(document).on("click", "a", function (e) {
@@ -59,13 +59,13 @@ $(document).ready(function () {
                     const temp_html = document.createElement("html");
                     let _body = $("body");
 
-                    response.match(script_pattern).forEach(script => {
-                        var src = script.match(source_pattern)[1];
+                    // (response.match(script_pattern) ?? []).forEach(script => {
+                    //     var src = script.match(source_pattern)[1];
                         
-                        if(main_scripts.includes(src)) {
-                           response = response.replace(script, "");
-                        }
-                    });
+                    //     if(main_scripts.includes(src)) {
+                    //        response = response.replace(script, "");
+                    //     }
+                    // });
 
                     document.title = response.match(title_pattern)[1];
                     temp_html.innerHTML = response; 
