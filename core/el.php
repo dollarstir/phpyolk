@@ -100,7 +100,7 @@ class el
         } else {
             $content = [$content];
         }
-        $tag=' <title '.$attributes.'>';
+        $tag=' <title>';
         $tag .=implode('', $content);
 
         // foreach ($content as $result) {
@@ -1652,7 +1652,7 @@ class el
         } else {
             $content = [$content];
         }
-        $tag=' <script '.$attributes.'>';
+        $tag=' <script '.$attributes.' reserved>';
         $tag .=implode('', $content);
 
         // foreach ($content as $result) {

@@ -16,9 +16,9 @@ YolkUI::run(new Wrapper(
                     el::title('','Yolk Framework'),
                     Yolk::uicore('allcss'),
                     el::linkcss('yolkassets/style.css'),
-                    el::linkcustomcss('https://fonts.googleapis.com', 'preconnect'),
-                    el::linkcustomcss('https://fonts.gstatic.com', 'preconnect'),
-                    el::linkcustomcss('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap', 'stylesheet'),
+                    // el::linkcustomcss('https://fonts.googleapis.com', 'preconnect'),
+                    // el::linkcustomcss('https://fonts.gstatic.com', 'preconnect'),
+                    // el::linkcustomcss('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap', 'stylesheet'),
                     el::linkcss('yolkassets/prism.css'),
                     
                 ]
@@ -38,7 +38,7 @@ YolkUI::run(new Wrapper(
 
                    
                     Yolk::uicore('alljs'),
-                    // el::script('src="yolkassets/prism.js"'),
+                    el::script('src="yolkassets/prism.js"'),
                 ]
             ),
         ]

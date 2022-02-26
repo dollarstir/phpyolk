@@ -1,6 +1,10 @@
-window.addEventListener("popstate", function (event) {
-    console.log("Popping");
+const head_pattern = /<head .*>([\w\W]+)<\/head>/gim;
+const body_pattern = /<body .*>([\w\W]+)<\/body>/gim;
+const title_pattern = /<title>(.*)<\/title>/;
+const script_pattern = /<script src="[\S]+"><\/script>/g;
+const source_pattern = /src="(.*)"/;
 
+window.addEventListener("popstate", function (event) {
     $.ajax({
         url: event.target.location,
         method: "get",
@@ -17,9 +21,21 @@ window.addEventListener("popstate", function (event) {
 
 })
 
-$(document).ready(function () {
-    console.log("Load History: ", history.length);
+var main_scripts = [];
 
+window.addEventListener("load", function (event, ...args) {
+    var content = document.getElementsByTagName("html")[0].innerHTML;
+
+    content.match(script_pattern).forEach(script => {
+        var src = script.match(source_pattern)[1];
+
+        if (!main_scripts.includes(src)) {
+            main_scripts.push(src);
+        }
+    });
+})
+
+$(document).ready(function () {
     $(document).on("click", "a", function (e) {
         e.preventDefault();
         var link = $(this).attr("href");
@@ -39,13 +55,27 @@ $(document).ready(function () {
             },
             beforeSend: () => { },
             success: (response) => {
-                console.log("Loads Page");
-
                 if (window.location.pathname != link) {
-                    console.log("Pushing");
-                    
+                    const temp_html = document.createElement("html");
+                    let _body = $("body");
+
+                    response.match(script_pattern).forEach(script => {
+                        var src = script.match(source_pattern)[1];
+                        
+                        if(main_scripts.includes(src)) {
+                           response = response.replace(script, "");
+                        }
+                    });
+
+                    document.title = response.match(title_pattern)[1];
+                    temp_html.innerHTML = response; 
+
+                    for (const {name, value} of temp_html.children[1].attributes) {
+                        _body.attr(name, value);
+                    }
+
+                    _body.html(response.match(body_pattern)[0]);
                     history.pushState(null, null, link);
-                    $("body").html(response);
                 }
             }
         });
