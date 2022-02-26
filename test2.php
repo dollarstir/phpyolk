@@ -14,6 +14,13 @@ YolkUI::run( new Wrapper(
         Yolk::uicore('allcss'),
 
        el::linkcss('style.css'),
+    // //    css::class('kofi',
+    // //    [
+    // //        bg("1px 1px solid"),
+    // //        borderadius('')
+    // //    ],
+
+    //    ),
     ]
     ),
     el::body('',
