@@ -1,6 +1,6 @@
-window.history.forward(1);
-
 window.addEventListener("popstate", function (event) {
+    console.log("Popping");
+
     $.ajax({
         url: event.target.location,
         method: "get",
@@ -15,7 +15,6 @@ window.addEventListener("popstate", function (event) {
         }
     });
 
-    return true;
 })
 
 $(document).ready(function () {
@@ -40,7 +39,11 @@ $(document).ready(function () {
             },
             beforeSend: () => { },
             success: (response) => {
+                console.log("Loads Page");
+
                 if (window.location.pathname != link) {
+                    console.log("Pushing");
+                    
                     history.pushState(null, null, link);
                     $("body").html(response);
                 }
