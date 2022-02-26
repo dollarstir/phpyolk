@@ -1,6 +1,11 @@
-window.history.forward(1);
+// var custom_history = [];
+
+// window.onload = () => {
+//     win
+// }
 
 window.addEventListener("popstate", function (event) {
+    console.log(event);
     $.ajax({
         url: event.target.location,
         method: "get",
