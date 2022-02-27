@@ -7,11 +7,13 @@ YolkUI::run(new Wrapper(el::html('lang="en"',
 [
     el::head('',
     [
-        meta::charset('charset="utf-8"'),
-        meta::browser('http-equiv="X-UA-Compatible" content="IE=edge"'),
-        meta::viewport('name="viewport" content="width=device-width, initial-scale=1.0"'),
+        meta::charset('utf-8'),
+        meta::browser('X-UA-Compatible', 'IE=edge'),
+        meta::viewport('width=device-width, initial-scale=1.0'),
         el::title('Yolk Framework'),
-        Yolk::uicore('allcss')
+        import('favicon'),
+        Yolk::uicore('corecss'),
+       
     ]
     ),
     el::body('',
@@ -21,45 +23,10 @@ YolkUI::run(new Wrapper(el::html('lang="en"',
         el::h4('class="text-muted m-4"',[
 
         
-            el::ul('',
-            [
-                el::li('style="width: fit-content"',
-                [
-                    el::span('', ['framework']),
-                    el::span('',[ $context['framework']])
-                ]
-                ),
-                el::li('style="width: fit-content"',
-                [
-                    el::span('', ['color']),
-                    el::span('', [$context['color']])
-                ]
-                ),
-                el::li('style="width: fit-content"',
-                [
-                    el::span('', ['id']),
-                    el::span('', [$context['id']])
-                ]
-                ),
-                el::li('style="width: fit-content"',
-                [
-                    el::span('', ['cid']),
-                    el::span('', [$context['cid']])
-                ]
-                )
-            ]
-            )
+            
         ]
         ),
-        el::h4('class="text-center text-muted mt-5"',
-        [
-            el::a('href="home"',
-            [
-                el::i('class="fa fa-face-laugh-wink text-success"')
-            ]
-          )
-        ]
-        )
+       
     ]
     )
 ])));

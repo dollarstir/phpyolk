@@ -37,20 +37,20 @@ class Yolk
             case 'jsfa':
                 return '<script src="'.Path::rebase('ui/js/all.min.js').'"></script>';
                 // break;
-            case 'allcss':
+            case 'corecss':
                 return '<link rel="stylesheet" href="'.Path::rebase('ui/css/bootstrap.min.css').'">
                 <link rel="stylesheet" href="'.Path::rebase('ui/css/all.min.css').'">
                 <link rel="stylesheet" href="'.Path::rebase('ui/css/sweetalert2.min.css').'">
-                <link rel="stylesheet" href="'.Path::rebase('yolkassets/prism.css').'">';
+                ';
                
 
                 // break;
-            case 'alljs':
+            case 'corejs':
                 return '<script src="'.Path::rebase('ui/js/jquery.min.js').'"></script>
                 <script src="'.Path::rebase('ui/js/bootstrap.min.js').'"></script>
                 <script src="'.Path::rebase('ui/js/all.min.js').'"></script>
                 <script src="'.Path::rebase('ui/js/sweetalert2.all.min.js').'"></script>
-                <script src="' . Path::rebase('yolkassets/prism.js').'"></script>
+                    
                 <script src="'.Path::rebase('processor.js').'"></script>
                 <script src="' . Path::rebase('ui/js/igniter.js') . '"></script>';
 

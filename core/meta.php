@@ -19,6 +19,10 @@ class meta{
     public static function browser($eq ='X-UA-Compatible',$browser='IE=edge'){
         return '<meta http-equiv="'.$eq.'" content="'.$browser.'">';
     }
+
+    public static function custom($name ='',$content=''){
+        return '<meta name="'.$name.'" content="'.$content.'">';
+    }
   
 }
 

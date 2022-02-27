@@ -1193,6 +1193,17 @@ class el
         }
     }
 
+    public static function linkjs($src = '', $attributes = '')
+    {
+        // return '<link rel="stylesheet" href="'.$href.'" type="text/css" '.$attributes.'>';
+        // return '<link rel="alternate" href="'.$href.'" type="application/atom+xml" title="Atom" '.$attributes.'>';
+        if (strpos($src, 'http') !== false || strpos($src, 'www') !== false) {
+            return '<script src="'.$src.'"  '.$attributes.'></script>';
+        } else {
+            return '<script src="'.Path::rebase($src).'" '.$attributes.'></script>';
+        }
+    }
+
     public static function linkcustomcss($href = '',$rel='',$attributes = '')
     {
         // return '<link rel="stylesheet" href="'.$href.'" type="text/css" '.$attributes.'>';
@@ -1204,14 +1215,37 @@ class el
         }
     }
 
-    public static function favicon($href = '', $attributes = '', $type = '')
+
+    public static function linkcustom($href = '',$rel='', $type='',$attributes = '')
+    {
+        // return '<link rel="stylesheet" href="'.$href.'" type="text/css" '.$attributes.'>';
+        // return '<link rel="alternate" href="'.$href.'" type="application/atom+xml" title="Atom" '.$attributes.'>';
+        if (strpos($href, 'http') !== false || strpos($href, 'www') !== false) {
+            return '<link rel="'.$rel.'" href="'.$href.'" type="'.$type.'" '.$attributes.'>';
+        } else {
+            return '<link rel="'.$rel.'"  href="'.Path::rebase($href).'" type="'.$type.'" '.$attributes.'>';
+        }
+    }
+
+    public static function favicon($href = '',$type = '', $attributes = '')
     {
         
 
         if (strpos($href, 'http') !== false || strpos($href, 'www') !== false) {
             return '<link rel="shortcut icon" href="'.$href.'" type="'.$type.'">';
         } else {
-            return '<link rel="stylesheet" href="'.Path::rebase($href).'" type="text/css" '.$attributes.'>';
+            return '<link rel="shortcut icon" href="'.Path::rebase($href).'" type="text/css" '.$attributes.'>';
+        }
+    }
+
+    public static function customfavicon($href = '' ,$rel= '',$type = '', $attributes = '')
+    {
+        
+
+        if (strpos($href, 'http') !== false || strpos($href, 'www') !== false) {
+            return '<link rel="'.$rel.'" href="'.$href.'" type="'.$type.'">';
+        } else {
+            return '<link rel="'.$rel.'" href="'.Path::rebase($href).'" type="text/css" '.$attributes.'>';
         }
     }
 

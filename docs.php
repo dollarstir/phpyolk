@@ -13,13 +13,12 @@ YolkUI::run(new Wrapper(
                     meta::charset(),
                     meta::browser(),
                     meta::viewport(),
-                    el::title('','Documentation'),
-                    Yolk::uicore('allcss'),
-                    el::linkcss('yolkassets/style.css'),
-                    // el::linkcustomcss('https://fonts.googleapis.com', 'preconnect'),
-                    // el::linkcustomcss('https://fonts.gstatic.com', 'preconnect'),
-                    // el::linkcustomcss('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap', 'stylesheet'),
-                    el::linkcss('yolkassets/prism.css'),
+                    el::title('', 'Documentation'),
+                    import('favicon'),
+
+                    Yolk::uicore('corecss'),
+                    import('css'),
+
                     
                 ]
             ),
@@ -27,8 +26,6 @@ YolkUI::run(new Wrapper(
             el::body(
                 'id="yolk-body" class="test"',
                 [
-
-                    
                     el::divi(
                         'id="mainCont"',
                         [
@@ -40,7 +37,7 @@ YolkUI::run(new Wrapper(
                                 '',
                                 [
                                     // el::button('id="ddo"','Submit'),
-                                    el::button('id="socl"',"Send"),
+                                    el::button('id="socl"', 'Send'),
                                     Container::basic(
                                         'id="maindiv"',
                                         [
@@ -53,13 +50,12 @@ YolkUI::run(new Wrapper(
                                                     ]),
                                                     el::divi('', [
                                                         el::h4('id="doctitle"', 'Documentation'),
-                                                    ])
+                                                    ]),
                                                 ]
                                             ),
                                             el::divi('id="contents"', [
                                                 el::divi('id="getStarted"', [
                                                     'Get Started',
-
                                                 ]),
                                                 el::divi('id="introbox"', [
                                                     el::p('', 'Welcome to the Yolk PHP documentation!'),
@@ -75,28 +71,24 @@ YolkUI::run(new Wrapper(
                                                         el::li('', ['Mysql']),
                                                         el::li('', ['MacOS, Windows  and Linux are supported']),
                                                     ]),
-                                                    CodeBox('css','
+                                                    CodeBox('css', '
                                                         #searchbox{ 
                                                             display: grid;grid-template-columns: fr 1fr;
                                                             border: 1px solid rgb(194, 194, 194);
                                                             border-radius: 5px ;}'),
-
                                                 ]),
-                                               
-
-                                            ])
+                                            ]),
                                         ]
                                     ),
-
                                 ]
                             ),
                         ]
                     ),
-                    Yolk::uicore('alljs'),
+                    Yolk::uicore('corejs'),
+                    import('js'),
                     // el::script("src='ui/js/sweetalert2.all.min.js'"),
                     // el::script('src="yolkassets/prism.js"'),
                 ]
-
             ),
         ]
     )
