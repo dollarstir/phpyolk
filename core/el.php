@@ -654,6 +654,41 @@ class el
         return trim($tag);
     }
 
+    public static function div($attributes = '', $content = [''])
+    {
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
+        }
+        $tag=' <div '.$attributes.'>';
+        $tag .=implode('', $content);
+
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</div>
+        ';
+        return trim($tag);
+    }
+
+
+    public static function container($attributes = '', $content = [''])
+    {
+        if (is_array($content)) {
+        } else {
+            $content = [$content];
+        }
+        $tag=' <div '.$attributes.'>';
+        $tag .=implode('', $content);
+
+        // foreach ($content as $result) {
+            
+        // }
+        $tag.='</div>
+        ';
+        return trim($tag);
+    }
+
     public static function dl($attributes = '', $content = [])
     {
         if (is_array($content)) {
@@ -1065,9 +1100,9 @@ class el
         return $tag;
     }
 
-    public static function input($type = 'text', $name = '', $class = '', $id = '', $attributes = '')
+    public static function input($type = 'text', $name = '', $class = '', $value = '', $attributes = '')
     {
-        return ' <input type="'.$type.'" name="'.$name.'" class="'.$class.'" id="'.$id.'" '.$attributes.'>';
+        return ' <input type="'.$type.'" name="'.$name.'" class="'.$class.'"  value="'.$value.'" '.$attributes.'>';
     }
 
     public static function ins($attributes = '', $content = [])

@@ -2,7 +2,7 @@
 
 $css =[
 
-    el::linkcss('yolkassets/prism.css'),
+    el::linkcss('ui/css/all.min.css'),
     
    
     el::linkcss('yolkassets/style.css'),
