@@ -10,12 +10,12 @@ YolkUI::run(new Wrapper(
         'lang="en"',
         [
             el::head(
-                '',
+                
                 [
                     meta::charset(),
                     meta::browser(),
                     meta::viewport(),
-                    el::title('', 'Yolk Framework'),
+                    el::title('Yolk Framework'),
                     // Yolk::uicore('allcss'),
                     el::linkcss('yolkassets/style.css'),
                     // el::linkcustomcss('https://fonts.googleapis.com', 'preconnect'),
@@ -25,12 +25,13 @@ YolkUI::run(new Wrapper(
                     import('favicon'),
                     Yolk::uicore('corecss'),
                     import('css'),
+                    import('php'),
 
                 ]
             ),
 
             el::body(
-                'id="tryto"',
+                
                 [
                     el::a('documentation', ''),
                     CodeBox('css', '

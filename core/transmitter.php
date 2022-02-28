@@ -14,6 +14,10 @@ function import($type){
         case 'favicon':
             return require 'settings/favicon.php';
             break;
+
+        case 'php':
+                //  require 'settings/php.php';
+                // break;
      }
 
     

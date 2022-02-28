@@ -77,13 +77,13 @@ class el
         return trim($tag);
     }
 
-    public static function head($attributes = '', $content = [])
+    public static function head($content = [])
     {
         if (is_array($content)) {
         } else {
             $content = [$content];
         }
-        $tag=' <head '.$attributes.'>';
+        $tag=' <head>';
         $tag .=implode('', $content);
 
         // foreach ($content as $result) {
@@ -94,30 +94,30 @@ class el
         return trim($tag);
     }
 
-    public static function title($attributes = '', $content = [])
+    public static function  title($content = '')
     {
-        if (is_array($content)) {
-        } else {
-            $content = [$content];
-        }
+        // if (is_array($content)) {
+        // } else {
+        //     $content = [$content];
+        // }
         $tag=' <title>';
-        $tag .=implode('', $content);
+        $tag .= $content;
 
         // foreach ($content as $result) {
             
         // }
-        $tag.='</title>
+        $tag .='</title>
         ';
         return trim($tag);
     }
 
-    public static function body($attributes = '', $content = [])
+    public static function body($content = [])
     {
         if (is_array($content)) {
         } else {
             $content = [$content];
         }
-        $tag=' <body '.$attributes.'>';
+        $tag=' <body>';
         $tag .=implode('', $content);
 
         // foreach ($content as $result) {
@@ -2199,5 +2199,11 @@ class el
     public static function doctype()
     {
         return'<!DOCTYPE html>';
+    }
+
+
+    public static function linkphp($url){
+
+        return ($url);
     }
 }

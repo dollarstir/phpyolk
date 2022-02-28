@@ -50,6 +50,13 @@ $router = new Router([
             return Viewer::view('/test3.php',$context);
         }
     ),
+
+    new Route(
+        '/login1',
+        function ($context){
+            return Viewer::view('/widgets/login/login.php',$context);
+        }
+    ),
     // new Route(
     //     '/test/{id}/customers/{cid}',
     //     function ($context) {

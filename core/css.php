@@ -5,7 +5,7 @@ class css{
         } else {
             $content = [$content];
         }
-        $tag = '{';
+        $tag = '#'.$idname.'{';
         foreach ($content as $key){
             $tag .= $key;
         }
