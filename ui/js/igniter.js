@@ -1,5 +1,5 @@
-var head_pattern = /<head .*>([\w\W]+)<\/head>/gim;
-var body_pattern = /<body .*>([\w\W]+)<\/body>/gim;
+var head_pattern = /<head>([\w\W]+)<\/head>/gim;
+var body_pattern = /<body>([\w\W]+)<\/body>/gim;
 var title_pattern = /<title>(.*)<\/title>/;
 var script_pattern = /<script src="[\S]+"><\/script>/g;
 var source_pattern = /src="(.*)"/;

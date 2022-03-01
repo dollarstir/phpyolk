@@ -1,6 +1,6 @@
 <?php
 
-class Inser extends database
+class Add extends database
 {
     public function insert($table, $records, $files = null,$uploadto ='upload')
     {
