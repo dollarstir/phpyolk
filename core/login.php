@@ -1,8 +1,9 @@
 <?php
 
-class Login extends database {
-
-    public function authenticate($table,$target, $conjunction = ''){
+class Login extends database
+{
+    public function authenticate($table, $target, $conjunction = '')
+    {
         $vs = '';
         foreach ($target as $value) {
             if (is_array($value)) {
@@ -19,32 +20,28 @@ class Login extends database {
             }
         }
         $ft = $this->conn->prepare("SELECT * FROM $table $vs");
-        foreach($target as $value){
+        foreach ($target as $value) {
             if (is_array($value)) {
                 if (count($value) == 3) {
                     $ft->bindValue(':'.$value[0], $value[2]);
                 }
             }
         }
-        try{
+        try {
             $ft->execute();
             $row = $ft->rowCount();
             $logs = $ft->fetch();
-            if($row >0){
+            if ($row > 0) {
                 session_start();
                 $_SESSION['user'] = $logs;
-                $msg = "loginsuccess";
-            }else{
-                $msg = 'loginfailed';
+                $msg = 'success';
+            } else {
+                $msg = 'failed';
             }
-
-        }catch(PDOException $e){
-
+        } catch (PDOException $e) {
             $msg = 'db error '.$e;
-
         }
 
         return $msg;
-
     }
 }
