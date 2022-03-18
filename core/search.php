@@ -1,8 +1,10 @@
 <?php
 class search{
 
-    public function basic(){
-        
+    public function basic($table,){
+
+
+
     }
 
 }
