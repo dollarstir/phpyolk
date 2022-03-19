@@ -5,7 +5,7 @@ $router = new Router([
     new Route(
         '/',
         function ($context) {
-            return Viewer::view('/main.php', $context);
+            return Viewer::view('/test4.php', $context);
         }
     ),
     new Route(

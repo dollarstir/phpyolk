@@ -14,18 +14,14 @@ YolkUI::run(new Wrapper(
                     meta::viewport(),
                     el::title('','Yolk Framework - SSR'),
                     Yolk::uicore('allcss'),
-                    el::linkcss('yolkassets/style.css'),
-                    // el::linkcustomcss('https://fonts.googleapis.com', 'preconnect'),
-                    // el::linkcustomcss('https://fonts.gstatic.com', 'preconnect'),
-                    // el::linkcustomcss('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap', 'stylesheet'),
-                    el::linkcss('yolkassets/prism.css'),
+                   import('css'),
                     
                 ]
             ),
             el::body(
-                'id="yolk-body"',
                 [
-                    el::a('t5','', 'Testing SSR functionality!')
+                    el::a('t5','', 'Testing SSR functionality!'),
+                    Yolk::uicore('')
                 ]
             ),
         ]
