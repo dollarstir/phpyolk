@@ -20,11 +20,16 @@ class search{
         if($limit == ''){
             $l ='';
         }
+        else{
+            $l ='LIMIT '.$limit;
+        }
         if($order != []){
             foreach ($order as $key=> $value){
                 $ord = 'ORDER BY '.$key.' '.$value;
             }
         }
+
+        
 
 
 
