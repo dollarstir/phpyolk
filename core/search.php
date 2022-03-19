@@ -28,8 +28,8 @@ class search extends database{
                 $ord = 'ORDER BY '.$key.' '.$value;
             }
         }
-        var_dump($vs);
-        var_dump($sq = $this->conn->prepare("SELECT * FROM $table $vs $ord $l")) ;
+        // var_dump($vs);
+        $sq = $this->conn->prepare("SELECT * FROM $table $vs $ord $l");
 
         foreach($record as $value){
           
