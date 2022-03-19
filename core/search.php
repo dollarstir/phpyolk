@@ -1,5 +1,5 @@
 <?php
-class search{
+class search extends database{
 
     public function basic($table,$searchword,$record,$order = [],$limit =''){
         $vs = '';
@@ -29,7 +29,7 @@ class search{
             }
         }
 
-        
+        $sq = 
 
 
 
