@@ -37,8 +37,8 @@ class Yolk
             case 'jsfa':
                 return '<script src="'.Path::rebase('ui/js/all.min.js').'"></script>';
                 // break;
-            case 'jsfa':
-                return '<script src="'.Path::rebase('ui/js/all.min.js').'"></script>';
+            case 'ps':
+                return '<script src="'.Path::rebase('processor/processor.js').'"></script>';
             case 'corecss':
                 return '<link rel="stylesheet" href="'.Path::rebase('ui/css/bootstrap.min.css').'">
                 <link rel="stylesheet" href="'.Path::rebase('ui/css/all.min.css').'">
@@ -52,6 +52,7 @@ class Yolk
                 <script src="'.Path::rebase('ui/js/bootstrap.min.js').'"></script>
                 <script src="'.Path::rebase('ui/js/all.min.js').'"></script>
                 <script src="'.Path::rebase('ui/js/sweetalert2.all.min.js').'"></script>
+                
                     
                 <script src="'.Path::rebase('processor.js').'"></script>';
                 
