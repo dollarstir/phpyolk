@@ -32,9 +32,9 @@ class search extends database{
         var_dump($sq = $this->conn->prepare("SELECT * FROM $table $vs $ord $l")) ;
 
         foreach($record as $value){
-            if(is_array($value)){
+          
                 $sq->bindValue(':'.$value, '%'.$searchword.'%',PDO::PARAM_STR);
-            }
+           
         }
        try{
 
