@@ -7,12 +7,12 @@ YolkUI::run(new Wrapper(
         'lang="en"',
         [
             el::head(
-                '',
+                
                 [
                     meta::charset(),
                     meta::browser(),
                     meta::viewport(),
-                    el::title('','Yolk Framework - SSR'),
+                    el::title('Yolk Framework - SSR'),
                     Yolk::uicore('corecss'),
                    import('css'),
                     
@@ -23,7 +23,7 @@ YolkUI::run(new Wrapper(
                     el::a('t5','', 'Testing SSR functionality!'),
 
                     el::div('class="container"',[
-                        input::
+                        Yolk::input('text','','search'),
                     ]),
                     Yolk::uicore('corejs')
                 ]
