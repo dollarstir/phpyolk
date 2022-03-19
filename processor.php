@@ -10,7 +10,7 @@ if (isset($_GET['action'])) {
             $s = new Search();
             $response = $s->basic('users',$search,['name']);
             foreach ($response as $row){
-                echo el::li('',[$row['name']]);
+                echo el::li('',[$row[0]['name']]);
             }
 
             break;
