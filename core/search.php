@@ -6,7 +6,12 @@ class search{
 
         foreach ($record as $value){
             if(is_array($value)){
-                vs .='WHERE '.$value.' LIKE :keyword'
+                if($vs == ''){
+                    $vs .='WHERE '.$value.' LIKE :keyword';
+                }
+                else{
+                    $vs .='OR '.$value.' LIKE :keyword';
+                }
 
             }
         }
