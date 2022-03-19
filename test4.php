@@ -13,7 +13,7 @@ YolkUI::run(new Wrapper(
                     meta::browser(),
                     meta::viewport(),
                     el::title('','Yolk Framework - SSR'),
-                    Yolk::uicore('allcss'),
+                    Yolk::uicore('corecss'),
                    import('css'),
                     
                 ]
@@ -21,7 +21,7 @@ YolkUI::run(new Wrapper(
             el::body(
                 [
                     el::a('t5','', 'Testing SSR functionality!'),
-                    Yolk::uicore('')
+                    Yolk::uicore('corejs')
                 ]
             ),
         ]
