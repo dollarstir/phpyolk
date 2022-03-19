@@ -29,7 +29,7 @@ class search extends database{
             }
         }
 
-        $sq = 
+        $sq = $this->conn->prepare("SELECT * FROM $table $vs $ord $l") 
 
 
 
