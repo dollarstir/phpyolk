@@ -29,7 +29,12 @@ class search extends database{
             }
         }
         // var_dump($vs);
-        $sq = $this->conn->prepare("SELECT * FROM $table $vs $ord $l");
+        if($searchword =='/'){
+            $sq = $this->conn->prepare("SELECT * FROM $table $ord $l");
+        }
+        else{
+            $sq = $this->conn->prepare("SELECT * FROM $table $vs $ord $l");
+        }
 
         foreach($record as $value){
           
