@@ -38,7 +38,7 @@ class Yolk
                 return '<script src="'.Path::rebase('ui/js/all.min.js').'"></script>';
                 // break;
             case 'jsfa':
-                    return '<script src="'.Path::rebase('ui/js/all.min.js').'"></script>';
+                return '<script src="'.Path::rebase('ui/js/all.min.js').'"></script>';
             case 'corecss':
                 return '<link rel="stylesheet" href="'.Path::rebase('ui/css/bootstrap.min.css').'">
                 <link rel="stylesheet" href="'.Path::rebase('ui/css/all.min.css').'">
