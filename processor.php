@@ -9,7 +9,9 @@ if (isset($_GET['action'])) {
             extract($_POST);
             $s = new Search();
             $response = $s->basic('users',$search,['name']);
-            echo $response;
+            foreach ($response as $row){
+                echo el::li('',[$row['name']]);
+            }
 
             break;
         
