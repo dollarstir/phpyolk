@@ -21,6 +21,10 @@ YolkUI::run(new Wrapper(
             el::body(
                 [
                     el::a('t5','', 'Testing SSR functionality!'),
+
+                    el::div('class="container"',[
+                        input::
+                    ]),
                     Yolk::uicore('corejs')
                 ]
             ),
