@@ -1,8 +1,9 @@
 <?php
 class search{
 
-    public function basic($table,$searchword,$record,$order = '',$by='',$limit =''){
+    public function basic($table,$searchword,$record,$order = [],$limit =''){
         $vs = '';
+        $ord;
 
         foreach ($record as $value){
             if(is_array($value)){
@@ -13,6 +14,15 @@ class search{
                     $vs .='OR '.$value.' LIKE :keyword';
                 }
 
+            }
+        }
+
+        if($limit == ''){
+            $l ='';
+        }
+        if($order != []){
+            foreach ($order as $key=> $value){
+                $ord = 'ORDER BY '.$key.' '.$value;
             }
         }
 
