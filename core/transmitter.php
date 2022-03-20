@@ -1,9 +1,8 @@
 <?php
 
-function import($type){
-
-
-     switch($type){
+function import($type)
+{
+    switch ($type) {
          case 'css':
             return require 'settings/css.php';
             break;
@@ -15,12 +14,11 @@ function import($type){
             return require 'settings/favicon.php';
             break;
 
-        case 'php':
-                //  require 'settings/php.php';
+        case 'yolkcss':
+               return  require 'settings/yorkcss.php';
                 // break;
      }
 
-    
 //     $tag = '<link rel="stylesheet" href="'.Path::rebase('ui/css/bootstrap.min.css').'">
 //     <link rel="stylesheet" href="'.Path::rebase('ui/css/all.min.css').'">
 //     <link rel="stylesheet" href="'.Path::rebase('ui/css/sweetalert2.min.css').'">
