@@ -1068,8 +1068,9 @@ class el
         return trim($tag);
     }
 
-    public static function hr($attributes = '')
+    public static function hr($times =1)
     {
+        $tag = '';
         return ' <hr '.$attributes.'>';
     }
 
