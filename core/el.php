@@ -375,7 +375,7 @@ class el
     public static function br($times = 1)
     {
         $tag = '';
-        for ($i = 0; $i <= $times; ++$i) {
+        for ($i = 1; $i <= $times; ++$i) {
             $tag .= '<br>';
         }
         $tag .= '';
@@ -384,7 +384,7 @@ class el
     }
     public static function break($times =1){
         $tag = '';
-        for($i = 0; $i <=$times;$i++){
+        for($i = 1; $i <=$times;$i++){
             $tag .= '<br>';
         }
         $tag .= '';
