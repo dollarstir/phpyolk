@@ -389,6 +389,8 @@ class el
         }
         $tag .= '';
 
+        return trim($tag);
+
     }
 
     public static function button($attributes = '', $content = [])
