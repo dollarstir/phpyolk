@@ -1079,6 +1079,10 @@ class el
         return trim($tag);
     }
 
+    public static function hruler($times =1){
+        
+    }
+
     public static function i($attributes = '', $content = [])
     {
         if (is_array($content)) {
