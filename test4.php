@@ -14,10 +14,11 @@ YolkUI::run(new Wrapper(
                     el::title('Yolk Framework - SSR'),
                     Yolk::uicore('corecss'),
                    import('css'),
-                   el::style('', [
-                       widget('body', [backgroundcolor('#ffcc00'), color('green')]),
-                       id('ll', [color('black', true)]),
-                   ]),
+                //    el::style('', [
+                //        widget('body', [backgroundcolor('#ffcc00'), color('green')]),
+                //        id('ll', [color('black', true)]),
+                //    ]),
+                yolkcss('k.php'),
                 ]
             ),
             el::body(

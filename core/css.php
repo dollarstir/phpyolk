@@ -44,3 +44,26 @@
 
          return trim($tag);
      }
+
+     function yolkcss($content = '')
+     {
+         //  if (is_array($content)) {
+         //  } else {
+         //      $content = [$content];
+         //  }
+         $tag = '<style>';
+         $tag .= include $content;
+         $tag .= '</style>';
+
+         return trim($tag);
+     }
+
+     function export($designs)
+     {
+         $tag = '';
+         foreach ($designs as $design) {
+             $tag .= $design;
+         }
+
+         return trim($tag);
+     }
