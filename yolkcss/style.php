@@ -1,11 +1,11 @@
 <?php
 
-$designs =
+$style =
 [
     // styling widget called 'body'
     widget('body',
     [
-        backgroundcolor('#ffcc00'),
+        backgroundcolor('gray'),
         color('green'),
     ]),
 // styling widget with id 'boy'
@@ -20,4 +20,4 @@ $designs =
     ]),
 ];
 
- return export($designs);
+ return export($style);

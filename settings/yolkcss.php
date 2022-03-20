@@ -1,14 +1,7 @@
 <?php
 
-$php = [
+$yolkcss = [
     yolkcss('yolkcss/style.php'),
 ];
 
-$rp = '';
-
-foreach ($php as $key) {
-    $rp .= $key;
-}
-$rp .= '';
-
-return $rp;
+return export($yolkcss);
