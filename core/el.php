@@ -1080,7 +1080,9 @@ class el
     }
 
     public static function hruler($times =1){
-        
+        $tag ='';
+        for ($i = 0; $i <= $times;$i++)
+
     }
 
     public static function i($attributes = '', $content = [])
