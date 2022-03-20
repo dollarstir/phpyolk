@@ -15,7 +15,7 @@ function import($type)
             break;
 
         case 'yolkcss':
-               return  require 'settings/yorkcss.php';
+               return  require 'settings/yolkcss.php';
                 // break;
      }
 

@@ -18,7 +18,8 @@ YolkUI::run(new Wrapper(
                 //        widget('body', [backgroundcolor('#ffcc00'), color('green')]),
                 //        id('ll', [color('black', true)]),
                 //    ]),
-                yolkcss('k.php'),
+                // yolkcss('k.php'),
+                import('yolkcss'),
                 ]
             ),
             el::body(
