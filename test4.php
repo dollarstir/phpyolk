@@ -21,7 +21,7 @@ YolkUI::run(new Wrapper(
             el::body(
                 [
                     el::a('t5','', 'Testing SSR functionality!'),
-                    el::br(2),
+                    el::break(),
 
                     el::div('class="container"',[
                         Yolk::input('text','','search','search'),
