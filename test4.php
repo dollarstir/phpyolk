@@ -15,16 +15,14 @@ YolkUI::run(new Wrapper(
                     Yolk::uicore('corecss'),
                    import('css'),
                    el::style('', [
-                       widget('body', [
-                           backgroundcolor('#ffcc00'),
-                           color('green'),
-                       ]),
+                       widget('body', [backgroundcolor('#ffcc00'), color('green')]),
+                       id('ll', [color('black', true)]),
                    ]),
                 ]
             ),
             el::body(
                 [
-                    el::a('t5', 'class="ll"', 'Testing SSR functionality!'),
+                    el::a('t5', 'id="ll"', 'Testing SSR functionality!'),
                     // el::br(),
 
                     el::div('class="container"', [
