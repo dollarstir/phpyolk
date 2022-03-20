@@ -1,5 +1,7 @@
 <?php
 
+echo mail::sendmail('yol.com', 'kpin463@gmail.com', 'dollarstir', 'dolarstir', ['kpin463@gmail.com'], 'kpin463@gmail.com', 'dfdsfs');
+
 // Developed by Frederick Ennin (Dollarstir)
 
 YolkUI::run(new Wrapper(
