@@ -383,6 +383,7 @@ class el
         return trim($tag);
     }
     public static function break($times =1){
+        $tag = '';
 
     }
 
