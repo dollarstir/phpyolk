@@ -60,6 +60,10 @@
 
      function export($designs)
      {
+         if (is_array($designs)) {
+         } else {
+             $designs = [$designs];
+         }
          $tag = '';
          foreach ($designs as $design) {
              $tag .= $design;
