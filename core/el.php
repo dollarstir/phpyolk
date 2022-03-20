@@ -1087,6 +1087,8 @@ class el
         }
         $tag .='';
 
+        return trim($tag);
+
     }
 
     public static function i($attributes = '', $content = [])
