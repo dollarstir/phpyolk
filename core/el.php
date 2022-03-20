@@ -382,6 +382,9 @@ class el
 
         return trim($tag);
     }
+    public static function break(){
+        
+    }
 
     public static function button($attributes = '', $content = [])
     {
