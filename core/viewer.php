@@ -49,7 +49,7 @@ class Viewer
     public static function error($code = 404)
     {
         http_response_code($code);
-        require Path::root("error/$code.php");
+        require Path::root("core/error/$code.php");
 
         return;
     }
