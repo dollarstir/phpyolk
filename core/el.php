@@ -1085,7 +1085,7 @@ class el
             $tag .= '<hr>';
 
         }
-        $tag =
+        $tag .='';
 
     }
 
