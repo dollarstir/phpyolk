@@ -378,7 +378,9 @@ class el
         for ($i = 0; $i <= $times; ++$i) {
             $tag .= '<br>';
         }
-        
+        $tag .= '';
+
+        return trim($tag);
     }
 
     public static function button($attributes = '', $content = [])
