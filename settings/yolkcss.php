@@ -1,7 +1,7 @@
 <?php
 
 $php = [
-    yolkcss('k.php'),
+    yolkcss('yolkcss/style.php'),
 ];
 
 $rp = '';
