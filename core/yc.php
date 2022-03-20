@@ -1,5 +1,7 @@
 <?php
 
+include 'css.php';
+
 function aligncontent($value = '', $isimportant = false)
 {
     if ($isimportant) {
