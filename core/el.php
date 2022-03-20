@@ -1071,7 +1071,7 @@ class el
     public static function hr($times =1)
     {
         $tag = '';
-        for ($i = 0; $i <= $times;)
+        for ($i = 0; $i <= $times;$i++)
     }
 
     public static function i($attributes = '', $content = [])
