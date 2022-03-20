@@ -385,7 +385,7 @@ class el
     public static function break($times =1){
         $tag = '';
         for($i = 0; $i <=$times;$i++){
-            
+            $tag .= '<br>';
         }
 
     }
