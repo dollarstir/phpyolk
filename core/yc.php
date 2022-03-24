@@ -1295,21 +1295,20 @@ function alignitems($value = '', $isimportant = false)
          $properties = [$properties];
      }
 
-     $tag = '@keyframes '.$animationname.'';
-     $tag .= implode('', $content);
+     $tag = '@keyframes '.$animationname.'{';
+     $tag .= implode('', $properties);
 
-     $tag .= '</blockquote>
-     ';
+     $tag .= '}';
 
      return trim($tag);
  }
 
- function all($value = '', $isimportant = false)
+ function left($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'left:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'left:'.$value.';';
      }
  }
 
