@@ -2074,92 +2074,85 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
+
+ 
+
+ function textunderlineposition($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'text-underline-position:'.$value.' !important;';
+     } else {
+         return 'text-underline-position:'.$value.';';
+     }
+ }
+ 
+
+ function top($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'top:'.$value.' !important;';
+     } else {
+         return 'top:'.$value.';';
+     }
+ }
+ 
+
  function transform($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'text-transform:'.$value.' !important;';
+         return 'transform:'.$value.' !important;';
      } else {
-         return 'text-transform:'.$value.';';
+         return 'transform:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function transformorigin($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'transform-origin:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'transform-origin:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function transformstyle($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'transform-style:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'transform-style:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function transition($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'transition:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'transition:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function transitiondelay($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'transition-delay:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'transition-delay:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function transitionduration($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'transition-duration:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
-     }
- }
- 
-
- function all($value = '', $isimportant = false)
- {
-     if ($isimportant) {
-         return ':'.$value.' !important;';
-     } else {
-         return ':'.$value.';';
-     }
- }
- 
-
- function all($value = '', $isimportant = false)
- {
-     if ($isimportant) {
-         return ':'.$value.' !important;';
-     } else {
-         return ':'.$value.';';
-     }
- }
- 
-
- function all($value = '', $isimportant = false)
- {
-     if ($isimportant) {
-         return ':'.$value.' !important;';
-     } else {
-         return ':'.$value.';';
+         return 'transition-duration:'.$value.';';
      }
  }
  
