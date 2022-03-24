@@ -1997,12 +1997,12 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function textdecorationstyle($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-decoration-style:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-decoration-style:'.$value.';';
      }
  }
  
