@@ -1957,42 +1957,42 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function textcombineupright($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-combine-upright:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-combine-upright:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function textdecoration($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-decoration:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-decoration:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function textdecorationcolor($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-decoration-color:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-decoration-color:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function textdecorationline($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-decoration-line:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-decoration-line:'.$value.';';
      }
  }
  
