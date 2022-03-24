@@ -2254,22 +2254,22 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function width($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'width:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'width:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function wordbreak($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'word-break:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'word-break:'.$value.';';
      }
  }
  
