@@ -1605,3 +1605,654 @@ function alignitems($value = '', $isimportant = false)
          return 'object-fit:'.$value.';';
      }
  }
+
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+
+ function all($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return ':'.$value.' !important;';
+     } else {
+         return ':'.$value.';';
+     }
+ }
+ 
+ 
