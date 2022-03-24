@@ -1528,6 +1528,15 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
+ function maximumwidth($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'max-width:'.$value.' !important;';
+     } else {
+         return 'max-width:'.$value.';';
+     }
+ }
+
  function all($value = '', $isimportant = false)
  {
      if ($isimportant) {
