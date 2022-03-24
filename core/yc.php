@@ -1207,30 +1207,30 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridtemplateareas($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-template-areas:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-template-areas:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridtemplatecolumns($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-template-columns:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-template-columns:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridtemplaterows($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-template-rows:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-template-rows:'.$value.';';
      }
  }
 
