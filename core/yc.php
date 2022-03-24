@@ -1483,21 +1483,21 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function maskrepeat($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'mask-repeat:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'mask-repeat:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function masksize($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'mask-size:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'mask-size:'.$value.';';
      }
  }
 
