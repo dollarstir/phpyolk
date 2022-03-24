@@ -1875,19 +1875,19 @@ function alignitems($value = '', $isimportant = false)
  function right($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'right:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'right:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function rowgap($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'row-gap:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'row-gap:'.$value.';';
      }
  }
  
