@@ -1597,11 +1597,11 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function objectfit($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'object-fit:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'object-fit:'.$value.';';
      }
  }
