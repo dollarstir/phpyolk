@@ -1696,31 +1696,31 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function overflow($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'overflow:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'overflow:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function overflowwrap($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'overflow-wrap:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'overflow-wrap:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function overflowx($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'overflow-x:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'overflow-x:'.$value.';';
      }
  }
 
