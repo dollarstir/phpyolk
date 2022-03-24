@@ -1724,22 +1724,22 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function overflowy($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'overflow-y:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'overflow-y:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function padding($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'padding:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'padding:'.$value.';';
      }
  }
  
