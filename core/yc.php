@@ -1270,21 +1270,21 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function isolation($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'isolation:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'isolation:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function justifycontent($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'justify-content:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'justify-content:'.$value.';';
      }
  }
 
