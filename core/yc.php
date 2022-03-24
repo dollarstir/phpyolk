@@ -1804,12 +1804,12 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function pagebreakinside($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'page-break-inside:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'page-break-inside:'.$value.';';
      }
  }
  
