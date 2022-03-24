@@ -1288,13 +1288,8 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function keyframes($animationname, $value = [])
  {
-     if ($isimportant) {
-         return 'all:'.$value.' !important;';
-     } else {
-         return 'all:'.$value.';';
-     }
  }
 
  function all($value = '', $isimportant = false)
