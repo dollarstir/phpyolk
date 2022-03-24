@@ -1420,12 +1420,12 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function mask($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'mask:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'mask:'.$value.';';
      }
  }
 
