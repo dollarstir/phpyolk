@@ -2194,52 +2194,62 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function userselect($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'user-select:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'user-select:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function verticalalign($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'vertical-align:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'vertical-align:'.$value.';';
+     }
+ }
+
+ function valign($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'vertical-align:'.$value.' !important;';
+     } else {
+         return 'vertical-align:'.$value.';';
+     }
+ }
+ 
+ 
+
+ function visibility($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'visibility:'.$value.' !important;';
+     } else {
+         return 'visibility:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function whitespace($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'white-space:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'white-space:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function widows($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'widows:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
-     }
- }
- 
-
- function all($value = '', $isimportant = false)
- {
-     if ($isimportant) {
-         return ':'.$value.' !important;';
-     } else {
-         return ':'.$value.';';
+         return 'widows:'.$value.';';
      }
  }
  
