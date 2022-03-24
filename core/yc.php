@@ -1754,22 +1754,22 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function paddingleft($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'padding-left:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'padding-left:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function paddingright($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'padding-right:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'padding-right:'.$value.';';
      }
  }
  
