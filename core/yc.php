@@ -1744,12 +1744,12 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function paddingbottom($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'padding-bottom:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'padding-bottom:'.$value.';';
      }
  }
  
