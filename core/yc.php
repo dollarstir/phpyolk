@@ -2047,30 +2047,39 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function textoverflow($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-overflow:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-overflow:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function textshadow($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-shadow:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-shadow:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function texttransform($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-transform:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-transform:'.$value.';';
+     }
+ }
+
+ function transform($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'text-transform:'.$value.' !important;';
+     } else {
+         return 'text-transform:'.$value.';';
      }
  }
  
