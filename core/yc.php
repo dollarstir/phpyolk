@@ -2314,6 +2314,7 @@ function alignitems($value = '', $isimportant = false)
 
  function webkit($property,$value = '', $isimportant = false)
  {
+    $property = $property($value);
      if ($isimportant) {
          return '-webkit-'.$property.':'.$value.' !important;';
      } else {
@@ -2323,7 +2324,8 @@ function alignitems($value = '', $isimportant = false)
 
  function ms($property,$value = '', $isimportant = false)
  {
-     if ($isimportant) {
+     $property = $property($value);
+    if ($isimportant) {
          return '-ms-'.$property.':'.$value.' !important;';
      } else {
          return '-ms-'.$property.':'.$value.';';
