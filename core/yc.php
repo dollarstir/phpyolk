@@ -1375,39 +1375,39 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function margin($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'margin:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'margin:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function marginbottom($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'margin-bottom:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'margin-bottom:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function marginleft($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'margin-left:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'margin-left:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function marginright($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'margin-right:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'margin-right:'.$value.';';
      }
  }
 
