@@ -1626,17 +1626,17 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function order($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'order:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'order:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function orphans($value = '', $isimportant = false)
  {
      if ($isimportant) {
          return ':'.$value.' !important;';
