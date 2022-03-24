@@ -1862,17 +1862,17 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function resize($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'resize:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'resize:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function right($value = '', $isimportant = false)
  {
      if ($isimportant) {
          return ':'.$value.' !important;';
