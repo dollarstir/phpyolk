@@ -1537,13 +1537,20 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function media($rule = '',$properties=[])
  {
-     if ($isimportant) {
-         return 'all:'.$value.' !important;';
-     } else {
-         return 'all:'.$value.';';
-     }
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = '@media '.$rule.'{';
+    $tag .= implode('', $properties);
+
+    
+    $tag .= '</blockquote>
+    ';
+
+    return trim($tag);
  }
 
  function all($value = '', $isimportant = false)
