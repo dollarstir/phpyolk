@@ -1501,30 +1501,30 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function masktype($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'mask-type:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'mask-type:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function maxheight($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'max-height:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'max-height:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function maxwidth($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'max-width:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'max-width:'.$value.';';
      }
  }
 
