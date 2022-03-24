@@ -1456,12 +1456,12 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function maskmode($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'mask-mode:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'mask-mode:'.$value.';';
      }
  }
 
