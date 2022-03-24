@@ -1639,19 +1639,19 @@ function alignitems($value = '', $isimportant = false)
  function orphans($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'orphans:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'orphans:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function outline($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'outline:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'outline:'.$value.';';
      }
  }
  
