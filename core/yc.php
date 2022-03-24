@@ -1686,12 +1686,12 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function outlinewidth($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'outline-width:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'outline-width:'.$value.';';
      }
  }
  
