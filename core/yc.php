@@ -1351,9 +1351,9 @@ function alignitems($value = '', $isimportant = false)
  function liststyleimage($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return ' list-style-image:url("'.$value.'") !important;';
      } else {
-         return 'all:'.$value.';';
+         return ' list-style-image:url("'.$value.'");';
      }
  }
 
