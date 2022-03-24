@@ -1294,6 +1294,14 @@ function alignitems($value = '', $isimportant = false)
      } else {
          $properties = [$properties];
      }
+
+     $tag = '@keyframes '.$animationname.'';
+     $tag .= implode('', $content);
+
+     $tag .= '</blockquote>
+     ';
+
+     return trim($tag);
  }
 
  function all($value = '', $isimportant = false)
