@@ -1794,12 +1794,12 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function pagebreakbefore($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'page-break-before:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'page-break-before:'.$value.';';
      }
  }
  
