@@ -1447,12 +1447,12 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function maskimage($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'mask-image:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'mask-image:'.$value.';';
      }
  }
 
