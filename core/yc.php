@@ -1357,21 +1357,21 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function liststyleposition($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'list-style-position:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'list-style-position:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function liststyletype($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'list-style-type:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'list-style-type:'.$value.';';
      }
  }
 
