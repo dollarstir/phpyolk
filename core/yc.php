@@ -1438,12 +1438,12 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function maskcomposite($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'mask-composite:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'mask-composite:'.$value.';';
      }
  }
 
