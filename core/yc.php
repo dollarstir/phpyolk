@@ -1774,12 +1774,12 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function paddingtop($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'padding-top:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'padding-top:'.$value.';';
      }
  }
  
