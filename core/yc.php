@@ -1552,12 +1552,21 @@ function alignitems($value = '', $isimportant = false)
     return trim($tag);
  }
 
- function all($value = '', $isimportant = false)
+ function minheight($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'min-height:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'min-height:'.$value.';';
+     }
+ }
+
+ function minimumheight($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'min-height:'.$value.' !important;';
+     } else {
+         return 'min-height:'.$value.';';
      }
  }
 
