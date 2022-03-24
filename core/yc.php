@@ -1607,21 +1607,21 @@ function alignitems($value = '', $isimportant = false)
  }
 
 
- function all($value = '', $isimportant = false)
+ function objectposition($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'object-position:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'object-position:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function opacity($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'opacity:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'opacity:'.$value.';';
      }
  }
  
