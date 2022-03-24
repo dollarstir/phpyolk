@@ -1429,12 +1429,12 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function maskclip($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'mask-clip:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'mask-clip:'.$value.';';
      }
  }
 
