@@ -1656,32 +1656,32 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function outlinecolor($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'outline-color:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'outline-color:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function outlineoffset($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'outline-offset:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'outline-offset:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function outlinestyle($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'outline-style:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'outline-style:'.$value.';';
      }
  }
  
