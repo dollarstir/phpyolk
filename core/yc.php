@@ -1129,63 +1129,63 @@ function alignitems($value = '', $isimportant = false)
  function gridcolumnend($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-column-end:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-column-end:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridcolumngap($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-column-gap:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-column-gap:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridcolumnstart($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-column-start:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-column-start:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridgap($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-gap:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-gap:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridrow($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-row:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-row:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridrowend($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-row-end:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-row-end:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridrowgap($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-row-gap:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-row-gap:'.$value.';';
      }
  }
 
