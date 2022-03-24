@@ -1570,6 +1570,33 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
+ function minwidth($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'min-width:'.$value.' !important;';
+     } else {
+         return 'min-width:'.$value.';';
+     }
+ }
+
+ function minimumwidth($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'min-width:'.$value.' !important;';
+     } else {
+         return 'min-width:'.$value.';';
+     }
+ }
+
+ function mixblendmode($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'mix-blend-mode:'.$value.' !important;';
+     } else {
+         return 'mix-blend-mode:'.$value.';';
+     }
+ }
+
  function all($value = '', $isimportant = false)
  {
      if ($isimportant) {
