@@ -1547,8 +1547,7 @@ function alignitems($value = '', $isimportant = false)
     $tag .= implode('', $properties);
 
     
-    $tag .= '</blockquote>
-    ';
+    $tag .= '}';
 
     return trim($tag);
  }
