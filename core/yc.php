@@ -1814,50 +1814,50 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function perspective($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'perspective:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'perspective:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function perspectiveorigin($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'perspective-origin:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'perspective-origin:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function pointerevents($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'pointer-events:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
-     }
- }
- 
-
- function all($value = '', $isimportant = false)
- {
-     if ($isimportant) {
-         return ':'.$value.' !important;';
-     } else {
-         return ':'.$value.';';
+         return 'pointer-events:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function position($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'position:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'position:'.$value.';';
+     }
+ }
+ 
+
+ function quotes($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'quotes:'.$value.' !important;';
+     } else {
+         return 'quotes:'.$value.';';
      }
  }
  
