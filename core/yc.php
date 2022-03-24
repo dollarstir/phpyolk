@@ -1411,12 +1411,12 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function margintop($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'margin-top:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'margin-top:'.$value.';';
      }
  }
 
