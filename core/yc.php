@@ -1892,51 +1892,68 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function scrollbehavior($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'scroll-behavior:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'scroll-behavior:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function tabsize($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'tab-size:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'tab-size:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function tablelayout($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'table-layout:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'table-layout:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function textalign($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-align:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-align:'.$value.';';
+     }
+ }
+ function aligntext($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'text-align:'.$value.' !important;';
+     } else {
+         return 'text-align:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function align($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-align:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-align:'.$value.';';
+     }
+ }
+
+ function textalignlast($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'text-align-last:'.$value.' !important;';
+     } else {
+         return 'text-align-last:'.$value.';';
      }
  }
 
