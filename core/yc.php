@@ -1189,21 +1189,21 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridrowstart($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-row-start:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-row-start:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function gridtemplate($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'grid-template:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'grid-template:'.$value.';';
      }
  }
 
