@@ -2007,42 +2007,42 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function  textdecorationthickness($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return ' text-decoration-thickness:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return ' text-decoration-thickness:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function textindent($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-indent:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-indent:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function textjustify($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-justify:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-justify:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function textorientation($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'text-orientation:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'text-orientation:'.$value.';';
      }
  }
  
