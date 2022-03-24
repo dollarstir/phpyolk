@@ -2157,30 +2157,39 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function transitionproperty($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'transition-property:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'transition-property:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function transitiontimingfunction($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'transition-timing-function:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'transition-timing-function:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function transitiontiming($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'transition-timing-function:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'transition-timing-function:'.$value.';';
+     }
+ }
+
+ function unicodebidi($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'unicode-bidi:'.$value.' !important;';
+     } else {
+         return 'unicode-bidi:'.$value.';';
      }
  }
  
