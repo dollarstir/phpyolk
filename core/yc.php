@@ -1312,43 +1312,43 @@ function alignitems($value = '', $isimportant = false)
      }
  }
 
- function all($value = '', $isimportant = false)
+ function letterspacing($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'letter-spacing:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'letter-spacing:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function linebreak($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'line-break:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'line-break:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function lineheight($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'line-height:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'line-height:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function liststyle($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'all:'.$value.' !important;';
+         return 'list-style:'.$value.' !important;';
      } else {
-         return 'all:'.$value.';';
+         return 'list-style:'.$value.';';
      }
  }
 
- function all($value = '', $isimportant = false)
+ function liststyleimage($value = '', $isimportant = false)
  {
      if ($isimportant) {
          return 'all:'.$value.' !important;';
