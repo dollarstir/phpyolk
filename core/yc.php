@@ -1450,9 +1450,9 @@ function alignitems($value = '', $isimportant = false)
  function maskimage($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return 'mask-image:'.$value.' !important;';
+         return 'mask-image:url('.$value.') !important;';
      } else {
-         return 'mask-image:'.$value.';';
+         return 'mask-image:url('.$value.');';
      }
  }
 
