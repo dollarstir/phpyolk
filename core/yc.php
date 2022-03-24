@@ -2274,22 +2274,59 @@ function alignitems($value = '', $isimportant = false)
  }
  
 
- function all($value = '', $isimportant = false)
+ function wordspacing($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'word-spacing:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'word-spacing:'.$value.';';
      }
  }
  
 
- function all($value = '', $isimportant = false)
+ function wrapword($value = '', $isimportant = false)
  {
      if ($isimportant) {
-         return ':'.$value.' !important;';
+         return 'word-wrap:'.$value.' !important;';
      } else {
-         return ':'.$value.';';
+         return 'word-wrap:'.$value.';';
+     }
+ }
+
+
+ function writingmode($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'writing-mode:'.$value.' !important;';
+     } else {
+         return 'writing-mode:'.$value.';';
+     }
+ }
+
+ function zindex($value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return 'z-index:'.$value.' !important;';
+     } else {
+         return 'z-index:'.$value.';';
+     }
+ }
+
+ function webkit($property,$value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return '-webkit-'.$property.':'.$value.' !important;';
+     } else {
+         return '-webkit-'.$property.':'.$value.';';
+     }
+ }
+
+ function ms($property,$value = '', $isimportant = false)
+ {
+     if ($isimportant) {
+         return '-ms-'.$property.':'.$value.' !important;';
+     } else {
+         return '-ms-'.$property.':'.$value.';';
      }
  }
  
