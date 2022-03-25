@@ -2334,6 +2334,91 @@ function alignitems($value = '', $isimportant = false)
 
 //  handling pseudo elements
 
-function after()
+function after($value,$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.'::after {';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+
+function before($value,$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.'::before {';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function firstletter($value,$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.'::first-letter {';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function firstline($value,$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.'::first-line {';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function selection($value,$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.'::selection {';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+
+
+function after($value,$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.'::after {';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
  
  
