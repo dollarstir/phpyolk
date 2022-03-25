@@ -2420,5 +2420,639 @@ function active($value,$othervalue ='',$properties =[]){
 
     return trim($tag);
 }
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+function active($value,$othervalue ='',$properties =[]){
+    if (is_array($properties)) {
+    } else {
+        $properties = [$properties];
+    }
+    $tag = $value.':active '.$othervalue.'{';
+    $tag .= implode('', $properties);
+
+   
+    $tag .= '}';
+
+    return trim($tag);
+}
+
+
+
  
  
