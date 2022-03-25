@@ -2421,12 +2421,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function checked($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':checked '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
@@ -2435,12 +2435,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function disabled($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':disabled '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
@@ -2449,12 +2449,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function isempty($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':empty '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
@@ -2463,12 +2463,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function enabled($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':enabled '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
