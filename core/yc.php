@@ -2561,12 +2561,12 @@ function invalid($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function lang($value,$language,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':lang('.$language.') '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
