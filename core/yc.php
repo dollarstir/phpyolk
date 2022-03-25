@@ -2331,5 +2331,9 @@ function alignitems($value = '', $isimportant = false)
          return '-ms-'.$property.':'.$value.';';
      }
  }
+
+//  handling pseudo elements
+
+function after()
  
  
