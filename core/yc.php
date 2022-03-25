@@ -2771,12 +2771,12 @@ function required($value,$properties =[]){
     return trim($tag);
 }
 
-function root($value,$properties =[]){
+function root($properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':root {';
+    $tag = ':root {';
     $tag .= implode('', $properties);
 
    
@@ -2785,12 +2785,12 @@ function root($value,$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function target($value,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':target {';
     $tag .= implode('', $properties);
 
    
@@ -2799,12 +2799,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function valid($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':valid '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
@@ -2813,82 +2813,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function visited($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':visited '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
@@ -2898,159 +2828,6 @@ function active($value,$othervalue ='',$properties =[]){
 }
 
 
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
-
-function active($value,$othervalue ='',$properties =[]){
-    if (is_array($properties)) {
-    } else {
-        $properties = [$properties];
-    }
-    $tag = $value.':active '.$othervalue.'{';
-    $tag .= implode('', $properties);
-
-   
-    $tag .= '}';
-
-    return trim($tag);
-}
 
 
 
