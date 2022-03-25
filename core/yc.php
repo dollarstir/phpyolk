@@ -2477,12 +2477,12 @@ function enabled($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function firstchild($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':first-child '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
@@ -2491,12 +2491,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function firstoftype($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':first-of-type '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
@@ -2505,12 +2505,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function focus($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':focus '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
