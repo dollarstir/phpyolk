@@ -2575,12 +2575,12 @@ function lang($value,$language,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function lastchild($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':last-child '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
@@ -2589,12 +2589,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function lastoftype($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':last-of-type '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
