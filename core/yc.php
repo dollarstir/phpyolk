@@ -2406,13 +2406,13 @@ function selection($value,$properties =[]){
 }
 
 
-
-function after($value,$properties =[]){
+// pseudo classes
+function active($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.'::after {';
+    $tag = $value.':active '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
