@@ -2603,7 +2603,7 @@ function lastoftype($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function link($value,$othervalue ='',$properties =[]){
+function unvisited($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
