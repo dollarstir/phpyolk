@@ -2631,12 +2631,12 @@ function not($value,$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function nthchild($value,$n,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':nth-child('.$n.') {';
     $tag .= implode('', $properties);
 
    
@@ -2645,12 +2645,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function nthlastchild($value,$n,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':nth-last-child('.$n.') {';
     $tag .= implode('', $properties);
 
    
@@ -2659,12 +2659,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function nthlastoftype($value,$n,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':nth-last-of-type('.$n.') {';
     $tag .= implode('', $properties);
 
    
@@ -2673,12 +2673,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function onlyoftype($value,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':only-of-type {';
     $tag .= implode('', $properties);
 
    
@@ -2687,12 +2687,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function onlychild($value,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':only-child {';
     $tag .= implode('', $properties);
 
    
@@ -2701,12 +2701,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function optional($value,$othervalue ='',$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':optional '.$othervalue.'{';
     $tag .= implode('', $properties);
 
    
@@ -2715,12 +2715,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function outofrange($value,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':out-of-range {';
     $tag .= implode('', $properties);
 
    
@@ -2729,12 +2729,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function readonly($value,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':read-only{';
     $tag .= implode('', $properties);
 
    
@@ -2743,12 +2743,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function readwrite($value,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':read-write {';
     $tag .= implode('', $properties);
 
    
@@ -2757,12 +2757,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function required($value,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':required{';
     $tag .= implode('', $properties);
 
    
@@ -2771,12 +2771,12 @@ function active($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function active($value,$othervalue ='',$properties =[]){
+function root($value,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = $value.':root {';
     $tag .= implode('', $properties);
 
    
