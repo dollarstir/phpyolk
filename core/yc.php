@@ -2617,12 +2617,12 @@ function unvisited($value,$othervalue ='',$properties =[]){
     return trim($tag);
 }
 
-function not($value,$othervalue ='',$properties =[]){
+function not($value,$properties =[]){
     if (is_array($properties)) {
     } else {
         $properties = [$properties];
     }
-    $tag = $value.':active '.$othervalue.'{';
+    $tag = ':not('.$value.') {';
     $tag .= implode('', $properties);
 
    
