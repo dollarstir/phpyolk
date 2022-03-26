@@ -130,7 +130,7 @@ $(function(){
 
 
 
-$('.addstaff').submit(function(e){
+$('.welcome').submit(function(e){
 
     e.preventDefault();
     // before();
