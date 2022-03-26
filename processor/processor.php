@@ -15,7 +15,7 @@ if (isset($_GET['action'])) {
                 $response = curl_exec($curl);
                 curl_close($curl);
 
-                return $response;
+                echo $response;
             }
             extract($_POST);
             $fields = ['email' => $usermail];
