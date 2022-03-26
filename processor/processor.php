@@ -6,7 +6,7 @@ if (isset($_GET['action'])) {
     switch ($_GET['action']) {
         case 'welcome':
 
-            function httpPost($url, $data)
+            function psd($url, $data)
             {
                 $curl = curl_init($url);
                 curl_setopt($curl, CURLOPT_POST, true);
@@ -15,14 +15,14 @@ if (isset($_GET['action'])) {
                 $response = curl_exec($curl);
                 curl_close($curl);
 
-                echo $response;
+                return $response;
             }
             extract($_POST);
             $fields = ['email' => $usermail];
 
             //url-ify the data for the POST
             $dd = http_build_query($fields);
-            echo json_decode(httpPost('http://phpyolk.com/newuser', $dd));
+            echo json_decode(psd('http://phpyolk.com/newuser', $dd));
             // $mail = new Mail();
             // $response = $mail->sendmail('www.phpyolk.com', 'New user', 'New user has started using yolk', 'Yolk User', ['kpin463@gmail.com']);
             // echo $response;
