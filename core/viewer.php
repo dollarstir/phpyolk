@@ -49,7 +49,7 @@ class Viewer
     public static function error($code = 404)
     {
         http_response_code($code);
-        require Path::root("error/$code.php");
+        require Path::root("core/error/$code.php");
 
         return;
     }
@@ -61,7 +61,7 @@ class Viewer
         if (is_readable($path)) {
             require_once $path;
         } else {
-            self::error(400);
+            self::error(404);
         }
 
         return;

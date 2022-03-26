@@ -19,19 +19,18 @@ YolkUI::run(new Wrapper(
                     import('favicon'),
                     Yolk::uicore('corecss'),
                     import('css'),
-                    import('php'),
+                    import('yolkcss'),
                 ]
             ),
 
             el::body(
                 [
-                    el::a('documentation', ''),
-                    CodeBox('css', '
-                    #searchbox{ 
-                        display: grid;grid-template-columns: fr 1fr;
-                        border: 1px solid rgb(194, 194, 194);
-                        border-radius: 5px ;}'),
-
+                    el::div('class="container"', [
+                        el::h2('class="text-center success"', 'Thank you for using the Yolk framework'),
+                        el::form('', '', 'class="welcome"', [
+                            Inputs::input('email', 'usermail', 'mail', '', ''),
+                        ]),
+                    ]),
                     Yolk::uicore('corejs'),
                     import('js'),
                 ]

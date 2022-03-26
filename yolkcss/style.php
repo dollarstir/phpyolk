@@ -5,18 +5,12 @@ $style =
     // styling widget called 'body'
     widget('body',
     [
-        backgroundcolor('gray'),
+        margin('0'),
+        padding('0'),
+    ]),
+    dot('success', [
         color('green'),
-    ]),
-// styling widget with id 'boy'
-    id('boy',
-    [
-        color('black'),
-    ]),
-// styling class  called 'mainbox'
-    dot('mainbox', [
-        borderradius('5px'),
-       backgroundcolor('#116699'),
+        margintop('100px'),
     ]),
 ];
 
