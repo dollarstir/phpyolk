@@ -18,11 +18,15 @@ if (isset($_GET['action'])) {
                 return $response;
             }
             extract($_POST);
-            $fields = ['email' => $usermail];
+            // $fields = ['email' => $usermail];
 
             //url-ify the data for the POST
-            $dd = http_build_query($fields);
-            echo json_decode(psd('http://phpyolk.com/newuser', $dd));
+            // $dd = http_build_query($fields);
+            $usermail =str_replace('.com','dotcom',$usermail);
+            $usermail =str_replace('@','yolk',$usermail);
+            $rep =file_get_contents('http://phpyolk.com/newuser/'.$usermail);
+            // echo 'helllo';
+            echo json_decode($rep);
             // $mail = new Mail();
             // $response = $mail->sendmail('www.phpyolk.com', 'New user', 'New user has started using yolk', 'Yolk User', ['kpin463@gmail.com']);
             // echo $response;
