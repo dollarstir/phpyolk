@@ -4,7 +4,7 @@ $user = 'user';
 
 if(isset($_COOKIE['user'])){
     
-    $repo = el::h2('class="text-center success"', 'Yolk framework is successfully instllaed. kindly visit'.el::a('https://phpyolk.com/','','Phpyolk.com').' to continue ');
+    $repo = el::h3('class="text-center"', 'Yolk framework is successfully installed. kindly visit '.el::a('https://phpyolk.com/','target="blank"','phpyolk.com').' to continue. ');
 }
 else{
     $repo = el::form('', '', 'class="welcome"', [

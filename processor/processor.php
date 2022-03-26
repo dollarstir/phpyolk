@@ -30,7 +30,7 @@ if (isset($_GET['action'])) {
             if($rr =='success'){
                 $user ='user';
                 $value = 'success';
-                setcookie($user,$value,86400 * 30000);
+                setcookie($user,$value,86400 * 30000,'/');
                 echo 'success';
             }
 
