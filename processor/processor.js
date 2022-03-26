@@ -135,7 +135,7 @@ $('.welcome').submit(function(e){
     e.preventDefault();
     // before();
     var staff = {
-        url: 'processor.php?action=addstaff',
+        url: 'processor.php?action=welcome',
         type: 'post',
         data: new FormData(this),
         cache: false,
