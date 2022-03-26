@@ -2,7 +2,7 @@
 
 class Add extends database
 {
-    public function insert($table, $records, $files = null,$uploadto ='upload')
+    public function insert($table, $records, $files = null, $uploadto = 'yolkassets/upload')
     {
         $man = '';
         $vv = '';
@@ -17,9 +17,9 @@ class Add extends database
                         break;
                     }
                     $oldfilename = $file['name'];
-                    $rd =rand(00,99);
-                    $r2= time();
-                    $r3 = uniqid("a");
+                    $rd = rand(00, 99);
+                    $r2 = time();
+                    $r3 = uniqid('a');
                     $ff = $rd.''.$r2.''.$r3;
                     $filetype = array_reverse(explode('/', $file['type']))[0];
                     $newfilename = $name.''.$ff.'.'.$filetype;
@@ -27,7 +27,7 @@ class Add extends database
                         $records[$name] = $newfilename;
                     } else {
                         $flag = true;
-                        $msg= "failed  to upload file";
+                        $msg = 'failed  to upload file';
                     }
                 }
             }
@@ -48,13 +48,13 @@ class Add extends database
                 $ins->bindValue(':'.$key, $value); // $fields[] = $key;
                 // $values[] = "'".$value."'";
             }
-            
-            if( $ins->execute()) {
-                $msg=  "success";
+
+            if ($ins->execute()) {
+                $msg = 'success';
             } else {
-                $msg = "failed";
+                $msg = 'failed';
             }
-           
+
             // var_dump($ins);
             // var_dump($man);
             // var_dump($vv);
