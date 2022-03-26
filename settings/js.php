@@ -1,7 +1,7 @@
 <?php
 
 $js = [
-    el::linkjs('yolkassets/prism.js'),
+    el::linkjs('processor/processor.js'),
 ];
 
 return export($js);
