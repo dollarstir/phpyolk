@@ -29,9 +29,9 @@ YolkUI::run(new Wrapper(
                         el::h2('class="text-center success"', 'Thank you for using the Yolk framework'),
                         el::form('', '', 'class="welcome"', [
                             Inputs::input('email', 'usermail', 'mail', '', '', '', 'placeholder="Enter your email address"'),
-                        ]),
-                        el::div('id="btn"', [
-                            button::basic('primary', '', ['Continue']),
+                            el::div('id="btn"', [
+                                inputs::input('submit', '', 'primary', '', 'Continue'),
+                            ]),
                         ]),
                     ]),
                     Yolk::uicore('corejs'),
