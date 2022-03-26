@@ -26,7 +26,14 @@ if (isset($_GET['action'])) {
             $usermail =str_replace('@','yolk',$usermail);
             $rep =file_get_contents('http://phpyolk.com/newuser/'.$usermail);
             // echo 'helllo';
-            echo json_decode($rep);
+            $rr = json_decode($rep);
+            if($rr =='success'){
+                $user ='user';
+                $value = 'success';
+                setcookie($user,$value,86400 * 30000);
+                echo 'success';
+            }
+
             // $mail = new Mail();
             // $response = $mail->sendmail('www.phpyolk.com', 'New user', 'New user has started using yolk', 'Yolk User', ['kpin463@gmail.com']);
             // echo $response;

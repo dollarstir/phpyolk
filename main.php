@@ -1,6 +1,19 @@
 <?php
-
+$user = 'user';
 // Developed by Frederick Ennin (Dollarstir)
+
+if(isset($_COOKIE['user'])){
+    
+    $repo = el::h2('class="text-center success"', 'Yolk framework is successfully instllaed. kindly visit'.el::a('https://phpyolk.com/','','Phpyolk.com').' to continue ');
+}
+else{
+    $repo = el::form('', '', 'class="welcome"', [
+        Inputs::input('email', 'usermail', 'mail', '', '', '', 'placeholder="Enter your email address"'),
+        el::div('id="btn"', [
+            inputs::input('submit', '', 'primary', '', 'Continue'),
+        ]),
+    ]);
+}
 require 'components/codes.php';
 
 YolkUI::run(new Wrapper(
@@ -27,12 +40,7 @@ YolkUI::run(new Wrapper(
                 [
                     el::div('class="container"', [
                         el::h2('class="text-center success"', 'Thank you for using the Yolk framework'),
-                        el::form('', '', 'class="welcome"', [
-                            Inputs::input('email', 'usermail', 'mail', '', '', '', 'placeholder="Enter your email address"'),
-                            el::div('id="btn"', [
-                                inputs::input('submit', '', 'primary', '', 'Continue'),
-                            ]),
-                        ]),
+                        $repo,
                     ]),
                     Yolk::uicore('corejs'),
                     import('js'),
