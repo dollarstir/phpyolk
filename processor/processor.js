@@ -151,61 +151,7 @@ $('.addstaff').submit(function(e){
 
 
 
-$('.delbookinfo').click(function(e){
 
-    e.preventDefault();
-    var id = this.id;
-    var sid = this.id;
-    // alert(id);
-    // before();
-    var session = {
-        url: 'processor.php?action=delete&table=bookings&sid='+ sid,
-        type: 'post',
-        data: jQuery.param({ sid : $('.delbookinfo').attr('id') }),
-        cache: false,
-        contentType: false,
-        processData: false,
-        beforeSend: before,
-        success: resp
-
-    };
-    $.ajax(session);
-});
-
-
-
-
-
-
-$("#search").keyup(function() {
-    //Assigning search box value to javascript variable named as "name".
-    var name = $('#search').val();
-    //Validating, if "name" is empty.
-    if (name == "") {
-        //Assigning empty value to "display" div in "search.php" file.
-        $("#display").html("");
-    }
-    //If name is not empty.
-    else {
-        //AJAX is called.
-        $.ajax({
-            //AJAX type is "Post".
-            type: "POST",
-            //Data will be sent to "ajax.php".
-            url: "processor/processor.php?action=search",
-            //Data, that will be sent to "ajax.php".
-            data: {
-                //Assigning value of "name" into "search" variable.
-                search: name
-            },
-            //If result found, this funtion will be called.
-            success: function(html) {
-                //Assigning result to "display" div in "search.php" file.
-                $("#display").html(html).show();
-            }
-        });
-    }
-});
 
 
 
