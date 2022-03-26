@@ -17,10 +17,17 @@ if (isset($_GET['action'])) {
 
                 return $response;
             }
-            echo json_decode(httpPost('submission.phpyolk.com', $usermail));
-            $mail = new Mail();
-            $response = $mail->sendmail('www.phpyolk.com', 'New user', 'New user has started using yolk', 'Yolk User', ['kpin463@gmail.com']);
-            echo $response;
+            extract($_POST);
+            $fields = [
+                'email' => $usermail,
+            ];
+
+            //url-ify the data for the POST
+            $data = http_build_query($fields);
+            echo json_decode(httpPost('http://phpyolk.com/newuser', $data));
+            // $mail = new Mail();
+            // $response = $mail->sendmail('www.phpyolk.com', 'New user', 'New user has started using yolk', 'Yolk User', ['kpin463@gmail.com']);
+            // echo $response;
 
             break;
 
