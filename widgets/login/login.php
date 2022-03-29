@@ -1,5 +1,11 @@
 "<?php
 // Developed By dollarstir(+233556676471/kpin463@gmail.com)
+$ins = new Add();
+extract($_POST);
+$response = $ins->insert('user', [
+    'username' => $username,
+    'email' => $email,
+], $_FILES);
 YolkUI::run(new Wrapper(
     el::html('',
     [

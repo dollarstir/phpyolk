@@ -18,7 +18,7 @@ class Yolkpay
 
     public static function pay()
     {
-        echo '<button type="submit" onclick="payWithPaystack()"> Pay </button>';
+        echo '<button class="btn btn-primary" type="submit" onclick="payWithPaystack()"> Pay </button>';
     }
 
     public static function handler()

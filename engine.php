@@ -7,6 +7,13 @@ $router = new Router([
         function ($context) {
             return Viewer::view('main.php', $context);
         }
-    ),  
+    ),
+
+    new Route(
+        '/check',
+        function ($context) {
+            return Viewer::view('test.php', $context);
+        }
+    ),
 ]);
 $router->launch();

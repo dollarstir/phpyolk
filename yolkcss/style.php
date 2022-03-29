@@ -22,6 +22,9 @@ $style =
         marginleft('45%', true),
         margintop('20px', true),
     ]),
-];
+dot('center', [
+    fontsize('15px', true),
+    textalign('center'),
+]), ];
 
  return export($style);
