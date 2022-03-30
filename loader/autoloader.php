@@ -1,14 +1,8 @@
 <?php
 
-require __DIR__.'/../core/config.php';
-require __DIR__.'/../core/yc.php';
-require __DIR__.'/../core/transmitter.php';
-
-Config::init();
-
-require __DIR__.'/../core/PHPMailer/src/Exception.php';
-require __DIR__.'/../core/PHPMailer/src/PHPMailer.php';
-require __DIR__.'/../core/PHPMailer/src/SMTP.php';
+require __DIR__.'/../core/includes.php';
+require __DIR__.'/../core/include.php';
+ Config::init();
 
 spl_autoload_register(function ($class) {
     $path = __DIR__.'/../core/'.strtolower(str_replace('\\', '/', $class)).'.php';

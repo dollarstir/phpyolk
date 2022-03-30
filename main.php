@@ -1,12 +1,11 @@
 <?php
+
 $user = 'user';
 // Developed by Frederick Ennin (Dollarstir)
 
-if(isset($_COOKIE['user'])){
-    
-    $repo = el::h3('class="text-center"', 'Yolk framework is successfully installed. kindly visit '.el::a('https://phpyolk.com/','target="blank"','phpyolk.com').' to continue. ');
-}
-else{
+if (isset($_COOKIE['user'])) {
+    $repo = el::h3('class="text-center"', 'Yolk framework is successfully installed. kindly visit '.el::a('https://phpyolk.com/', 'target="blank"', 'phpyolk.com').' to continue. ');
+} else {
     $repo = el::form('', '', 'class="welcome"', [
         Inputs::input('email', 'usermail', 'mail', '', '', '', 'placeholder="Enter your email address"'),
         el::div('id="btn"', [
@@ -14,7 +13,6 @@ else{
         ]),
     ]);
 }
-require 'components/codes.php';
 
 YolkUI::run(new Wrapper(
     el::html(
