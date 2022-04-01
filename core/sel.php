@@ -46,7 +46,11 @@ class Sel extends database
 
     public function getall($table, $order = [], $limit = '')
     {
-        if ($order == []) {
+        $kof = '';
+        if ($order != []) {
+            foreach ($order as $key => $value) {
+                $kof .= "ORDER BY $key $value";
+            }
         }
         if ($limit == '') {
             $sel = $this->conn->prepare("SELECT * FROM $table $order");
