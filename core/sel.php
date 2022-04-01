@@ -51,11 +51,13 @@ class Sel extends database
             foreach ($order as $key => $value) {
                 $kof .= "ORDER BY $key $value";
             }
+        } else {
+            $kof = '';
         }
         if ($limit == '') {
-            $sel = $this->conn->prepare("SELECT * FROM $table $order");
+            $sel = $this->conn->prepare("SELECT * FROM $table $kof");
         } else {
-            $sel = $this->conn->prepare("SELECT * FROM $table $order $limit");
+            $sel = $this->conn->prepare("SELECT * FROM $table $kof  LIMIT $limit");
         }
 
         $sel->execute();

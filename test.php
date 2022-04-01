@@ -2,13 +2,12 @@
 
 $repo = '';
 $g = new Sel();
-$resp = $g->getall('users','ORDER BY id DESC','limit 5');
+$resp = $g->getall('users', ['id' => 'DESC'], '5');
 $cont = '';
-foreach ($resp as $row){
-$cont  .= el::tr('',[
-    el::td('',$row['name']),
-    el::td('',$row['email'])
-
+foreach ($resp as $row) {
+    $cont .= el::tr('', [
+    el::td('', $row['name']),
+    el::td('', $row['email']),
 ]);
 }
 // $c = new Counter();
@@ -24,7 +23,6 @@ $cont  .= el::tr('',[
 //     'email' => $email,
 // ], $_FILES);
 
- 
     YolkUI::run(new Wrapper(
 el::html('',
 [
@@ -39,15 +37,14 @@ YOlk::uicore('corecss'),
 el::body([
     el::h2('class="center"', 'Registeration test'),
 Container::basic('', [
-    el::table('',[
-       el::tr('',[
-           el::th('',"Username"),
-           el::th('',"Email"),
+    el::table('', [
+       el::tr('', [
+           el::th('', 'Username'),
+           el::th('', 'Email'),
        ]),
-      
+
         $cont,
-    
-    ])
+    ]),
 ]),
 import('js'),
 ]),
