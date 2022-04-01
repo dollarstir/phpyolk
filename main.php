@@ -33,7 +33,6 @@ YolkUI::run(new Wrapper(
                     import('yolkcss'),
                 ]
             ),
-
             el::body(
                 [
                     el::div('class="container"', [
