@@ -38,3 +38,11 @@ function sendmail($domain, $subject, $message, $from_name = 'Yolk Mailer', $to, 
 
     return $response;
 }
+
+function update($table, $records, $target = '', $files = null, $uploadto = 'yolkassets/upload')
+{
+    $init = new Upd();
+    $response = $init->update($table, $records, $target, $files, $uploadto = 'yolkassets/upload');
+
+    return $response;
+}
