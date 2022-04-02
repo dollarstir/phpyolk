@@ -4,6 +4,10 @@ class Sel extends database
 {
     public function select($table, $target, $conjunction = '', $order = [], $limit = '')
     {
+        if (is_array($order)) {
+        } else {
+            $order = [$order];
+        }
         $vs = '';
         // $allval = []
         foreach ($target as $value) {
