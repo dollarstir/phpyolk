@@ -2,5 +2,9 @@
 
 function involve($file)
 {
-    return require __DIR__.'/../fragement/'.$file;
+    if (strpos($file, '.') !== false) {
+        return require __DIR__.'/../fragement/'.$file;
+    } else {
+        return require __DIR__.'/../fragement/'.$file.'.php';
+    }
 }
