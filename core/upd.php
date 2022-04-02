@@ -2,7 +2,7 @@
 
 class Upd extends Database
 {
-    public function update($table, $records, $target= '',$files = null,$uploadto ='upload')
+    public function update($table, $records, $target = '', $files = null, $uploadto = 'yolkassets/upload')
     {
         try {
             $vu = '';
@@ -16,9 +16,9 @@ class Upd extends Database
                             break;
                         }
                         $oldfilename = $file['name'];
-                        $rd =rand(00,99);
-                        $r2= time();
-                        $r3 = uniqid("axesdfd");
+                        $rd = rand(00, 99);
+                        $r2 = time();
+                        $r3 = uniqid('axesdfd');
                         $ff = $rd.''.$r2.''.$r3;
                         $filetype = array_reverse(explode('/', $file['type']))[0];
                         $newfilename = $name.''.$ff.'.'.$filetype;
@@ -31,8 +31,7 @@ class Upd extends Database
                 }
             }
 
-            if(!$flag){
-
+            if (!$flag) {
                 foreach ($records as $key => $value) {
                     $vu .= $key.'= :'.$key.',';
                 }
@@ -47,7 +46,6 @@ class Upd extends Database
                 } else {
                     $msg = 'Update Failed';
                 }
-
             }
         } catch (PDOException $e) {
             $msg = 'ERROR: '.$e->getMessage();
