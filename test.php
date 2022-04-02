@@ -2,25 +2,15 @@
 
 $repo = '';
 $resp = fetchall('users', ['id' => 'DESC'], '2');
+$email = 'kpin463@gmail.com';
+$rest = customfetch('users', [['email', '=', $email]], '', ['id' => 'DESC'], '3');
 $cont = '';
-foreach ($resp as $row) {
+foreach ($rest as $row) {
     $cont .= el::tr('', [
     el::td('', $row['name']),
     el::td('', $row['email']),
 ]);
 }
-// $c = new Counter();
-// $res = $c->customcount('users', [
-//     ['email', '=', 'kpin463@gmail.com'],
-// ]);
-// $ct = badge::basic('primary', $res);
-// if (isset($_POST['btn'])) {
-//     $ins = new Add();
-//     extract($_POST);
-//     $response = $ins->insert('users', [
-//     'name' => $username,
-//     'email' => $email,
-// ], $_FILES);
 
     YolkUI::run(new Wrapper(
 el::html('',

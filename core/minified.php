@@ -15,3 +15,7 @@ function customfetch($table, $target, $conjunction = '', $order = [], $limit = '
 
     return $response;
 }
+
+function sms($senderid, $recipient, $message)
+{
+}
