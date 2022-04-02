@@ -2,7 +2,7 @@
 
 $c = '';
 
-$r = update('users', ['email' => 'dollarstir@gmail.com'], 'name = "Dollarstir"');
+$r = update('users', ['email' => 'dollarstir@gmail.com'], 'name = "Dollarir"');
 $c = Alert::closable('success', $r);
 // $keyword = 'kofi';
 // $rest = search('users', $keyword, ['email'], ['id' => 'DESC']);
@@ -29,6 +29,7 @@ YOlk::uicore('corecss'),
 el::body([
     el::h2('class="center"', 'Registeration test'),
 Container::basic('', [
+    $c,
     el::table('', [
        el::tr('', [
            el::th('', 'Username'),
@@ -39,6 +40,7 @@ Container::basic('', [
     ]),
 ]),
 import('js'),
+Yolk::uicore('jsb'),
 ]),
 ])
 ));

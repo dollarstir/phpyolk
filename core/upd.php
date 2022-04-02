@@ -42,9 +42,9 @@ class Upd extends Database
                     $up->bindValue(':'.$key, $value);
                 }
                 if ($up->execute()) {
-                    $msg = 'Updated Successfully';
+                    $msg = 'success';
                 } else {
-                    $msg = 'Update Failed';
+                    $msg = 'failed';
                 }
             }
         } catch (PDOException $e) {
