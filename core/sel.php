@@ -50,6 +50,10 @@ class Sel extends database
 
     public function getall($table, $order = [], $limit = '')
     {
+        if (is_array($order)) {
+        } else {
+            $order = [$order];
+        }
         $kof = '';
         if ($order != []) {
             foreach ($order as $key => $value) {
