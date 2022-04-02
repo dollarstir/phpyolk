@@ -1,10 +1,8 @@
 <?php
 
-sms('Dollarsoft', '0556676471', 'Welcome to the Yolk Framework');
-$repo = '';
-$resp = fetchall('users', ['id' => 'DESC'], '2');
-$email = 'kpin463@gmail.com';
-$rest = customfetch('users', [['email', '=', $email]], '', ['id' => 'DESC'], '3');
+$keyword = 'kofi';
+$rest = search('users', $keyword, ['email'], ['id' => 'DESC']);
+
 $cont = '';
 foreach ($rest as $row) {
     $cont .= el::tr('', [
