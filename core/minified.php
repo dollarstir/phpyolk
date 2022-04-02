@@ -48,4 +48,12 @@ function update($table, $records, $target = '', $files = null, $uploadto = 'yolk
 }
 function insert($table, $records, $files = null, $uploadto = 'yolkassets/upload')
 {
+    $init = new Add();
+    $response = $init->insert($table, $records, $files, $uploadto);
+
+    return $response;
+}
+
+function delete($table, $target, $conjunction = '')
+{
 }
