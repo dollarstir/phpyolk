@@ -18,4 +18,8 @@ function customfetch($table, $target, $conjunction = '', $order = [], $limit = '
 
 function sms($senderid, $recipient, $message)
 {
+    $send = new Yolksms();
+    $response = $send->sms($senderid, $recipient, $message);
+
+    return $response;
 }
