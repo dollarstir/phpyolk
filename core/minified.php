@@ -1,7 +1,13 @@
 <?php
 
-function fetchall($table, $records, $target = '')
+function fetchall($table, $order = [], $limit = '')
 {
     $init = new Sel();
-    $response = $init->getall($table, $order = [], $limit = '');
+    $response = $init->getall($table, $order, $limit);
+
+    return $response;
+}
+
+function customfetch(){
+    
 }

@@ -1,8 +1,7 @@
 <?php
 
 $repo = '';
-$g = new Sel();
-$resp = $g->getall('users', ['id' => 'DESC'], '5');
+$resp = fetchall('users', ['id' => 'DESC'], '2');
 $cont = '';
 foreach ($resp as $row) {
     $cont .= el::tr('', [
