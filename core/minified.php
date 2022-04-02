@@ -61,3 +61,7 @@ function delete($table, $target, $conjunction = '')
 
     return $response;
 }
+
+function countall($table)
+{
+}
