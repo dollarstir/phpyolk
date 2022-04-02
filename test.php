@@ -2,8 +2,8 @@
 
 $c = '';
 
-$r = customcount('users', [['name', '=', 'Dollarstir']]);
-$c = badge::basic('primary', 'Total Dollarsstir: '.$r);
+$r = convertmoney('20', 'USD', 'GHS');
+$c = alert::basic('success', 'You have converted $20 to GH¢'.$r);
 // $keyword = 'kofi';
 // $rest = search('users', $keyword, ['email'], ['id' => 'DESC']);
 
