@@ -1,15 +1,19 @@
 <?php
 
-$keyword = 'kofi';
-$rest = search('users', $keyword, ['email'], ['id' => 'DESC']);
+$c = '';
+
+$r = update('users', ['email' => 'dollarstir@gmail.com'], 'name = "Dollarstir"');
+$c = Alert::closable('success', $r);
+// $keyword = 'kofi';
+// $rest = search('users', $keyword, ['email'], ['id' => 'DESC']);
 
 $cont = '';
-foreach ($rest as $row) {
-    $cont .= el::tr('', [
-    el::td('', $row['name']),
-    el::td('', $row['email']),
-]);
-}
+// foreach ($rest as $row) {
+//     $cont .= el::tr('', [
+//     el::td('', $row['name']),
+//     el::td('', $row['email']),
+// ]);
+// }
 
     YolkUI::run(new Wrapper(
 el::html('',
