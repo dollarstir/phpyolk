@@ -23,3 +23,11 @@ function sms($senderid, $recipient, $message)
 
     return $response;
 }
+
+function search($table, $searchword, $record, $order = [], $limit = '')
+{
+    $init = new search();
+    $response = $init->basic($table, $searchword, $record, $order, $limit);
+
+    return $response;
+}
