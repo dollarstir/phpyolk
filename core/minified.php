@@ -58,5 +58,6 @@ function delete($table, $target, $conjunction = '')
 {
     $init = new Del();
     $response = $init->delete($table, $target, $conjunction);
-    return $response
+
+    return $response;
 }
