@@ -1,5 +1,6 @@
 <?php
 
+sms('Dollarsoft', '0556676471', 'Welcome to the Yolk Framework');
 $repo = '';
 $resp = fetchall('users', ['id' => 'DESC'], '2');
 $email = 'kpin463@gmail.com';
