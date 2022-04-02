@@ -77,3 +77,7 @@ function customcount($table, $target, $conjunction = '')
 
     return $response;
 }
+
+function convertmoney($amount, $from_currency, $to_currency)
+{
+}
