@@ -56,4 +56,6 @@ function insert($table, $records, $files = null, $uploadto = 'yolkassets/upload'
 
 function delete($table, $target, $conjunction = '')
 {
+    $init = new Del();
+    $response = $init->delete($table, $target, $conjunction);
 }
