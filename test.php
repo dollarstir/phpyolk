@@ -2,8 +2,8 @@
 
 $c = '';
 
-$r = countall('users');
-$c = badge::basic('primary', 'Total Users: '.$r);
+$r = customcount('users', [['name', '=', 'Dollarstir']]);
+$c = badge::basic('primary', 'Total Dollarsstir: '.$r);
 // $keyword = 'kofi';
 // $rest = search('users', $keyword, ['email'], ['id' => 'DESC']);
 
