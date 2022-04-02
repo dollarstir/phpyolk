@@ -4,16 +4,16 @@ $c = '';
 
 $r = convertmoney('20', 'USD', 'GHS');
 $c = alert::basic('success', 'You have converted $20 to GH¢'.$r);
-// $keyword = 'kofi';
-// $rest = search('users', $keyword, ['email'], ['id' => 'DESC']);
+$keyword = 'kofi';
+$rest = search('users', $keyword, ['email'], ['id' => 'DESC']);
 
 $cont = '';
-// foreach ($rest as $row) {
-//     $cont .= el::tr('', [
-//     el::td('', $row['name']),
-//     el::td('', $row['email']),
-// ]);
-// }
+foreach ($rest as $row) {
+    $cont .= el::tr('', [
+    el::td('', $row['name']),
+    el::td('', $row['email']),
+]);
+}
 
     YolkUI::run(new Wrapper(
 el::html('',
