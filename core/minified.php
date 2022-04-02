@@ -65,5 +65,7 @@ function delete($table, $target, $conjunction = '')
 function countall($table)
 {
     $init = new Counter();
-    $response = $init->
+    $response = $init->countall($table);
+
+    return $response;
 }
