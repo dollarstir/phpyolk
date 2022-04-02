@@ -31,3 +31,7 @@ function search($table, $searchword, $record, $order = [], $limit = '')
 
     return $response;
 }
+function mail($domain, $subject, $message, $from_name = 'Yolk Mailer', $to, $reply_to = 'info@phpyork.com', $reply_to_name = 'Yolk Mailer')
+{
+    $n =
+}
