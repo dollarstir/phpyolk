@@ -8,6 +8,15 @@ class Sel extends database
         } else {
             $order = [$order];
         }
+
+        $kof = '';
+        if ($order != []) {
+            foreach ($order as $key => $value) {
+                $kof .= "ORDER BY $key $value";
+            }
+        } else {
+            $kof = '';
+        }
         $vs = '';
         // $allval = []
         foreach ($target as $value) {
