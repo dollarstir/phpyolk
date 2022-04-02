@@ -80,4 +80,8 @@ function customcount($table, $target, $conjunction = '')
 
 function convertmoney($amount, $from_currency, $to_currency)
 {
+    $init = new Converter();
+    $response = $init->currency($amount, $from_currency, $to_currency);
+
+    return $response;
 }
