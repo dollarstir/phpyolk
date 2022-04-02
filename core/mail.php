@@ -10,12 +10,16 @@ class Mail extends PHPMailer
 {
 //    ader/autoloader.php';
 
-    public function sendmail($domain, $subject, $message, $from_name = 'Yolk Mailer',$to, $reply_to = 'info@phpyork.com', $reply_to_name = 'Yolk Mailer')
+    public function sendmail($domain, $subject, $message, $from_name = 'Yolk Mailer', $to, $reply_to = 'info@phpyork.com', $reply_to_name = 'Yolk Mailer')
     {
         // PHPMailer\PHPMailer\PHPMailer;
         // PHPMailer\PHPMailer\SMTP;
         try {
             $mail = new PHPMailer(true);
+            if (is_array($to)) {
+            } else {
+                $to = [$to];
+            }
 
             // Server Settings
             $mail->SMTPDebug = SMTP::DEBUG_OFF;
@@ -34,12 +38,10 @@ class Mail extends PHPMailer
             $mail->isHTML(true);
             $mail->Body = $message;
 
-            
             $rp = $mail->send();
             if ($rp == 1) {
                 echo 'success';
             }
-           
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
