@@ -37,9 +37,9 @@ class Sel extends database
         // $vs = rtrim($vs, $conjunction);
         // echo $vs;
         if ($limit == '') {
-            $sel = $this->conn->prepare("SELECT * FROM $table $vs");
+            $sel = $this->conn->prepare("SELECT * FROM $table $vs $kof ");
         } else {
-            $sel = $this->conn->prepare("SELECT * FROM $table $vs $limit");
+            $sel = $this->conn->prepare("SELECT * FROM $table $vs $kof LIMIT $limit");
         }
         foreach ($target as $value) {
             if (is_array($value)) {
