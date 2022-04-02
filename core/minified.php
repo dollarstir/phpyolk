@@ -72,4 +72,8 @@ function countall($table)
 
 function customcount($table, $target, $conjunction = '')
 {
+    $init = new Counter();
+    $response = $init->customcount($table, $target, $conjunction);
+
+    return $response;
 }
