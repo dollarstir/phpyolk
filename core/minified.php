@@ -8,6 +8,6 @@ function fetchall($table, $order = [], $limit = '')
     return $response;
 }
 
-function customfetch(){
-    
+function customfetch($table, $target, $conjunction = '', $limit = '')
+{
 }
