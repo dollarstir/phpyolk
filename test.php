@@ -2,8 +2,8 @@
 
 $c = '';
 
-$r = update('users', ['email' => 'dollarstir@gmail.com'], 'name = "Dollarir"');
-$c = Alert::closable('success', $r);
+$r = countall('users');
+$c = badge::basic('primary', 'Total Users: '.$r);
 // $keyword = 'kofi';
 // $rest = search('users', $keyword, ['email'], ['id' => 'DESC']);
 

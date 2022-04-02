@@ -69,3 +69,7 @@ function countall($table)
 
     return $response;
 }
+
+function customcount($table, $target, $conjunction = '')
+{
+}
