@@ -89,5 +89,14 @@ function convertmoney($amount, $from_currency, $to_currency)
 function paginate($table, $order = [], $numperpage)
 {
     $init = new Pagination();
-    $response = $init->paginate($table, $order = [], $numperpage);
+    $response = $init->paginate($table, $order, $numperpage);
+
+    return $response;
+}
+function pagecount($table, $perpage)
+{
+    $init = new Pagination();
+    $response = $init->pagecount($table, $perpage);
+
+    return $response;
 }
