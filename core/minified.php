@@ -85,3 +85,7 @@ function convertmoney($amount, $from_currency, $to_currency)
 
     return $response;
 }
+
+function paginate($table, $order = [], $limit)
+{
+}
