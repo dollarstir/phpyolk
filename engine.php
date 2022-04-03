@@ -15,5 +15,12 @@ $router = new Router([
             return Viewer::view('test.php', $context);
         }
     ),
+
+    new Route(
+        '/check/{rid}',
+        function ($context) {
+            return Viewer::view('test.php', $context);
+        }
+    ),
 ]);
 $router->launch();

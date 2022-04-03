@@ -86,17 +86,17 @@ function convertmoney($amount, $from_currency, $to_currency)
     return $response;
 }
 
-function paginate($table, $order = [], $numperpage)
+function paginate($table, $order = [], $numperpage, $ct)
 {
     $init = new Pagination();
-    $response = $init->paginate($table, $order, $numperpage);
+    $response = $init->paginate($table, $order, $numperpage, $ct);
 
     return $response;
 }
-function pagecount($table, $perpage)
+function pagecount($table, $perpage,$ct)
 {
     $init = new Pagination();
-    $response = $init->pagecount($table, $perpage);
+    $response = $init->pagecount($table, $perpage, $ct);
 
     return $response;
 }

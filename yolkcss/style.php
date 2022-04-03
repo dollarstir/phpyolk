@@ -22,9 +22,13 @@ $style =
         marginleft('45%', true),
         margintop('20px', true),
     ]),
-dot('center', [
-    fontsize('15px', true),
-    textalign('center'),
-]), ];
+    dot('center', [
+        fontsize('15px', true),
+        textalign('center'),
+    ]),
+    widget('table', [
+        width('100%'),
+    ]),
+];
 
  return export($style);

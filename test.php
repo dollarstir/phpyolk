@@ -1,8 +1,9 @@
 <?php
 
+// $context['rid'] = 1;
 $pg = '';
 $c = '';
-$pg = pagecount('users', '5');
+$pg = pagecount('users', '5', $context['rid']);
 // $cc = customcount('users', [['name', '=', 'Obery']]);
 // $c = badge::basic('primary', $cc);
 // sms('Dollarsoft', '0556676471,0540389039', 'Thank you for using Yolk Framework');
@@ -11,19 +12,16 @@ $pg = pagecount('users', '5');
 // $c = alert::basic('success', 'You have converted £20 to GH¢'.$r);
 $keyword = 'k';
 
-if (isset($_POST['btn'])) {
-    $rest = insert('users', [
-        'name' => 'Obery',
-        'email' => 'aframson77@gmail.com',
-        'contact' => '0232423',
-        'password' => md5('123'),
-    ], $_FILES);
-    $c = alert::basic('success', $rest);
-}
-$resti = customfetch('users', [
-    ['name', '=', 'Obery'],
-    ['email', '=', 'aframson77@gmail.com'],
-], 'OR');
+// if (isset($_POST['btn'])) {
+//     $rest = insert('users', [
+//         'name' => 'Obery',
+//         'email' => 'aframson77@gmail.com',
+//         'contact' => '0232423',
+//         'password' => md5('123'),
+//     ], $_FILES);
+//     $c = alert::basic('success', $rest);
+// }
+$resti = paginate('users', ['id' => 'ASC'], '5', $context['rid']);
     $cont = '';
 foreach ($resti as $row) {
     $cont .= el::tr('', [
@@ -56,15 +54,12 @@ Container::basic('', [
        ]),
 
         $cont,
-        el::tr('', [
-            $pg,
-        ]),
     ]),
-
-    el::form('', 'POST', 'enctype="multipart/form-data"', [
-        inputfile::basic('image', 'upload image'),
-        inputs::input('submit', 'btn', 'primary', '', 'Upload Now'),
-    ]),
+    $pg,
+    // el::form('', 'POST', 'enctype="multipart/form-data"', [
+    //     inputfile::basic('image', 'upload image'),
+    //     inputs::input('submit', 'btn', 'primary', '', 'Upload Now'),
+    // ]),
 ]),
 import('js'),
 Yolk::uicore('jsb'),
