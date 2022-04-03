@@ -35,29 +35,31 @@ class pagination extends database
             $co->execute();
             $cc = $co->fetchColumn();
             $total_pages = ceil($cc / $perpage);
-            $result = '';
+            $result = '<nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>';
             for ($page = 1; $page <= $total_pages; ++$page) {
-                $result .= '<nav aria-label="Page navigation example">
-                <ul class="pagination">
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                $result .= '
+                  <li class="page-item"><a class="page-link" href="#">'.$page.'</a></li>
                   
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>';
+                  
+              ';
             }
+            $result .= '<li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+                </a>
+             </li>
+                </ul>
+             </nav>';
         } catch (PDOException $e) {
-            $msg = $e;
+            $result = $e;
         }
 
-        return $msg;
+        return $result;
     }
 }
