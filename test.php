@@ -1,17 +1,33 @@
 <?php
 
 $c = '';
+// $cc = customcount('users', [['name', '=', 'Obery']]);
+// $c = badge::basic('primary', $cc);
+// sms('Dollarsoft', '0556676471,0540389039', 'Thank you for using Yolk Framework');
 
-$r = convertmoney('20', 'USD', 'GHS');
-$c = alert::basic('success', 'You have converted $20 to GH¢'.$r);
-$keyword = 'kofi';
-$rest = search('users', $keyword, ['email'], ['id' => 'DESC']);
+// $r = convertmoney('20', 'EUR', 'GHS');
+// $c = alert::basic('success', 'You have converted £20 to GH¢'.$r);
+$keyword = 'k';
 
-$cont = '';
-foreach ($rest as $row) {
+if (isset($_POST['btn'])) {
+    $rest = insert('users', [
+        'name' => 'Obery',
+        'email' => 'aframson77@gmail.com',
+        'contact' => '0232423',
+        'password' => md5('123'),
+    ], $_FILES);
+    $c = alert::basic('success', $rest);
+}
+$resti = customfetch('users', [
+    ['name', '=', 'Obery'],
+    ['email', '=', 'aframson77@gmail.com'],
+], 'OR');
+    $cont = '';
+foreach ($resti as $row) {
     $cont .= el::tr('', [
     el::td('', $row['name']),
     el::td('', $row['email']),
+    el::td('', $row['contact']),
 ]);
 }
 
@@ -34,9 +50,15 @@ Container::basic('', [
        el::tr('', [
            el::th('', 'Username'),
            el::th('', 'Email'),
+           el::th('', 'Contact'),
        ]),
 
         $cont,
+    ]),
+
+    el::form('', 'POST', 'enctype="multipart/form-data"', [
+        inputfile::basic('image', 'upload image'),
+        inputs::input('submit', 'btn', 'primary', '', 'Upload Now'),
     ]),
 ]),
 import('js'),
