@@ -382,15 +382,16 @@ class el
 
         return trim($tag);
     }
-    public static function break($times =1){
+
+    public static function break($times = 1)
+    {
         $tag = '';
-        for($i = 1; $i <=$times;$i++){
+        for ($i = 1; $i <= $times; ++$i) {
             $tag .= '<br>';
         }
         $tag .= '';
 
         return trim($tag);
-
     }
 
     public static function button($attributes = '', $content = [])
@@ -1068,10 +1069,10 @@ class el
         return trim($tag);
     }
 
-    public static function hr($times =1)
+    public static function hr($times = 1)
     {
         $tag = '';
-        for ($i = 1; $i <= $times;$i++){
+        for ($i = 1; $i <= $times; ++$i) {
             $tag .= '<hr>';
         }
         $tag .= '';
@@ -1079,16 +1080,15 @@ class el
         return trim($tag);
     }
 
-    public static function hruler($times =1){
-        $tag ='';
-        for ($i = 1; $i <= $times;$i++){
+    public static function hruler($times = 1)
+    {
+        $tag = '';
+        for ($i = 1; $i <= $times; ++$i) {
             $tag .= '<hr>';
-
         }
-        $tag .='';
+        $tag .= '';
 
         return trim($tag);
-
     }
 
     public static function i($attributes = '', $content = [])
@@ -1127,46 +1127,46 @@ class el
         return trim($tag);
     }
 
-    public static function img($source = '', $attributes = '')
+    public static function img($source = '', $loadingtype = 'lazy', $attributes = '')
     {
         // $source =trim($source);
         if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false) {
-            $tag = '<img src="'.$source.'" '.$attributes.' />';
+            $tag = '<img src="'.$source.'" loading="'.$loadingtype.'" '.$attributes.' />';
         } else {
-            $tag = ' <img  src="'.Path::rebase($source).'" '.$attributes.'/>';
+            $tag = ' <img  src="'.Path::rebase($source).'" loading="'.$loadingtype.'" '.$attributes.'/>';
         }
 
         return $tag;
     }
 
-    public static function image($source = '', $attributes = '')
+    public static function image($source = '', $loadingtype = 'lazy', $attributes = '')
     {
         if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false) {
-            $tag = '<img src="'.$source.'" '.$attributes.' />';
+            $tag = '<img src="'.$source.'" loading="'.$loadingtype.'" '.$attributes.' />';
         } else {
-            $tag = ' <img  src="'.Path::rebase($source).'" '.$attributes.'/>';
+            $tag = ' <img  src="'.Path::rebase($source).'" loading="'.$loadingtype.'" '.$attributes.'/>';
         }
 
         return $tag;
     }
 
-    public static function pic($source = '', $attributes = '')
+    public static function pic($source = '', $loadingtype = 'lazy', $attributes = '')
     {
         if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false) {
-            $tag = '<img src="'.$source.'" '.$attributes.' />';
+            $tag = '<img src="'.$source.'" loading="'.$loadingtype.'" '.$attributes.' />';
         } else {
-            $tag = ' <img  src="'.Path::rebase($source).'" '.$attributes.'/>';
+            $tag = ' <img  src="'.Path::rebase($source).'" loading="'.$loadingtype.'" '.$attributes.'/>';
         }
 
         return $tag;
     }
 
-    public static function photo($source = '', $attributes = '')
+    public static function photo($source = '', $loadingtype = 'lazy', $attributes = '')
     {
         if (strpos($source, 'http') !== false || strpos($source, 'www.') !== false) {
-            $tag = '<img src="'.$source.'" '.$attributes.' />';
+            $tag = '<img src="'.$source.'" loading="'.$loadingtype.'" '.$attributes.' />';
         } else {
-            $tag = ' <img  src="'.Path::rebase($source).'" '.$attributes.'/>';
+            $tag = ' <img  src="'.Path::rebase($source).'" loading="'.$loadingtype.'" '.$attributes.'/>';
         }
 
         return $tag;
