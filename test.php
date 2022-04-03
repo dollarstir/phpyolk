@@ -28,6 +28,7 @@ foreach ($resti as $row) {
     el::td('', $row['name']),
     el::td('', $row['email']),
     el::td('', $row['contact']),
+    el::td('', el::image('yolkassets/upload/'.$row['image'], '', 'width="50px"')),
 ]);
 }
 
@@ -51,6 +52,7 @@ Container::basic('', [
            el::th('', 'Username'),
            el::th('', 'Email'),
            el::th('', 'Contact'),
+           el::th('', 'Image'),
        ]),
 
         $cont,

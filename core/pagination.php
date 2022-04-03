@@ -4,7 +4,7 @@ class pagination extends database
 {
     public function paginate($table, $order = [], $limit, $ct)
     {
-        var_dump($ct);
+        // var_dump($ct);
         $ct;
         $page = ($ct != '') ? $ct : 1;
         $starting_limit = ($page - 1) * $limit;
