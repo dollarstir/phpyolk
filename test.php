@@ -3,7 +3,7 @@
 // $context['rid'] = 1;
 $pg = '';
 $c = '';
-$pg = pagecount('users', '5', $context['rid']);
+$pg = pagecount('users', '3', $context['rid']);
 // $cc = customcount('users', [['name', '=', 'Obery']]);
 // $c = badge::basic('primary', $cc);
 // sms('Dollarsoft', '0556676471,0540389039', 'Thank you for using Yolk Framework');
