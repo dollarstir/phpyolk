@@ -2,7 +2,7 @@
 
 class pagination extends database
 {
-    public function paginate($table, $order = [], $limit = '')
+    public function paginate($table, $order = [], $limit)
     {
         if (is_array($order)) {
         } else {
