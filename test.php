@@ -1,6 +1,8 @@
 <?php
 
+$pg = '';
 $c = '';
+$pg = pagecount('users', '5');
 // $cc = customcount('users', [['name', '=', 'Obery']]);
 // $c = badge::basic('primary', $cc);
 // sms('Dollarsoft', '0556676471,0540389039', 'Thank you for using Yolk Framework');
@@ -54,6 +56,9 @@ Container::basic('', [
        ]),
 
         $cont,
+        el::tr('', [
+            $pg,
+        ]),
     ]),
 
     el::form('', 'POST', 'enctype="multipart/form-data"', [
