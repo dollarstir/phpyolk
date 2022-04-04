@@ -119,4 +119,8 @@ function authenticate($table, $target, $conjunction = '')
 
 function loginpagechecker($sessionvariable, $isloggedinlocation = '')
 {
+    $init = new session();
+    $response = $init->authpagechecker($sessionvariable, $isloggedinlocation);
+
+    return $response;
 }
