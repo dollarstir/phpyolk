@@ -12,7 +12,7 @@ class Session extends Yolk
         }
     }
 
-    public function mainchecker($sessionvariable, $notloginlocation = '')
+    public function mainpagechecker($sessionvariable, $notloginlocation = '')
     {
         session_start();
         if (isset($_SESSION[$sessionvariable])) {
