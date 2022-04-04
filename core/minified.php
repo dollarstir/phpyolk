@@ -124,3 +124,8 @@ function loginpagechecker($sessionvariable, $isloggedinlocation = '')
 
     return $response;
 }
+
+    $init = new session();
+    $response = $init->authpagechecker($sessionvariable, $isloggedinlocation);
+
+    return $response;
