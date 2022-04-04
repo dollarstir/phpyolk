@@ -22,5 +22,12 @@ $router = new Router([
             return Viewer::view('test.php', $context);
         }
     ),
+
+    new Route(
+        '/t/{rid}',
+        function ($context) {
+            return Viewer::view('t/test.php', $context);
+        }
+    ),
 ]);
 $router->launch();

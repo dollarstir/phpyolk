@@ -39,10 +39,10 @@ function sendmail($domain, $subject, $message, $from_name = 'Yolk Mailer', $to, 
     return $response;
 }
 
-function update($table, $records, $target = '', $files = null, $uploadto = 'yolkassets/upload')
+function update($table, $records, $target = [], $files = null, $uploadto = 'yolkassets/upload')
 {
     $init = new Upd();
-    $response = $init->update($table, $records, $target, $files, $uploadto = 'yolkassets/upload');
+    $response = $init->update($table, $records, $target, $files, $uploadto);
 
     return $response;
 }
@@ -132,3 +132,42 @@ function mainchecker($sessionvariable, $notloginlocation = '')
 
     return $response;
 }
+ function logout($sessionvariable = '')
+ {
+     $init = new sessions();
+     $response = $init->logout($sessionvariable);
+
+     return $response;
+ }
+
+     function addsession($sessionvariable, $value)
+     {
+         $init = new sessions();
+         $response = $init->addsession($sessionvariable, $value);
+     }
+
+     function updatesession($sessionvariable, $value)
+     {
+         $init = new sessions();
+         $response = $init->updatesession($sessionvariable, $value);
+     }
+
+     function viewsession($sessionvariable)
+     {
+         $init = new sessions();
+         $response = $init->viewsession($sessionvariable);
+
+         return $response;
+     }
+
+     function deletesession($sessionvariable = '')
+     {
+         $init = new sessions();
+         $response = $init->deletesession($sessionvariable);
+     }
+
+     function initsession()
+     {
+         $init = new sessions();
+         $response = $init->initsession();
+     }
