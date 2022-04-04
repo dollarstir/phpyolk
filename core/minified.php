@@ -103,8 +103,16 @@ function pagecount($table, $perpage, $ct)
 
 function loginauth($table, $sessionvariable, $target, $conjunction = '')
 {
-    $init = new login();
-    $response = $init->authenticate($table, $sessionvariable, $target, $conjunction);
+    $init = new Auth();
+    $response = $init->loginauthenticate($table, $sessionvariable, $target, $conjunction);
+
+    return $response;
+}
+
+function authenticate($table, $target, $conjunction = '')
+{
+    $init = new Auth();
+    $response = $init->authenticate($table, $target, $conjunction);
 
     return $response;
 }
