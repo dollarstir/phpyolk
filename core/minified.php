@@ -125,10 +125,10 @@ function loginpagechecker($sessionvariable, $isloggedinlocation = '')
     return $response;
 }
 
-function mainchecker($sessionvariable, $isloggedinlocation = '')
+function mainchecker($sessionvariable, $notloginlocation = '')
 {
     $init = new session();
-    $response = $init->mainpagechecker($sessionvariable, $isloggedinlocation);
+    $response = $init->mainpagechecker($sessionvariable, $notloginlocation);
 
     return $response;
 }
