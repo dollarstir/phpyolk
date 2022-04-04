@@ -2,7 +2,7 @@
 
 class Auth extends database
 {
-    public function authenticate($table, $sessionvariable, $target, $conjunction = '')
+    public function authenticate($table, $target, $conjunction = '')
     {
         $vs = '';
         foreach ($target as $value) {

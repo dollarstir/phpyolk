@@ -1,25 +1,23 @@
 <?php
-class Session extends Yolk {
 
-    public function authpagechecker($isloggedinlocation=""){
+class Session extends Yolk
+{
+    public function authpagechecker($sessionvariable, $isloggedinlocation = '')
+    {
         session_start();
-        if(isset($_SESSION['user'])){
+        if (isset($_SESSION[$sessionvariable])) {
             $this->goto($isloggedinlocation);
-
-        }
-        else{
+        } else {
             // $this->goto($notloginlocation);
         }
-
     }
 
-    public function mainchecker($notloginlocation=""){
+    public function mainchecker($sessionvariable, $notloginlocation = '')
+    {
         session_start();
-        if(isset($_SESSION['user'])){
+        if (isset($_SESSION[$sessionvariable])) {
             // $this->goto($isloggedinlocation);
-
-        }
-        else{
+        } else {
             $this->goto($notloginlocation);
         }
     }
