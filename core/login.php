@@ -2,7 +2,7 @@
 
 class Login extends database
 {
-    public function authenticate($table, $target, $conjunction = '')
+    public function authenticate($table, $sessionvariable, $target, $conjunction = '')
     {
         $vs = '';
         foreach ($target as $value) {
@@ -33,7 +33,7 @@ class Login extends database
             $logs = $ft->fetch();
             if ($row > 0) {
                 session_start();
-                $_SESSION['user'] = $logs;
+                $_SESSION[$sessionvariable] = $logs;
                 $msg = 'success';
             } else {
                 $msg = 'failed';
