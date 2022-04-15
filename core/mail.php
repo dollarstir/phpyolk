@@ -40,10 +40,12 @@ class Mail extends PHPMailer
 
             $rp = $mail->send();
             if ($rp == 1) {
-                echo 'success';
+                $msg = 'success';
             }
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            $msg = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
+
+        return $msg;
     }
 }
