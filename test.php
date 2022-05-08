@@ -1,5 +1,15 @@
 <?php
 
+// counting all students from a database table
+$students = countall($tablename);
+echo 'Total students:'.$students;
+
+// couting students who paid fees
+$paidstudents = customcount($tablename, [['status', '=', 'paid']], $conjunction = '');
+
+echo 'Paid  students:'.$paidstudents;
+
+// couting
 // $context['rid'] = 1;
 $pg = '';
 $c = '';
