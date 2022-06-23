@@ -5,7 +5,7 @@ $router = new Router([
     new Route(
         '/',
         function ($context) {
-            return Viewer::view('install.php', $context);
+            return Viewer::view('test.php', $context);
         }
     ),
 ]);

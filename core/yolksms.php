@@ -26,7 +26,8 @@ class Yolksms
         curl_close($ch);
 
         return $this->responses($result->code);
-        // return $status;
+
+        return $result;
     }
 
     private function responses($response)
