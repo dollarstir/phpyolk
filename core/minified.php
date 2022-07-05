@@ -16,6 +16,22 @@ function customfetch($table, $target, $conjunction = '', $order = [], $limit = '
     return $response;
 }
 
+function randomfetch($table, $target, $conjunction = '', $limit = '')
+{
+    $init = new Sel();
+    $response = $init->randomfetch($table, $target, $conjunction, $limit);
+
+    return $response;
+}
+
+function allrandom($table, $limit = '')
+{
+    $init = new Sel();
+    $response = $init->allrandom($table, $limit);
+
+    return $response;
+}
+
 function sms($senderid, $recipient, $message)
 {
     $send = new Yolksms();
@@ -93,6 +109,13 @@ function paginate($table, $order = [], $numperpage, $ct)
 
     return $response;
 }
+
+function customepaginate($table, $target, $conjunction = '', $order = [], $limit, $ct)
+{
+    $init = new Pagination();
+    $response = $init->customepaginate($table, $target, $conjunction, $order, $limit, $ct);
+}
+
 function pagecount($table, $perpage, $ct)
 {
     $init = new Pagination();

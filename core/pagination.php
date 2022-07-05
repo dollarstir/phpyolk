@@ -31,6 +31,64 @@ class pagination extends database
         return $sel->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // custome pagenate
+    public function customepaginate($table, $target, $conjunction = '', $order = [], $limit, $ct)
+    {
+        // var_dump($ct);
+        $ct;
+        $page = ($ct != '') ? $ct : 1;
+        $starting_limit = ($page - 1) * $limit;
+        if (is_array($order)) {
+        } else {
+            $order = [$order];
+        }
+        $kof = '';
+        if ($order != []) {
+            foreach ($order as $key => $value) {
+                $kof .= "ORDER BY $key $value";
+            }
+        } else {
+            $kof = '';
+        }
+
+        $vs = '';
+        // $allval = []
+        foreach ($target as $value) {
+            if (is_array($value)) {
+                if (count($value) == 3) {
+                    $colunmname = $value[0];
+                    $operator = $value[1];
+                    $colunmvalue = $value[2];
+                    if ($vs == '') {
+                        $vs .= 'WHERE '.$colunmname.' '.$operator.' :'.$colunmname;
+                    } else {
+                        $vs .= " $conjunction $colunmname $operator :$colunmname";
+                    }
+                }
+            }
+        }
+        if ($limit == '') {
+            $sel = $this->conn->prepare("SELECT * FROM $table $vs $kof");
+        } else {
+            $sel = $this->conn->prepare("SELECT * FROM $table $vs $kof  LIMIT $starting_limit,$limit");
+        }
+
+        foreach ($target as $value) {
+            if (is_array($value)) {
+                if (count($value) == 3) {
+                    $sel->bindValue(':'.$value[0], $value[2]);
+                }
+            }
+        }
+        try {
+            $sel->execute();
+
+            return $sel->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo $e;
+        }
+    }
+
     public function pagecount($table, $perpage, $ct)
     {
         try {
@@ -39,27 +97,7 @@ class pagination extends database
             $co->execute();
             $cc = $co->fetchColumn();
             $total_pages = ceil($cc / $perpage);
-            $result = '<nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item '.($ct == 1 ? 'disabled' : '').'">
-                <a class="page-link" href="'.($ct - 1).'" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>';
-            for ($page = 1; $page <= $total_pages; ++$page) {
-                $result .= '
-                  <li class="page-item '.($ct == $page ? 'active' : '').'"><a class="page-link" href="'.$page.'">'.$page.'</a></li>
-                  
-                  
-              ';
-            }
-            $result .= '<li class="page-item '.($ct == $total_pages ? 'disabled' : '').'">
-            <a class="page-link" href="'.($ct + 1).'" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-                </a>
-             </li>
-                </ul>
-             </nav>';
+            $result = $total_pages;
         } catch (PDOException $e) {
             $result = $e;
         }
